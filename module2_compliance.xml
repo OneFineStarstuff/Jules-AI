@@ -1,0 +1,58 @@
+<report>
+<title>Regulatory Compliance & Technical Alignment Framework (EU AI Act, NIST, ISO 42001)</title>
+<abstract>This module provides the technical alignment framework for mapping international regulations to the enterprise AI stack. It specifies the automation of EU AI Act Article 11/14 requirements, the operationalization of NIST AI RMF 'Map, Measure, Manage' functions, and the implementation of Governance-as-Code (GaC) software standards within CI/CD pipelines.</abstract>
+<content><![CDATA[
+# 1. Global Regulatory Mapping Matrix
+
+| Regulation | Scope | Technical Enforcement Mechanism |
+| :--- | :--- | :--- |
+| **EU AI Act (2026)**| High-Risk & GPAI | Automated Annex IV Technical Dossier generation via Sentinel v2.4. |
+| **NIST AI RMF 1.0** | Enterprise Risk | Real-time risk scoring (OPA-Rego) and alignment scoreboards. |
+| **ISO/IEC 42001** | AI Management System | CCE (Continuous Compliance Engine) asynchronous audit hooks. |
+| **GDPR** | Data Privacy | Zero-trust PII scrubbing middleware and 7-year WORM retention. |
+| **Basel III/IV** | Financial Stability | Capital Drift Index (CDI) mapping AGI reasoning to RWA. |
+
+---
+
+# 2. EU AI Act 2026: Conformity Automation
+
+Under 2026 enforcement, manual compliance is a systemic liability. Sentinel v2.4 automates the conformity lifecycle:
+
+## 2.1 Article 11: Technical Documentation
+Sentinel's **AuditorWORMVerifier** aggregates evidence from:
+- **Foundation Layer**: Signed hardware attestation (Nitro Enclave).
+- **Memory Layer**: Merkle-DAG hashes of RAG context datasets.
+- **Brain Layer**: Model weights versioning and few-shot instruction logs.
+
+## 2.2 Article 14: Human Oversight
+Mandatory "Agentic Human-in-the-Loop" (A-HITL) density checks. If the ratio of autonomous vs. human-verified decisions falls below the institutional safety threshold, the **Experience Layer** enforces a mandatory UI gate.
+
+---
+
+# 3. Governance-as-Code (GaC) Standards
+
+Compliance must be integrated into the engineering lifecycle.
+
+## 3.1 CI/CD Governance Gates
+GitHub Actions workflows must include a `sentinel-verify` step:
+```yaml
+jobs:
+  compliance-scan:
+    steps:
+      - name: Run OPA Rego Audit
+        run: opa eval -d policies/eu_ai_act.rego "data.sentinel.deny"
+      - name: Check Hardware Attestation
+        run: verify-enclave --hash ${{ github.event.model_hash }}
+```
+
+## 3.2 OPA/Rego Policy-as-Code
+Policies are version-controlled in Git and synchronized to the **Immune System** sidecars.
+- **Example Policy**: "Deny deployment if model training FLOPs > $10^{26}$ AND Board SEV-0 approval is missing."
+
+---
+
+# 4. Systemic Risk & Minimum Viable Governance (MVG)
+G-SIFIs must maintain an MVG stack to ensure operational continuity during alignment emergencies.
+- **MVG Components**: 1. Hard-wired Kill-Switch, 2. Air-gapped WORM Auditor, 3. Deterministic Policy Sidecar.
+]]></content>
+</report>
