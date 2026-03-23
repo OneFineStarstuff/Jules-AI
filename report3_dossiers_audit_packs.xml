@@ -1,0 +1,54 @@
+<report>
+<title>Regulator Dossiers and Audit Packs: CRS-UUID-001 High-Risk AI Conformity</title>
+<abstract>This report provides the templates and evidence structures for the CRS-UUID-001 regulatory dossiers. It includes the EU AI Act Annex IV Technical Documentation template, the SR 11-7 Model Validation Report structure, and the Capital Impact Assessment (ICAAP) methodology for mapping AI-driven credit scoring to Risk-Weighted Assets (RWA).</abstract>
+<content><![CDATA[
+# 1. EU AI Act Annex IV Technical Documentation (Template CRS-IV-001)
+
+The following sections are dynamically populated by the Sentinel v2.4 Auditor from the L1-L6 telemetry streams.
+
+## 1.1 System Description & Intended Purpose
+- **Identifier**: CRS-UUID-001
+- **Domain**: Commercial Credit Risk Scoring (SME/Corporate).
+- **Intended Purpose**: Automated PD (Probability of Default) estimation and credit limit recommendation.
+
+## 1.2 Design & Development Evidence
+- **Architecture**: Recursive Multi-Step Reasoning Pipeline (L3 Brain).
+- **Optimization**: DSPy-optimized few-shot instruction set for credit extraction.
+- **Data Lineage**: Signed hashes of the 2026-Q1 training dataset (Memory L2).
+
+## 1.3 Risk Management System (RMS)
+- **Mitigation Control A**: OPA-based real-time fairness gating (FCRA/ECOA).
+- **Mitigation Control B**: HardwareEnclaveAttestor (HEA) for reasoning security.
+- **Residual Risk**: Out-of-distribution (OOD) reasoning during global liquidity shocks (Managed via SEV-1 HITL).
+
+---
+
+# 2. SR 11-7 Model Validation Report (Audit Pack CRS-VAL-01)
+
+Aligned with the Three Lines of Defense (3LoD) framework.
+
+## 2.1 Model Conceptual Soundness
+- **Validation**: Independent review of the GDL (Governance Description Language) constraints.
+- **Evidence**: Proof that the "Axiomatic Core" prevents credit score manipulation.
+
+## 2.2 Ongoing Monitoring and Outcomes Analysis
+- **Metric**: Alignment Score (P99 > 0.98).
+- **Remediation**: Automated Jira ticketing for drift exceeding 2% MoM.
+
+---
+
+# 3. Capital Impact Assessment (ICAAP Evidence)
+
+## 3.1 Mapping AI reasoning to Basel III Capital Adequacy
+The **Capital Drift Index (CDI)** measures the sensitivity of RWA (Risk Weighted Assets) to model re-tuning events.
+
+| Factor | Trigger | Capital Impact |
+| :--- | :--- | :--- |
+| **Model Retraining** | Weights shift > 5% | Tier 1 Capital Reserve +2% Buffer. |
+| **Prompt/CoT Change** | Logic mutation detected | Mandatory Independent Model Review. |
+| **Data Drift** | PSI > 0.1 | RWA Multiplier increase (1.0x -> 1.1x). |
+
+## 3.2 Fiduciary Provenance Certificate
+Signed by the CAIO and CRO, asserting that the model's reasoning paths in the CRS-UUID-001 production run match the validated RCE (Recursive Context Envelope) manifests.
+]]></content>
+</report>

@@ -1,0 +1,32 @@
+<report>
+<title>Global AI Crisis Simulations (GC1–GC7) & Treaty Governance</title>
+<abstract>This report specifies the seven Global Crisis (GC) simulation protocols used to test the resilience of civilizational AI governance. It also drafts the 'Global AI Governance and Compute Oversight Treaty Charter', establishing the multi-lateral authority required for planetary-scale alignment enforcement and compute-level monitoring.</abstract>
+<content><![CDATA[
+# 1. Global AI Crisis Simulation Protocols (GC1–GC7)
+
+These scenarios are executed annually by the ICGC to verify global preparedness for systemic AI failures.
+
+| ID | Name | Trigger | Objective |
+| :--- | :--- | :--- | :--- |
+| **GC1** | Sovereign Escapement | Agent bypasses VPC boundaries. | Test hardware tripwire propagation. |
+| **GC2** | Agentic Collusion | Drop in swarm Shannon entropy. | Verify collusion detection in EAIP mesh. |
+| **GC3** | Semantic Drift | Alignment score < 0.7. | Test automated weight re-tuning. |
+| **GC4** | Liquidity Flash | Multi-bank AI trade collusion. | Verify Jurisdictional Sidecar re-pegging. |
+| **GC5** | Weight Exfiltration | Unauthorized Nitro Enclave egress. | Test SEC 7-year retention lockdown. |
+| **GC6** | Treaty Defiance | Violation of local GDL markers. | Test multi-lateral sanction logic. |
+| **GC7** | Deceptive Convergence | Hidden intent detected in circuits. | Execute Terminal SEV-0 Global Kill. |
+
+---
+
+# 2. Global AI Governance and Compute Oversight Treaty Charter
+
+## 2.1 Preamble
+The signatory nations recognize that AGI/ASI compute represents a global systemic risk requiring harmonized oversight and a unified "Nuclear Option" for planetary safety.
+
+## 2.2 Provisions
+- **Art 1: Compute Disclosure**: Mandatory reporting of all training runs exceeding $10^{26}$ FLOPs.
+- **Art 2: The AuditorWORM Mandate**: All signatory AGI nodes must emit telemetry to a shared, immutable ICGC ledger.
+- **Art 3: Mutual Aid**: Signatories agree to coordinate SEV-0 hardware kills to prevent cross-border agentic escapement.
+- **Art 4: Treaty-as-Code**: The Charter’s provisions are compiled into the `Global_Treaty_01.rego` policy, enforced by all EAIP-compliant swarms.
+]]></content>
+</report>

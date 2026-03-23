@@ -1,0 +1,48 @@
+<report>
+<title>Technical Enforcement: Policy-as-Code & Cryptographic Evidence Manifests</title>
+<abstract>This report details the technical enforcement mechanisms for the CRS-UUID-001 system. It specifies the OPA/Rego policy-as-code integration for CI/CD and runtime safety, the HardwareEnclaveAttestor protocol for cryptographic proof of execution, and the structure of the Cryptographic Evidence Manifests required for regulator-defensible audit trails.</abstract>
+<content><![CDATA[
+# 1. Policy-as-Code Enforcement (OPA/Rego)
+
+## 1.1 CI/CD Compliance Gates
+Sentinel v2.4 enforces GDL (Governance Description Language) constraints during the model training and deployment pipeline:
+- **Redline Check**: Deny deployment if the training dataset includes non-consented PII (GDPR Art 6).
+- **Fairness check**: Deny if disparate impact ratio for protected classes (FCRA/ECOA) is outside $[0.8, 1.25]$.
+
+### Example: Rego Fairness Policy
+```rego
+package sentinel.bank.credit
+
+default allow = false
+
+allow {
+    input.disparate_impact_ratio >= 0.8
+    input.disparate_impact_ratio <= 1.25
+    input.accuracy_score > 0.95
+}
+```
+
+## 1.2 Runtime Policy Gating
+The **Immune System (L5)** intercepts all gRPC requests to the CRS Reasoning Kernel:
+- **Reasoning Depth**: Limit to 5 recursive steps per scoring request to prevent resource exhaustion.
+- **PII Scrubbing**: Mandate use of the `context_redactor` middleware for all context fragments.
+
+---
+
+# 2. Cryptographic Evidence Manifests
+
+## 2.1 HardwareEnclaveAttestor (HEA) Protocol
+The HEA protocol ensures that the CRS-UUID-001 model is executing within an untampered Trusted Execution Environment (TEE).
+1. **Challenge**: The Sentinel Plane issues a nonce to the Enclave.
+2. **Attestation**: The Enclave signs the model hash, reasoning trace, and nonce using its hardware-bound private key.
+3. **Verification**: Sentinel verifies the signature against the cloud provider's Root of Trust.
+
+## 2.2 AuditorWORM Manifest Structure
+Every credit decision produces a Cryptographic Evidence Manifest (CEM):
+- **TraceID**: Global EAIP identifier.
+- **ModelVersion**: Signed hash of the CRS-UUID-001 weights.
+- **PolicyHash**: Identifier of the specific Rego policy version active at time of inference.
+- **ProvenanceChain**: Merkle-DAG of all retrieved RAG context fragments.
+- **AttestationSignature**: Result of the HEA protocol.
+]]></content>
+</report>

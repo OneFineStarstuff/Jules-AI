@@ -1,0 +1,38 @@
+<report>
+<title>CRS-UUID-001: System Profile and Six-Layer Governance Mapping</title>
+<abstract>This report defines the technical and regulatory profile for the 'CRS-UUID-001' Credit Risk Scoring AI system at Global Bank plc. It establishes the mapping between the system's operational components and the six-layer civilizational governance architecture, ensuring alignment with EU AI Act High-Risk requirements, SR 11-7 model risk standards, and Basel III capital adequacy frameworks.</abstract>
+<content><![CDATA[
+# 1. System Identity: CRS-UUID-001 (Global Bank plc)
+
+## 1.1 Technical Specification
+- **Model Type**: Ensemble Gradient Boosted Trees + Transformer-based Reasoning Kernel.
+- **Task**: Real-time probability of default (PD) estimation for commercial lending.
+- **Classification**: High-Risk AI System (EU AI Act Annex III, 5b); Tier 1 Critical Model (SR 11-7).
+- **Compute Threshold**: $2.5 \times 10^{24}$ FLOPs (Training); Execution in AWS Nitro Enclaves.
+
+## 1.2 The Six-Layer Governance Architecture Mapping
+
+| Layer | System Component | Primary Governance Control |
+| :--- | :--- | :--- |
+| **L1: Foundation** | AWS P5 (H100) + Nitro Enclaves | **HardwareEnclaveAttestor**: TEE-anchored execution verification. |
+| **L2: Memory** | VectorDB + Snowflake (Encrypted) | **Zero-Trust Retrieval**: Real-time PII scrubbing (GDPR/FCRA). |
+| **L3: Brain** | Reasoning Kernel (CRS-v4) | **Constitutional Alignment**: Hard-wired GDL fairness constraints. |
+| **L4: Nervous System** | EAIP (gRPC/mTLS) | **RCE Provenance**: Cryptographic reasoning trace for auditability. |
+| **L5: Immune System** | Sentinel v2.4 Plane | **OPA-Rego Policy-as-Code**: Real-time blocking of SEV-0 incidents. |
+| **L6: Experience** | Adaptive Credit Dashboard | **Mandatory HITL Gate**: Human override for edge-case approvals. |
+
+---
+
+# 2. Regulatory Alignment Matrix (Dossier CRS-001-REG)
+
+## 2.1 EU AI Act Annex IV (Technical Documentation)
+The **Immune System (L5)** automatically generates the Annex IV dossier by aggregating:
+- **L1/L2 Evidence**: Data lineage and hardware attestation.
+- **L3/L4 Evidence**: Model architecture, reasoning logs, and error taxonomy.
+- **L5/L6 Evidence**: Risk management measures and human oversight logs.
+
+## 2.2 SR 11-7 & Basel III Alignment
+- **Model Risk Management (MRM)**: The **AuditorWORMVerifier** maintains the immutable validation record required for independent model review.
+- **Capital Impact (ICAAP)**: AGI-driven credit scores are mapped to RWA (Risk Weighted Assets) using the **Capital Drift Index**, ensuring Basel III capital adequacy is maintained during model re-tuning.
+]]></content>
+</report>

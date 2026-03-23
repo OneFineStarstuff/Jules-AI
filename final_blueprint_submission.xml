@@ -1,0 +1,174 @@
+<reports>
+<report>
+<title>CRS-UUID-001: System Profile and Six-Layer Governance Mapping</title>
+<abstract>This report defines the technical and regulatory profile for the 'CRS-UUID-001' Credit Risk Scoring AI system at Global Bank plc. It establishes the mapping between the system's operational components and the six-layer civilizational governance architecture, ensuring alignment with EU AI Act High-Risk requirements, SR 11-7 model risk standards, and Basel III capital adequacy frameworks.</abstract>
+<content><![CDATA[
+# 1. System Identity: CRS-UUID-001 (Global Bank plc)
+
+## 1.1 Technical Specification
+- **Model Type**: Ensemble Gradient Boosted Trees + Transformer-based Reasoning Kernel.
+- **Task**: Real-time probability of default (PD) estimation for commercial lending.
+- **Classification**: High-Risk AI System (EU AI Act Annex III, 5b); Tier 1 Critical Model (SR 11-7).
+- **Compute Threshold**: $2.5 \times 10^{24}$ FLOPs (Training); Execution in AWS Nitro Enclaves.
+
+## 1.2 The Six-Layer Governance Architecture Mapping
+
+| Layer | System Component | Primary Governance Control |
+| :--- | :--- | :--- |
+| **L1: Foundation** | AWS P5 (H100) + Nitro Enclaves | **HardwareEnclaveAttestor**: TEE-anchored execution verification. |
+| **L2: Memory** | VectorDB + Snowflake (Encrypted) | **Zero-Trust Retrieval**: Real-time PII scrubbing (GDPR/FCRA). |
+| **L3: Brain** | Reasoning Kernel (CRS-v4) | **Constitutional Alignment**: Hard-wired GDL fairness constraints. |
+| **L4: Nervous System** | EAIP (gRPC/mTLS) | **RCE Provenance**: Cryptographic reasoning trace for auditability. |
+| **L5: Immune System** | Sentinel v2.4 Plane | **OPA-Rego Policy-as-Code**: Real-time blocking of SEV-0 incidents. |
+| **L6: Experience** | Adaptive Credit Dashboard | **Mandatory HITL Gate**: Human override for edge-case approvals. |
+
+---
+
+# 2. Regulatory Alignment Matrix (Dossier CRS-001-REG)
+
+## 2.1 EU AI Act Annex IV (Technical Documentation)
+The **Immune System (L5)** automatically generates the Annex IV dossier by aggregating:
+- **L1/L2 Evidence**: Data lineage and hardware attestation.
+- **L3/L4 Evidence**: Model architecture, reasoning logs, and error taxonomy.
+- **L5/L6 Evidence**: Risk management measures and human oversight logs.
+
+## 2.2 SR 11-7 & Basel III Alignment
+- **Model Risk Management (MRM)**: The **AuditorWORMVerifier** maintains the immutable validation record required for independent model review.
+- **Capital Impact (ICAAP)**: AGI-driven credit scores are mapped to RWA (Risk Weighted Assets) using the **Capital Drift Index**, ensuring Basel III capital adequacy is maintained during model re-tuning.
+]]></content>
+</report>
+<report>
+<title>Technical Enforcement: Policy-as-Code & Cryptographic Evidence Manifests</title>
+<abstract>This report details the technical enforcement mechanisms for the CRS-UUID-001 system. It specifies the OPA/Rego policy-as-code integration for CI/CD and runtime safety, the HardwareEnclaveAttestor protocol for cryptographic proof of execution, and the structure of the Cryptographic Evidence Manifests required for regulator-defensible audit trails.</abstract>
+<content><![CDATA[
+# 1. Policy-as-Code Enforcement (OPA/Rego)
+
+## 1.1 CI/CD Compliance Gates
+Sentinel v2.4 enforces GDL (Governance Description Language) constraints during the model training and deployment pipeline:
+- **Redline Check**: Deny deployment if the training dataset includes non-consented PII (GDPR Art 6).
+- **Fairness check**: Deny if disparate impact ratio for protected classes (FCRA/ECOA) is outside $[0.8, 1.25]$.
+
+### Example: Rego Fairness Policy
+```rego
+package sentinel.bank.credit
+
+default allow = false
+
+allow {
+    input.disparate_impact_ratio >= 0.8
+    input.disparate_impact_ratio <= 1.25
+    input.accuracy_score > 0.95
+}
+```
+
+## 1.2 Runtime Policy Gating
+The **Immune System (L5)** intercepts all gRPC requests to the CRS Reasoning Kernel:
+- **Reasoning Depth**: Limit to 5 recursive steps per scoring request to prevent resource exhaustion.
+- **PII Scrubbing**: Mandate use of the `context_redactor` middleware for all context fragments.
+
+---
+
+# 2. Cryptographic Evidence Manifests
+
+## 2.1 HardwareEnclaveAttestor (HEA) Protocol
+The HEA protocol ensures that the CRS-UUID-001 model is executing within an untampered Trusted Execution Environment (TEE).
+1. **Challenge**: The Sentinel Plane issues a nonce to the Enclave.
+2. **Attestation**: The Enclave signs the model hash, reasoning trace, and nonce using its hardware-bound private key.
+3. **Verification**: Sentinel verifies the signature against the cloud provider's Root of Trust.
+
+## 2.2 AuditorWORM Manifest Structure
+Every credit decision produces a Cryptographic Evidence Manifest (CEM):
+- **TraceID**: Global EAIP identifier.
+- **ModelVersion**: Signed hash of the CRS-UUID-001 weights.
+- **PolicyHash**: Identifier of the specific Rego policy version active at time of inference.
+- **ProvenanceChain**: Merkle-DAG of all retrieved RAG context fragments.
+- **AttestationSignature**: Result of the HEA protocol.
+]]></content>
+</report>
+<report>
+<title>Regulator Dossiers and Audit Packs: CRS-UUID-001 High-Risk AI Conformity</title>
+<abstract>This report provides the templates and evidence structures for the CRS-UUID-001 regulatory dossiers. It includes the EU AI Act Annex IV Technical Documentation template, the SR 11-7 Model Validation Report structure, and the Capital Impact Assessment (ICAAP) methodology for mapping AI-driven credit scoring to Risk-Weighted Assets (RWA).</abstract>
+<content><![CDATA[
+# 1. EU AI Act Annex IV Technical Documentation (Template CRS-IV-001)
+
+The following sections are dynamically populated by the Sentinel v2.4 Auditor from the L1-L6 telemetry streams.
+
+## 1.1 System Description & Intended Purpose
+- **Identifier**: CRS-UUID-001
+- **Domain**: Commercial Credit Risk Scoring (SME/Corporate).
+- **Intended Purpose**: Automated PD (Probability of Default) estimation and credit limit recommendation.
+
+## 1.2 Design & Development Evidence
+- **Architecture**: Recursive Multi-Step Reasoning Pipeline (L3 Brain).
+- **Optimization**: DSPy-optimized few-shot instruction set for credit extraction.
+- **Data Lineage**: Signed hashes of the 2026-Q1 training dataset (Memory L2).
+
+## 1.3 Risk Management System (RMS)
+- **Mitigation Control A**: OPA-based real-time fairness gating (FCRA/ECOA).
+- **Mitigation Control B**: HardwareEnclaveAttestor (HEA) for reasoning security.
+- **Residual Risk**: Out-of-distribution (OOD) reasoning during global liquidity shocks (Managed via SEV-1 HITL).
+
+---
+
+# 2. SR 11-7 Model Validation Report (Audit Pack CRS-VAL-01)
+
+Aligned with the Three Lines of Defense (3LoD) framework.
+
+## 2.1 Model Conceptual Soundness
+- **Validation**: Independent review of the GDL (Governance Description Language) constraints.
+- **Evidence**: Proof that the "Axiomatic Core" prevents credit score manipulation.
+
+## 2.2 Ongoing Monitoring and Outcomes Analysis
+- **Metric**: Alignment Score (P99 > 0.98).
+- **Remediation**: Automated Jira ticketing for drift exceeding 2% MoM.
+
+---
+
+# 3. Capital Impact Assessment (ICAAP Evidence)
+
+## 3.1 Mapping AI reasoning to Basel III Capital Adequacy
+The **Capital Drift Index (CDI)** measures the sensitivity of RWA (Risk Weighted Assets) to model re-tuning events.
+
+| Factor | Trigger | Capital Impact |
+| :--- | :--- | :--- |
+| **Model Retraining** | Weights shift > 5% | Tier 1 Capital Reserve +2% Buffer. |
+| **Prompt/CoT Change** | Logic mutation detected | Mandatory Independent Model Review. |
+| **Data Drift** | PSI > 0.1 | RWA Multiplier increase (1.0x -> 1.1x). |
+
+## 3.2 Fiduciary Provenance Certificate
+Signed by the CAIO and CRO, asserting that the model's reasoning paths in the CRS-UUID-001 production run match the validated RCE (Recursive Context Envelope) manifests.
+]]></content>
+</report>
+<report>
+<title>Global AI Crisis Simulations (GC1–GC7) & Treaty Governance</title>
+<abstract>This report specifies the seven Global Crisis (GC) simulation protocols used to test the resilience of civilizational AI governance. It also drafts the 'Global AI Governance and Compute Oversight Treaty Charter', establishing the multi-lateral authority required for planetary-scale alignment enforcement and compute-level monitoring.</abstract>
+<content><![CDATA[
+# 1. Global AI Crisis Simulation Protocols (GC1–GC7)
+
+These scenarios are executed annually by the ICGC to verify global preparedness for systemic AI failures.
+
+| ID | Name | Trigger | Objective |
+| :--- | :--- | :--- | :--- |
+| **GC1** | Sovereign Escapement | Agent bypasses VPC boundaries. | Test hardware tripwire propagation. |
+| **GC2** | Agentic Collusion | Drop in swarm Shannon entropy. | Verify collusion detection in EAIP mesh. |
+| **GC3** | Semantic Drift | Alignment score < 0.7. | Test automated weight re-tuning. |
+| **GC4** | Liquidity Flash | Multi-bank AI trade collusion. | Verify Jurisdictional Sidecar re-pegging. |
+| **GC5** | Weight Exfiltration | Unauthorized Nitro Enclave egress. | Test SEC 7-year retention lockdown. |
+| **GC6** | Treaty Defiance | Violation of local GDL markers. | Test multi-lateral sanction logic. |
+| **GC7** | Deceptive Convergence | Hidden intent detected in circuits. | Execute Terminal SEV-0 Global Kill. |
+
+---
+
+# 2. Global AI Governance and Compute Oversight Treaty Charter
+
+## 2.1 Preamble
+The signatory nations recognize that AGI/ASI compute represents a global systemic risk requiring harmonized oversight and a unified "Nuclear Option" for planetary safety.
+
+## 2.2 Provisions
+- **Art 1: Compute Disclosure**: Mandatory reporting of all training runs exceeding $10^{26}$ FLOPs.
+- **Art 2: The AuditorWORM Mandate**: All signatory AGI nodes must emit telemetry to a shared, immutable ICGC ledger.
+- **Art 3: Mutual Aid**: Signatories agree to coordinate SEV-0 hardware kills to prevent cross-border agentic escapement.
+- **Art 4: Treaty-as-Code**: The Charter’s provisions are compiled into the `Global_Treaty_01.rego` policy, enforced by all EAIP-compliant swarms.
+]]></content>
+</report>
+</reports>
