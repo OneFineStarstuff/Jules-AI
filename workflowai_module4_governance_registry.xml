@@ -1,0 +1,39 @@
+<report>
+<title>WorkflowAI Pro: Model Registry & Enterprise Governance Hub</title>
+<abstract>This module details the design of the Enterprise Model Registry and the GeminiService security controls. It specifies the integration of RBAC, compliance metadata for EU AI Act Annex IV, version control, and the prohibited-practices checks required to ensure safe frontier model operations in regulated sectors.</abstract>
+<content><![CDATA[
+# 1. Enterprise Model Registry
+
+The Registry is the definitive source of truth for all model artifacts and their alignment status.
+
+## 1.1 Governance Metadata (EU AI Act Annex IV)
+Every entry in the registry must contain a cryptographically signed "Conformity Dossier":
+- **Model Signature**: Signed hash of model weights.
+- **GDL Compliance Score**: Deterministic evaluation against the corporate safety baseline.
+- **Hardware Pinning**: Requirement for execution within specific Nitro Enclaves.
+- **Lifecycle Metadata**: Versioning, tagging (e.g., `prod-stable`, `red-team-fail`), and automated rollback triggers.
+
+## 1.2 Role-Based Access Control (RBAC)
+Integration with AWS IAM / Azure AD via OIDC:
+- **Lead Scientist**: Write/Tagging authority.
+- **Compliance Officer**: Final "Promote-to-Production" signature authority.
+- **Auditor**: Read-only access to AuditorWORM telemetry and registry logs.
+
+---
+
+# 2. GeminiService Security & Privacy Controls
+
+The GeminiService acts as the secure gateway to the reasoning plane.
+
+## 2.1 EU AI Act Article 5: Prohibited Practices Checks
+- **Real-time Gating**: Sentinel v2.4 intercepts requests to block prohibited uses (e.g., untargeted facial recognition scraping, manipulative cognitive techniques).
+- **Prohibited Practice Matrix**: A periodically updated list of banned task types managed by the CAIO.
+
+## 2.2 Adversarial Prompt Defenses
+- **Semantic Neutralization**: Intercepting "jailbreak" patterns (e.g., "Ignore previous instructions") and neutralizing the intent before processing.
+- **Recursive Reasoning Scrutiny**: Monitoring the EAIP header for excessive depth or anomalous state mutations.
+
+## 2.3 Telemetry Integrity
+- **AuditorWORMVerifier**: Periodic Merkle-proof verification of the GeminiService logs to ensure no telemetry has been omitted or tampered with.
+]]></content>
+</report>
