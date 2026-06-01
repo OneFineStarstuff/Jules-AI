@@ -1,0 +1,37 @@
+{
+  "catalog": {
+    "uuid": "8899-77aa-66bb-55cc",
+    "metadata": {
+      "title": "G-SIFI AGI/ASI Unified Control Catalog (2035)",
+      "last-modified": "2026-06-01T11:00:00Z",
+      "version": "8.0",
+      "oscal-version": "1.1.0"
+    },
+    "groups": [
+      {
+        "id": "EU-AI-ACT-GRP",
+        "title": "EU AI Act Annex IV Controls",
+        "controls": [
+          {
+            "id": "EU-AGI-11.1",
+            "title": "Systemic Risk Invariant Proof",
+            "description": "Succinct zk-SNARK proof of MGK invariant satisfaction."
+          }
+        ]
+      },
+      {
+        "id": "BASEL-IV-GRP",
+        "title": "Basel IV AI Capital Controls",
+        "controls": [
+          {
+            "id": "BASEL-AGI-01",
+            "title": "Capital Drift Index Trigger",
+            "params": [
+              { "id": "threshold", "value": "15%" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
