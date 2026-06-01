@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIFISupervisionReport version="4.0" institution="GLOBAL-BANK-PLC" classification="STRICTLY-CONFIDENTIAL">
+    <Metadata>
+        <ReportID>RSP-2030-GSIFI-001</ReportID>
+        <Timestamp>2026-06-01T07:00:00Z</Timestamp>
+        <PQC_Signature algorithm="ML-DSA-87">0x8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b</PQC_Signature>
+        <QKD_SessionID>QKD-LONDON-HK-7788</QKD_SessionID>
+    </Metadata>
+
+    <CryptographicAssurance>
+        <CAS_SPP_Proof type="zk-SNARK">
+            <CircuitID>CIRCUIT-EPISTEMIC-ALIGNMENT-v4</CircuitID>
+            <ProofHash>0xdeadbeef12345678</ProofHash>
+            <VerificationStatus>VERIFIED_BY_ARRE</VerificationStatus>
+        </CAS_SPP_Proof>
+        <WORM_AuditIntegrity>
+            <MerkleRoot>0x1234567890abcdef</MerkleRoot>
+            <RetentionStatus mode="COMPLIANCE">7_YEARS</RetentionStatus>
+        </WORM_AuditIntegrity>
+    </CryptographicAssurance>
+
+    <ContainmentStatus>
+        <MGK_Kernel state="ENFORCING">
+            <TLA_Verified>true</TLA_Verified>
+            <EscapementAlerts>0</GIEN_GlobalAlerts>
+        </MGK_Kernel>
+        <KillSwitch state="ARMED" hardware="IRMI-v2.1" />
+    </ContainmentStatus>
+
+    <SystemicRiskMetrics>
+        <CDI_CapitalDrift>0.038</CDI_CapitalDrift>
+        <ICGC_ComputeQuota usage="0.82" quota="1.0" unit="ZETTAFLOPS" />
+        <ResonanceScore>0.9992</ResonanceScore>
+    </SystemicRiskMetrics>
+
+    <AlignmentVerification>
+        <EpistemicVerifier result="PASSED" delta="0.041" />
+        <DisparateImpactRatio result="COMPLIANT" value="0.985" />
+    </AlignmentVerification>
+
+    <SupervisoryAction>
+        <AuditGatewayURL>https://audit.global-bank.plc/sgql/v4</AuditGatewayURL>
+        <RegulatoryQueryLayer mode="SGQL_STREAMING" />
+    </SupervisoryAction>
+</GSIFISupervisionReport>
