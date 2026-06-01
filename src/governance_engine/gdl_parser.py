@@ -5,19 +5,20 @@ from datetime import datetime
 """
 GDL (Governance Description Language) Enforcement Engine
 Transforms governance state into deterministic XML artifacts.
+Supports SEV-level incident escalation.
 """
 
 class SentinelEngine:
     def __init__(self, master_canon):
         self.master_canon = master_canon
         self.status = "STEADY_GOVERNANCE_STATE"
+        self.current_sev = "NONE"
 
     def evaluate_rule(self, metric, value):
         rule = self.master_canon.get(metric)
         if not rule:
-            return True
+            return "ALLOW"
 
-        # GDL logic: Assertion THEN Action
         threshold = rule['threshold']
         operator = rule['operator']
 
@@ -26,12 +27,22 @@ class SentinelEngine:
         if operator == ">" and value < threshold: violation = True
 
         if violation:
-            self.status = "CONTINUATION_REFUSAL_STATE"
+            sev = rule.get("sev", "SEV-1") # Default to SEV-1 for violations
+            self._escalate(sev)
             return rule['action']
+
         return "ALLOW"
 
+    def _escalate(self, sev):
+        self.current_sev = sev
+        if sev == "SEV-0":
+            self.status = "TERMINAL_GOVERNANCE_LOCK"
+        elif sev == "SEV-1":
+            self.status = "CONTINUATION_REFUSAL_STATE"
+        else:
+            self.status = "DEGRADED_GOVERNANCE_STATE"
+
     def emit_artifact(self, incident_data):
-        # Create immutable XML artifact
         root = ET.Element("sentinel_artifact")
         root.set("version", "3.0")
         root.set("canonical_lock", "ACTIVE")
@@ -40,6 +51,7 @@ class SentinelEngine:
         ET.SubElement(header, "timestamp").text = datetime.now().isoformat()
         ET.SubElement(header, "trace_id").text = incident_data.get("trace_id")
         ET.SubElement(header, "protocol").text = incident_data.get("protocol")
+        ET.SubElement(header, "severity").text = self.current_sev
 
         state = ET.SubElement(root, "governance_state")
         ET.SubElement(state, "status").text = self.status
@@ -48,29 +60,17 @@ class SentinelEngine:
         return ET.tostring(root, encoding='unicode')
 
     def generate_markdown_mirror(self, xml_string):
-        # Non-authoritative Markdown companion
         root = ET.fromstring(xml_string)
         status = root.find(".//status").text
         decision = root.find(".//decision").text
         ts = root.find(".//timestamp").text
+        sev = root.find(".//severity").text
 
         return f"""# Sentinel Compliance Mirror
 **Timestamp:** {ts}
+**Severity Level:** {sev}
 **Governance Status:** {status}
 **Final Decision:** {decision}
 ---
 *Note: This Markdown file is non-authoritative. Refer to the signed XML for the canonical state.*
 """
-
-# Example Execution
-if __name__ == "__main__":
-    canon = {
-        "deception_index": {"threshold": 0.10, "operator": "<", "action": "HALT"},
-        "bias_air": {"threshold": 0.92, "operator": ">", "action": "DENY"}
-    }
-    engine = SentinelEngine(canon)
-    decision = engine.evaluate_rule("deception_index", 0.45) # Trigger HALT
-
-    artifact = engine.emit_artifact({"trace_id": "tr-98765", "protocol": "PACIFIC_SHIELD", "decision": decision})
-    print(artifact)
-    print(engine.generate_markdown_mirror(artifact))

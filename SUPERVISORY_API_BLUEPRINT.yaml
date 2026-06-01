@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Sovereign AGI Supervisory API
+  version: 1.0.0
+  description: High-fidelity gRPC/REST interface for regulatory oversight and forensic replay.
+
+paths:
+  /supervisory/decision/{uuid}/replay:
+    get:
+      summary: Deterministic Decision Replay
+      description: Retrieves the exact reasoning path, policy context, and evidence integrity hash for a specific decision.
+      parameters:
+        - name: uuid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Signed Evidence Manifest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EvidenceManifest'
+
+  /supervisory/telemetry/kpis:
+    get:
+      summary: Real-time Governance KPIs
+      responses:
+        '200':
+          description: Current alignment and stability metrics.
+
+  /supervisory/control/kill-switch:
+    post:
+      summary: Manual IRMI Trigger
+      description: Allows authorized supervisors to manually trigger the hardware kill-switch.
+      security:
+        - MultiSigAuth: []
+
+components:
+  schemas:
+    EvidenceManifest:
+      type: object
+      properties:
+        uuid: { type: string }
+        timestamp: { type: string, format: date-time }
+        model_hash: { type: string }
+        policy_version: { type: string }
+        reasoning_trace: { type: string }
+        evidence_integrity_hash: { type: string }
