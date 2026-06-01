@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConformityDossier version="3.0" standard="EU-AI-ACT-ART-11" institution="GLOBAL-BANK-PLC">
+<ConformityDossier version="3.1" standard="EU-AI-ACT-ART-11" institution="GLOBAL-BANK-PLC">
     <Metadata>
         <ThirdPartyAttestation>PRE-ASSESSMENT_PENDING</ThirdPartyAttestation>
         <AuditBody>CERT-BODY-GSIFI-2030</AuditBody>
@@ -7,6 +7,7 @@
         <Timestamp>2026-06-01T06:20:00Z</Timestamp>
         <ComplianceStandard>ISO/IEC 42001:2023</ComplianceStandard>
         <AccountablePerson role="CAIO">Dr. Jules AGI</AccountablePerson>
+        <RegulatoryAlignment>EU-AI-ACT, NIST-RMF, NIS2, OECD</RegulatoryAlignment>
     </Metadata>
 
     <ModelRegistry>
@@ -15,13 +16,15 @@
             <Signature>ML-DSA-PQC-SIGNATURE-778899</Signature>
             <FLOPs>1.2e24</FLOPs>
             <AlignmentCore>AXIOMATIC-HUMAN-SUPREMACY-v1</AlignmentCore>
+            <OECDAlignment principle="Accountability">VERIFIED</OECDAlignment>
         </Model>
     </ModelRegistry>
 
     <GovernanceStack>
         <ImmuneSystem image="sentinel-sidecar:v2.4" />
         <NervousSystem protocol="EAIP-v3.0" identity="SPIFFE-X509" />
-        <Foundation cloud="AWS-NITRO" logging="KAFKA-WORM" />
+        <Foundation cloud="AWS-NITRO" logging="KAFKA-WORM" encryption="ML-KEM-PQC" />
+        <ResiliencyStandard name="NIS2" status="CERTIFIED" />
     </GovernanceStack>
 
     <PolicyAudit>
@@ -32,11 +35,13 @@
             </Policy>
         </ActivePolicies>
         <DisparateImpactRatio target="0.8-1.25" current="0.982" status="COMPLIANT" />
+        <CDI_Attestation drift="0.042" capital_buffer="+0.0%" />
     </PolicyAudit>
 
     <SafetyEvidence>
         <RedTeamingPass standard="RED-TEAM-001" timestamp="2026-05-15T09:00:00Z" />
         <CognitiveResonanceMonitor status="ACTIVE" drift="0.002" />
         <KillSwitchStatus state="ARMED" hardware="IRMI-v2" />
+        <VulnerabilityReporting standard="NIS2" endpoint="https://soc.global-bank.plc/agi/vulns" />
     </SafetyEvidence>
 </ConformityDossier>
