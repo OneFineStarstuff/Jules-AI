@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  sentinel-governance-sidecar:
+    image: institutional/sentinel-sidecar:v2.4
+    networks:
+      - governance_mesh
+    deploy:
+      mode: global
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+    secrets:
+      - spi_svid_cert
+      - audit_kms_key
+    environment:
+      - LOG_RETENTION_YEARS=7
+      - COMPLIANCE_MODE=ISO_42001
+      - ENCLAVE_TYPE=nitro
+      - NODE_ENV=production # Disables simulation mode
+
+  auditor-worm-verifier:
+    image: institutional/auditor-worm:v1.0
+    networks:
+      - governance_mesh
+    volumes:
+      - audit_data:/var/lib/audit/worm:ro
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+networks:
+  governance_mesh:
+    driver: overlay
+    attachable: false # Prevents dynamic attachment of unauthorized containers
+    internal: true
+    driver_opts:
+      com.docker.network.driver.mtu: 1500
+      com.docker.network.overlay.vxlanid_list: "4097"
+      encryption: "true" # Mandatory VXLAN encryption for air-gapped mesh
+
+secrets:
+  spi_svid_cert:
+    external: true
+  audit_kms_key:
+    external: true
+
+volumes:
+  audit_data:
+    driver: local
