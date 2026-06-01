@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: G-SIFI AGI Regulator Audit Gateway
+  description: API for real-time supervisory ingestion of zk-SNARK proofs and OSCAL evidence.
+  version: 4.5.0
+servers:
+  - url: https://audit.global-bank.plc/v4
+paths:
+  /proofs/submit:
+    post:
+      summary: Ingest succinct compliance proof
+      description: Allows institutional Sentinel sidecars to commit CAS-SPP v2.0 proofs.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProofManifest'
+      responses:
+        '202':
+          description: Proof received and queued for batch verification.
+  /telemetry/sgql:
+    post:
+      summary: R-SGQL Subscription Endpoint
+      description: Streaming telemetry for planetary homeostasis triggers (ICGC/GASC).
+      responses:
+        '200':
+          description: sGQL Stream Established.
+  /dossier/generate:
+    get:
+      summary: Request real-time Conformity Dossier
+      description: Triggers the ARRE engine to synthesize Annex IV XML from Kafka WORM logs.
+      responses:
+        '200':
+          description: Dossier Assembly Triggered.
+
+components:
+  schemas:
+    ProofManifest:
+      type: object
+      required: [traceId, proof, merkleRoot]
+      properties:
+        traceId:
+          type: string
+          format: uuid
+        proof:
+          type: string
+          description: Base64 encoded Groth16/PlonK proof.
+        merkleRoot:
+          type: string
+          description: Root of the turn's Recursive Context Envelope.
+        resonanceScore:
+          type: number
+        jurisdiction:
+          type: string
+          enum: [EU, US, APAC, GLOBAL]

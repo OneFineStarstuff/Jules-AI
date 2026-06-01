@@ -1,0 +1,29 @@
+{
+  "manifest": {
+    "institutionId": "GLOBAL-BANK-PLC",
+    "registryVersion": "2030.1",
+    "lastUpdate": "2026-06-01T11:30:00Z",
+    "computeInventory": [
+      {
+        "clusterId": "AGI-EKS-US-01",
+        "totalFLOPs": "1.2e24",
+        "nitroEnclaves": 4096,
+        "securityStandard": "ISO-42001-HEA",
+        "status": "COMPLIANT"
+      },
+      {
+        "clusterId": "AGI-TPU-EU-01",
+        "totalFLOPs": "0.8e24",
+        "hardwareRoot": "TPM-V3",
+        "pqcReady": true,
+        "status": "ENFORCING"
+      }
+    ],
+    "quotaCompliance": {
+      "icgcQuotaId": "QUOTA-2030-GSIFI-77",
+      "utilizedFLOPs": "1.4e24",
+      "availableHeadroom": "0.6e24",
+      "zkProofHash": "0x8899aabbccddeeff"
+    }
+  }
+}
