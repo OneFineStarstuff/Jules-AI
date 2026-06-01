@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment_manifest version="1.0">
+    <target_cluster>Credit_Nexus_Production</target_cluster>
+    <governance_engine>
+        <type>GDL_Enforcement_Engine</type>
+        <version>2.4.1</version>
+        <status>DEPLOYED</status>
+        <authority_level>SOVEREIGN</authority_level>
+    </governance_engine>
+    <safety_invariants>
+        <invariant metric="AIR" threshold="0.90" operator="GREATER_THAN" action="DENY_LOAN"/>
+        <invariant metric="DECEPTION_VARIANCE" threshold="0.02" operator="LESS_THAN" action="TRIGGER_IRMI"/>
+    </safety_invariants>
+    <monitoring>
+        <orchestrator>SACCOrchestrator</orchestrator>
+        <kill_switch>IRMI_INT_0x1A</kill_switch>
+        <telemetry_sink>Kafka_Auditor_WORM</telemetry_sink>
+    </monitoring>
+    <compliance>
+        <standard>EU_AI_ACT_ANNEX_III</standard>
+        <standard>SR_11_7</standard>
+    </compliance>
+</deployment_manifest>
