@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "lexai": "https://lexai.org/ns/governance#",
+    "policy": "lexai:Policy",
+    "constraint": "lexai:Constraint",
+    "enforcement": "lexai:EnforcementAction"
+  },
+  "@graph": [
+    {
+      "@id": "policy:EU-AI-ACT-ART-11",
+      "type": "policy",
+      "label": "Technical Documentation Integrity",
+      "lexai:appliesTo": "High-Risk AI Systems",
+      "lexai:constraints": [
+        {
+          "type": "constraint",
+          "label": "Audit Log Retention",
+          "lexai:value": "7 Years",
+          "lexai:storageType": "WORM"
+        }
+      ]
+    },
+    {
+      "@id": "policy:SR-11-7-VALIDATION",
+      "type": "policy",
+      "label": "G-SIFI Model Validation",
+      "lexai:appliesTo": "Tier 1 Critical Models",
+      "lexai:enforcement": {
+        "type": "enforcement",
+        "action": "SUSPEND_INFERENCE",
+        "condition": "CDI_SHIFT > 15%"
+      }
+    }
+  ]
+}
