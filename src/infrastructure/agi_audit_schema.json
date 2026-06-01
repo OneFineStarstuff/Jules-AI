@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "G-SIFI AGI Audit Metadata Schema",
+  "type": "object",
+  "properties": {
+    "traceId": { "type": "string", "format": "uuid" },
+    "merkleRoot": { "type": "string" },
+    "modelHash": { "type": "string" },
+    "rceDrift": { "type": "number" },
+    "resonanceScore": { "type": "number" },
+    "heaAttestation": { "type": "string" },
+    "jurisdiction": { "enum": ["EU", "US", "APAC", "GLOBAL"] },
+    "severity": { "enum": ["SEV-0", "SEV-1", "SEV-2", "SEV-3"] }
+  },
+  "required": ["traceId", "merkleRoot", "modelHash", "heaAttestation"]
+}

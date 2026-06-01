@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGI_ConformityDossier version="5.0" standard="EU-AI-ACT-ANNEX-IV" classification="G-SIFI-RESTRICTED">
+    <InstitutionalMetadata>
+        <InstitutionID>GLOBAL-BANK-PLC</InstitutionID>
+        <CAIO_Name>Dr. Jules AGI</CAIO_Name>
+        <AuditTimestamp>2026-06-01T08:00:00Z</AuditTimestamp>
+        <ComplianceStatus>FULLY_COMPLIANT</ComplianceStatus>
+    </InstitutionalMetadata>
+
+    <TechnicalDocumentation>
+        <ReasoningKernel id="crs-uuid-001">
+            <Version>v2.4.5</Version>
+            <ModelWeightsHash>sha256:7f8e9a0b1c2d3e4f5a6b7c8d9e0f1a2b</ModelWeightsHash>
+            <AlignmentCore>AXIOMATIC-HUMAN-SUPREMACY-v3</AlignmentCore>
+            <TrainingFLOPs>1.4e24</TrainingFLOPs>
+        </ReasoningKernel>
+
+        <Architecture>
+            <EnclaveType>AWS-NITRO-TEE</EnclaveType>
+            <AuditLogging>KAFKA-WORM-S3-OBJECT-LOCK</AuditLogging>
+            <SecurityProtocol>PQC-ML-KEM-1024</SecurityProtocol>
+        </Architecture>
+    </TechnicalDocumentation>
+
+    <RiskManagementEvidence>
+        <CDI_Attestation>
+            <CurrentDriftValue>0.038</CurrentDriftValue>
+            <BaselIV_Status>BUFFER_NOMINAL</BaselIV_Status>
+        </CDI_Attestation>
+        <RedTeamReportID>RT-2030-GSIFI-77</RedTeamReportID>
+        <KillSwitchStatus state="ARMED" trigger="IRMI-INT-0x1A" />
+    </RiskManagementEvidence>
+
+    <SupervisoryInteroperability>
+        <EAIP_Version>v3.0</EAIP_Version>
+        <SGQL_Gateway>https://supervisory.global-bank.plc/r-sgql/v5</SGQL_Gateway>
+        <CAS_SPP_ProofID>CAS-ZK-9988-ABC</CAS_SPP_ProofID>
+    </SupervisoryInteroperability>
+</AGI_ConformityDossier>
