@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalSupervisoryManifest version="7.0" institution="GLOBAL-BANK-PLC" doctrine="DYNAMIC-LEGITIMACY">
+    <Metadata>
+        <ReportID>RSP-2030-ULT-001</ReportID>
+        <AuditWindow start="2026-06-01T00:00:00Z" end="2030-12-31T23:59:59Z" />
+        <PQC_Signature algorithm="ML-DSA-87">0x8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b</PQC_Signature>
+        <AccountableOfficer role="CAIO">Dr. Jules AGI</AccountableOfficer>
+    </Metadata>
+
+    <GStackConformity>
+        <ProtocolLayer id="GAIRDS" status="ACTIVE" result="99.8_STRESS_RESILIENCE" />
+        <ProtocolLayer id="GRI" status="SYNCED" peerCount="14" />
+        <ProtocolLayer id="CEE" status="ISOLATED" enclave="NITRO-TEE-GSIFI-01" />
+        <ProtocolLayer id="NSNs" status="ENFORCING" driftThreshold="0.15" />
+        <ProtocolLayer id="MetaEndgame" status="READY" stewardship="PLANETARY_HOMEOSTASIS" />
+    </GStackConformity>
+
+    <FormalAssurance>
+        <UMIF_TLA_Proof status="VERIFIED" kernelHash="sha256:d8e8f8..." />
+        <Coq_FunctionalCorrectness status="QED" target="IRMI-HARD-KILL" />
+        <CAS_SPP_ProofBundle count="1024" type="zk-SNARK" verifierKey="CRYPTO-PUB-KEY-PRA-2030" />
+    </FormalAssurance>
+
+    <SystemicStability>
+        <CDI_CurrentValue>0.041</CDI_CurrentValue>
+        <GlobalDriftSync status="STABLE" gossipMesh="GIEN-v3.0" />
+        <ICGC_QuotaUsage value="0.824" unit="PLANETARY_RATIO" />
+    </SystemicStability>
+
+    <JurisdictionalCompliance>
+        <ComplianceNode region="EU-WEST-1" standard="EU-AI-ACT-ANNEX-IV" result="PASSED" />
+        <ComplianceNode region="US-EAST-1" standard="NIST-AI-600-1" result="PASSED" />
+        <ComplianceNode region="AP-SOUTHEAST-1" standard="MAS-FEAT" result="PASSED" />
+    </JurisdictionalCompliance>
+
+    <LegitimacySignature>
+        <Attestation id="DYNAMIC-LEGITIMACY-SIG" timestamp="2026-06-01T10:00:00Z" />
+        <HardwareRoot state="ARMED" hardwareID="TPM-GSIFI-ROOT-001" />
+    </LegitimacySignature>
+</GlobalSupervisoryManifest>
