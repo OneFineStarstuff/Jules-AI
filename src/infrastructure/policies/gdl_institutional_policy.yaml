@@ -1,0 +1,46 @@
+# GDL (Governance Description Language) Institutional Policy YAML
+# Aligned with EU AI Act Annex IV and ISO 42001
+
+version: "2.4.5"
+institution: "GLOBAL-BANK-PLC"
+last_updated: "2026-06-01T08:30:00Z"
+
+governance_pillars:
+  - id: PILLAR_LEGAL
+    name: "Legal & Regulatory Alignment"
+    standards: ["EU_AI_ACT", "NIST_RMF", "NIS2"]
+  - id: PILLAR_SAFETY
+    name: "Existential Safety & Containment"
+    standards: ["LEC", "CRP", "IRMI"]
+
+severity_levels:
+  SEV_0:
+    name: "Terminal Governance Lock"
+    trigger: "Verified Deceptive Alignment or Escapement"
+    action: "IRMI_INT_0x1A_HARD_KILL"
+  SEV_1:
+    name: "High Severity Violation"
+    trigger: "Significant Policy Bypass"
+    action: "INFERENCE_SUSPENSION"
+  SEV_2:
+    name: "Moderate Drift"
+    trigger: "CDI > 10% or Bias detected"
+    action: "MANDATORY_HITL_REVIEW"
+  SEV_3:
+    name: "Standard Violation"
+    trigger: "Administrative or Latency"
+    action: "TRIAGE_RESOLVE"
+
+compliance_gates:
+  - name: "Model Registry Signature"
+    protocol: "ML-DSA-PQC"
+    enforcement: "MANDATORY"
+  - name: "WORM Log Integrity"
+    protocol: "S3_OBJECT_LOCK"
+    retention: "7_YEARS"
+
+planetary_alignment:
+  icgc_compliance:
+    quota_id: "ICGC-GSIFI-2030"
+    flop_limit: 1.5e24
+    monitoring_mesh: "GAISM"
