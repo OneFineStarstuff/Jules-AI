@@ -1,0 +1,51 @@
+{
+  "catalog": {
+    "uuid": "778899-abc-def-123",
+    "metadata": {
+      "title": "G-SIFI AGI Compliance Catalog (OSCAL v1.1.0)",
+      "last-modified": "2026-06-01T10:00:00Z",
+      "version": "v1.1",
+      "oscal-version": "1.1.0"
+    },
+    "groups": [
+      {
+        "id": "GRP-AGI-SAFETY",
+        "title": "AGI Safety & Containment",
+        "controls": [
+          {
+            "id": "AC-1",
+            "title": "Hardware Kill-Switch (IRMI)",
+            "params": [
+              { "id": "p-1", "value": "INT_0x1A" }
+            ]
+          },
+          {
+            "id": "AC-2",
+            "title": "Epistemic Alignment tripwire",
+            "params": [
+              { "id": "p-2", "value": "15.2%" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GRP-CRYPTO-AUDIT",
+        "title": "Cryptographic Audit & PQC",
+        "controls": [
+          {
+            "id": "CA-1",
+            "title": "zk-SNARK CAS-SPP Proofs",
+            "status": "ENFORCED"
+          },
+          {
+            "id": "CA-2",
+            "title": "PQC WORM Audit Trails",
+            "params": [
+              { "id": "algo", "value": "ML-DSA-87" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
