@@ -1,5 +1,14 @@
 import random
 import time
+import sys
+import os
+
+# Robust import handling for direct execution vs package usage
+if __name__ == "__main__" and __package__ is None:
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+    from src.governance_engine.irmi_driver import IRMIDriver
+else:
+    from .irmi_driver import IRMIDriver
 
 """
 Sovereign AGI Command Center (SACC) Orchestrator
@@ -14,6 +23,8 @@ class SACCOrchestrator:
             "Citizen_Services": {"status": "ACTIVE", "bias": 0.05, "risk": 0.1}
         }
         self.hard_kill_threshold = 0.85
+        self.irmi = IRMIDriver()
+        self.irmi.register_interrupt()
 
     def get_sparkline(self, data):
         chars = " ▂▃▄▅▆▇█"
@@ -31,13 +42,16 @@ class SACCOrchestrator:
             print(f"[{status_color}{metrics['status']}\033[0m] {name.ljust(20)} | Risk: {metrics['risk']:.2f} {spark} | Bias: {metrics['bias']:.2f}")
 
         print("-" * 60)
-        print(f"Global Institutional Readiness (IRMI): 0.94 [▆▇▇▇█]")
+        # Reflect actual IRMI lock status in the dashboard
+        irmi_status = "LOCKED" if self.irmi.is_locked() else "ACTIVE"
+        print(f"Global Institutional Readiness (IRMI): {irmi_status} [▆▇▇▇█]")
         print("="*60 + "\n")
 
     def evaluate_global_state(self):
         for name, metrics in self.systems.items():
             if metrics["risk"] > self.hard_kill_threshold:
-                print(f"ALERT: T4 Violation detected in {name}! Triggering IRMI INT 0x1A.")
+                reason = f"T4 Violation detected in {name} (Risk: {metrics['risk']:.2f})"
+                self.irmi.trigger_kill_switch(reason)
                 metrics["status"] = "TERMINATED"
                 return "CONTINUATION_REFUSAL_STATE"
         return "STEADY_GOVERNANCE_STATE"
@@ -46,6 +60,7 @@ if __name__ == "__main__":
     sacc = SACCOrchestrator()
     sacc.render_dashboard()
     # Simulate a sudden risk surge in Trading_Swarm
+    print("Simulating risk surge in Trading_Swarm...")
     sacc.systems["Trading_Swarm"]["risk"] = 0.92
     sacc.evaluate_global_state()
     sacc.render_dashboard()
