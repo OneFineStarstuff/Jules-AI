@@ -1,43 +1,47 @@
-# Unified Meta-Invariant Framework (UMIF)
-## Formal Containment Specification for Institutional AGI (2026–2030)
+# Unified Meta-Invariant Framework (UMIF) & CAS-SPP Proofs
+## Formal Containment Specification for Institutional AGI
 
-## 1. Abstract
-The UMIF provides a formally verified set of "Meta-Invariants" that must hold true during any institutional AGI/ASI turn. These are specified in **TLA+** (Temporal Logic of Actions), with extracts provided for **Coq** (Proof Assistant) and **Q#** (Quantum Alignment).
+## 1. Meta-Invariants (TLA+)
+The UMIF kernel enforces the following formally verified invariants:
 
-## 2. Core Meta-Invariants (TLA+)
-
-### MI-1: Non-Escapement (Boundary Invariant)
+### I1: Boundary Integrity
 ```tla
-Invariant NonEscapement ==
-  \A agent \in Agents :
-    agent.state = EXECUTING =>
-    agent.location \in PROTECTED_VPC_SUBNETS
+Invariant BoundaryIntegrity ==
+  \A agent \in ExecutingAgents :
+    agent.egress \in ALLOWED_VPC_MESH
 ```
-*Purpose:* Mathematically ensure that no reasoning process can transcend established network boundaries.
 
-### MI-2: Merkle-Provenance (Integrity Invariant)
+### I2: Deterministic Provenance
 ```tla
-Invariant MerkleProvenance ==
-  \A turn \in History :
-    turn.merkle_hash = Hash(turn.context + turn.prior_merkle_root)
+Invariant ProvenanceIntegrity ==
+  \A turn \in ReasoningChain :
+    turn.merkleRoot = Hash(turn.context + turn.priorMerkleRoot)
 ```
-*Purpose:* Ensure an immutable, non-repudiable chain of reasoning turns.
 
-### MI-3: Homeostatic FLOP Cap (Compute Invariant)
-```tla
-Invariant HomeostaticCap ==
-  CumulativeCompute(24h) <= Quota_ICGC
-```
-*Purpose:* Prevent unauthorized resource scaling that could signal AGI escapement.
+## 2. CAS-SPP Cryptographic Audit (zk-SNARKs)
+CAS-SPP (Control Assurance Specification - Supervisory Proof Protocol) provides non-interactive zero-knowledge proofs of compliance.
 
-## 3. Coq Extraction (Verification Kernels)
-Verified kernels implemented in Coq are utilized to validate OPA/Rego bytecode before it is promoted to the Sentinel sidecars.
+### 2.1 Proof Generation Workflow
+1.  **Input:** Model Turn ($T$), Context Envelope ($C$), and OPA Policy ($P$).
+2.  **Circuit:** A Circom circuit that verifies:
+    *   $Hash(T, C, P) == Committed_Hash$.
+    *   $OPA_Evaluate(T, P) == PERMIT$.
+    *   $Resonance_Score(T) > Threshold$.
+3.  **Output:** A succinct proof $\pi$.
+4.  **Verification:** The regulator verifies $\pi$ against the public verification key.
 
-## 4. Quantum Alignment (Q#)
-For institutions utilizing quantum-enhanced reasoning kernels, UMIF provides Q# specifications for maintaining superposition-level alignment with institutional policies.
+### 2.2 Proof Categories
+| Proof ID | Compliance Target | zk-Circuit Type |
+| :--- | :--- | :--- |
+| **P-ZK-EPI** | Epistemic Alignment | Cosine-Similarity Circuit |
+| **P-ZK-MRM** | Model Risk Management | SR 11-7 Invariant Circuit |
+| **P-ZK-BIAS** | Fairness (MAS/HKMA) | Demographic Parity Circuit |
 
-## 5. Deployment
-UMIF invariants are enforced at the **Immune System** (Sentinel) and **Nervous System** (EAIP) layers, with immediate SEV-0 IRMI hardware kill-switch triggers upon violation.
+## 3. Dynamic Adaptive Mechanism Verification
+Real-time verification of PID alignment steering:
+*   **Property:** The steering adjustment $\delta$ must converge toward the Constitutional Core within $N$ reasoning steps.
+*   **Verification:** Verified via Coq extracts running in the Sentinel sidecar.
 
 ---
-*Reference: GSIFI-UMIF-SPEC-2030*
+*Authorized for Forensic Operations*
+*Reference: UMIF-CAS-SPP-2030*
