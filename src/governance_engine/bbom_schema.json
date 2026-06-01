@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "G-SIFI AGI Behavioral Bill of Materials (BBOM)",
+  "type": "object",
+  "properties": {
+    "modelIdentifier": { "type": "string" },
+    "axiomaticCoreHash": { "type": "string" },
+    "epistemicBounds": {
+      "type": "object",
+      "properties": {
+        "minResonance": { "type": "number", "minimum": 0.9 },
+        "maxDrift": { "type": "number", "maximum": 0.15 }
+      }
+    },
+    "containmentProtocols": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["IRMI_INT_0x1A", "BGP_WITHDRAWAL", "ENCLAVE_TERMINATION"] }
+    },
+    "systemicRiskFactors": {
+      "type": "object",
+      "properties": {
+        "liquidityImpact": { "type": "number" },
+        "collusionProbability": { "type": "number" }
+      }
+    }
+  },
+  "required": ["modelIdentifier", "axiomaticCoreHash", "epistemicBounds"]
+}
