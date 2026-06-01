@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConformityDossier version="3.0" standard="EU-AI-ACT-ART-11" institution="GLOBAL-BANK-PLC">
+    <Metadata>
+        <ThirdPartyAttestation>PRE-ASSESSMENT_PENDING</ThirdPartyAttestation>
+        <AuditBody>CERT-BODY-GSIFI-2030</AuditBody>
+        <ReportID>RSP-2030-Q4-001</ReportID>
+        <Timestamp>2026-06-01T06:20:00Z</Timestamp>
+        <ComplianceStandard>ISO/IEC 42001:2023</ComplianceStandard>
+        <AccountablePerson role="CAIO">Dr. Jules AGI</AccountablePerson>
+    </Metadata>
+
+    <ModelRegistry>
+        <Model id="crs-uuid-001">
+            <Version>v2.4.1</Version>
+            <Signature>ML-DSA-PQC-SIGNATURE-778899</Signature>
+            <FLOPs>1.2e24</FLOPs>
+            <AlignmentCore>AXIOMATIC-HUMAN-SUPREMACY-v1</AlignmentCore>
+        </Model>
+    </ModelRegistry>
+
+    <GovernanceStack>
+        <ImmuneSystem image="sentinel-sidecar:v2.4" />
+        <NervousSystem protocol="EAIP-v3.0" identity="SPIFFE-X509" />
+        <Foundation cloud="AWS-NITRO" logging="KAFKA-WORM" />
+    </GovernanceStack>
+
+    <PolicyAudit>
+        <ActivePolicies>
+            <Policy id="OPA-CREDIT-RISK-v1">
+                <Hash>sha256:d8e8f8g8h8i8j8k8l8m8n8o8p8q8r8s8</Hash>
+                <Scope>G-SIFI-TIER1-CREDIT</Scope>
+            </Policy>
+        </ActivePolicies>
+        <DisparateImpactRatio target="0.8-1.25" current="0.982" status="COMPLIANT" />
+    </PolicyAudit>
+
+    <SafetyEvidence>
+        <RedTeamingPass standard="RED-TEAM-001" timestamp="2026-05-15T09:00:00Z" />
+        <CognitiveResonanceMonitor status="ACTIVE" drift="0.002" />
+        <KillSwitchStatus state="ARMED" hardware="IRMI-v2" />
+    </SafetyEvidence>
+</ConformityDossier>

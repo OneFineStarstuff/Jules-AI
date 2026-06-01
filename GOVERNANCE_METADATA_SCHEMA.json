@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Institutional AGI Governance Metadata",
+  "type": "object",
+  "properties": {
+    "traceId": { "type": "string", "format": "uuid" },
+    "modelId": { "type": "string" },
+    "modelVersion": { "type": "string" },
+    "policyHash": { "type": "string" },
+    "decision": { "enum": ["PERMIT", "DENY", "ESCALATE"] },
+    "severity": { "enum": ["SEV-0", "SEV-1", "SEV-2", "SEV-3"] },
+    "complianceArtifacts": {
+      "type": "object",
+      "properties": {
+        "merkleRoot": { "type": "string" },
+        "countersignature": { "type": "string" },
+        "heaAttestation": { "type": "string" }
+      }
+    }
+  },
+  "required": ["traceId", "modelId", "policyHash", "decision"]
+}
