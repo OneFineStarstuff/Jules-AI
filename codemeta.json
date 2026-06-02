@@ -1,0 +1,39 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Sovereign AI Governance Suite",
+  "description": "High-assurance specification and implementation suite for AGI governance.",
+  "version": "5.1.0",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Apex",
+      "familyName": "Jules",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Sovereign AI Governance Authority"
+      }
+    }
+  ],
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/OneFineStarstuff/Jules",
+  "developmentStatus": "active",
+  "keywords": [
+    "AGI",
+    "Governance",
+    "Safety",
+    "zk-SNARK",
+    "Formal Verification"
+  ],
+  "programmingLanguage": [
+    "Python",
+    "JavaScript",
+    "TLA+",
+    "Circom"
+  ],
+  "runtimePlatform": [
+    "Docker Swarm",
+    "Kubernetes",
+    "AWS Nitro Enclaves"
+  ]
+}
