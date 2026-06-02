@@ -1,0 +1,21 @@
+{
+  "title": "Sovereign AI Governance Suite",
+  "description": "High-assurance specification and implementation suite for enterprise and civilizational-scale AGI governance.",
+  "creators": [
+    {
+      "name": "Jules, Apex",
+      "affiliation": "Sovereign AI Governance Authority"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "upload_type": "software",
+  "keywords": [
+    "AGI Governance",
+    "AI Safety",
+    "Systemic Risk",
+    "Formal Verification",
+    "zk-SNARKs"
+  ],
+  "version": "5.1.0"
+}

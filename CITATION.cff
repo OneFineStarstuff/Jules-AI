@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Jules"
+  given-names: "Apex"
+  affiliation: "Sovereign AI Governance Authority"
+title: "Sovereign AI Governance Suite"
+version: 5.1.0
+doi: 10.5281/zenodo.1234567
+date-released: 2024-05-20
+url: "https://github.com/OneFineStarstuff/Jules"
+keywords:
+  - "AGI Governance"
+  - "AI Safety"
+  - "Systemic Risk"
+  - "Formal Verification"
+  - "zk-SNARKs"
+  - "Basel IV"
+abstract: "The definitive high-assurance specification and implementation suite for enterprise and civilizational-scale AGI governance, integrating formal verification, cryptographic supervision, and systemic risk modeling."
