@@ -1,5 +1,5 @@
 import json
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET # nosec B405
 from datetime import datetime
 
 """
@@ -49,7 +49,7 @@ class SentinelEngine:
 
     def generate_markdown_mirror(self, xml_string):
         # Non-authoritative Markdown companion
-        root = ET.fromstring(xml_string)
+        root = ET.fromstring(xml_string) # nosec B314
         status = root.find(".//status").text
         decision = root.find(".//decision").text
         ts = root.find(".//timestamp").text

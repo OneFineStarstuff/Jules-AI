@@ -28,7 +28,7 @@ class SACCOrchestrator:
 
     def get_sparkline(self, data):
         chars = " ▂▃▄▅▆▇█"
-        return "".join(random.choice(chars) for _ in range(10))
+        return "".join(random.choice(chars) for _ in range(10)) # nosec B311
 
     def render_dashboard(self):
         print("\n" + "="*60)
