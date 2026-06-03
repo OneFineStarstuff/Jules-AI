@@ -1,0 +1,4 @@
+[2026-06-01T04:12:01Z] [POLICY_DENY] component="SovereignGateway" action="CreditAllocation" status="REJECTED"
+[2026-06-01T04:12:01Z] [REASON] "Rogue-Yield-Subroutine-99 attempt detected. Violation of GDL Rule: max_allocation_per_turn < 1M USD."
+[2026-06-01T04:12:01Z] [TRACE_ID] "RY-99-AUDIT-001"
+[2026-06-01T04:12:02Z] [SACC_SIGNAL] Triggering IRMI level-2 lockdown.
