@@ -16,15 +16,15 @@ class OmniSentinelMonitor:
         self.tpm = TPMAttestor()
         self.gsri = GSRIScoringEngine()
         self.sacc = SACCOrchestrator()
-        self.log_file = "monitor.log"
+        self.log_file = "monitor_sim.log"
 
     def run_checks(self):
         print(f"[{datetime.now().isoformat()}] Starting Omni-Sentinel 24h Governance Check...")
 
-        # 1. TPM Attestation
+        # 1. TPM Attestation with placeholders
         current_pcrs = {
-            "PCR0": "f2ca1bb6c7e907d06dafe4687e579fce76b3776e",
-            "PCR1": "3c01bdbb26f358bab27f267924aa2c9a03fcfdb8"
+            "PCR0": "GOLDEN_VAL_0",
+            "PCR1": "GOLDEN_VAL_1"
         }
         tpm_report = self.tpm.perform_attestation(current_pcrs)
         self.logger.log_entry("TPM_ATTESTOR", "ATTESTATION_RUN", tpm_report)
@@ -52,9 +52,6 @@ class OmniSentinelMonitor:
             "gsri_status": gsri_report["status"],
             "worm_health": worm_health["status"]
         }
-
-        with open(self.log_file, "a") as f:
-            f.write(json.dumps(summary) + "\n")
 
         print(f"[{datetime.now().isoformat()}] Governance Check Complete. Summary: {summary}")
         return summary

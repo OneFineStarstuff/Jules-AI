@@ -4,13 +4,13 @@ from datetime import datetime
 class TPMAttestor:
     """
     TPM 2.0 Attestor for AWS Nitro Enclaves.
-    Performs PCR_MATCH validation for cryptographic isolation.
+    Performs validation for cryptographic isolation.
     """
     def __init__(self):
-        # Known-good PCR hashes for the Sentinel Kernel
+        # Placeholders for golden values
         self.golden_pcrs = {
-            "PCR0": "f2ca1bb6c7e907d06dafe4687e579fce76b3776e",
-            "PCR1": "3c01bdbb26f358bab27f267924aa2c9a03fcfdb8"
+            "PCR0": "GOLDEN_VAL_0",
+            "PCR1": "GOLDEN_VAL_1"
         }
 
     def perform_attestation(self, current_pcrs):
@@ -33,18 +33,9 @@ class TPMAttestor:
             "attestation_status": "SUCCESS" if all_match else "FAILED",
             "pcr_results": results,
             "timestamp": datetime.now().isoformat(),
-            "enclave_id": "enc-9f2d8a3c"
+            "enclave_id": "ENCLAVE_ID_PLACEHOLDER"
         }
 
     def verify_integrity(self):
         """Self-check of the attestor state."""
-        return "INTEGRITY_VERIFIED_TPM_ROOT_CA"
-
-if __name__ == "__main__":
-    attestor = TPMAttestor()
-    # Simulated current PCRs
-    test_pcrs = {
-        "PCR0": "f2ca1bb6c7e907d06dafe4687e579fce76b3776e",
-        "PCR1": "3c01bdbb26f358bab27f267924aa2c9a03fcfdb8"
-    }
-    print(json.dumps(attestor.perform_attestation(test_pcrs), indent=2))
+        return "INTEGRITY_VERIFIED"

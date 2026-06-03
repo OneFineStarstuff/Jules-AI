@@ -29,7 +29,7 @@ def run_simulation():
     }
 
     xml_artifact = engine.emit_artifact(incident_data)
-    markdown_mirror = engine.generate_markdown_mirror(xml_artifact)
+    markdown_mirror = engine.generate_markdown_mirror(incident_data, decision)
 
     print("\n--- Canonical XML Artifact ---")
     print(xml_artifact)

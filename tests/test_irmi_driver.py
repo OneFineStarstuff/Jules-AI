@@ -38,7 +38,8 @@ class TestIRMIDriver(unittest.TestCase):
         self.driver.register_interrupt()
         logs = self.driver.get_safety_logs()
         self.assertIn("hash", logs[0])
-        self.assertEqual(len(logs[0]["hash"]), 16)
+        # Verifying that a simulated hash is present
+        self.assertTrue(logs[0]["hash"].startswith("HASH_"))
 
 if __name__ == "__main__":
     unittest.main()

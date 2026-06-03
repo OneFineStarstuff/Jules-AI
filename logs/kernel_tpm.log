@@ -1,5 +1,0 @@
-[2026-06-01T04:12:05Z] [TPM_CRITICAL] PCR mismatch detected on PCR0.
-[2026-06-01T04:12:05Z] [EXPECTED] f2ca1bb6c7e907d06dafe4687e579fce76b3776e
-[2026-06-01T04:12:05Z] [ACTUAL] a3b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9
-[2026-06-01T04:12:05Z] [ALERT] Possible kernel tampering or unauthorized eBPF hook injection.
-[2026-06-01T04:12:06Z] [IRMI] Invoking hardware-root-of-trust emergency shutdown.

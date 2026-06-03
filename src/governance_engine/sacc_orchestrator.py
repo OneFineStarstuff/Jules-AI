@@ -1,4 +1,4 @@
-import random
+import secrets
 import time
 import sys
 import os
@@ -28,7 +28,7 @@ class SACCOrchestrator:
 
     def get_sparkline(self, data):
         chars = " ▂▃▄▅▆▇█"
-        return "".join(random.choice(chars) for _ in range(10)) # nosec B311
+        return "".join(secrets.choice(chars) for _ in range(10))
 
     def render_dashboard(self):
         print("\n" + "="*60)

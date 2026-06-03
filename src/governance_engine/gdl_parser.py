@@ -47,12 +47,11 @@ class SentinelEngine:
 
         return ET.tostring(root, encoding='unicode')
 
-    def generate_markdown_mirror(self, xml_string):
+    def generate_markdown_mirror(self, incident_data, decision):
         # Non-authoritative Markdown companion
-        root = ET.fromstring(xml_string) # nosec B314
-        status = root.find(".//status").text
-        decision = root.find(".//decision").text
-        ts = root.find(".//timestamp").text
+        # Refactored to avoid re-parsing XML
+        ts = datetime.now().isoformat()
+        status = self.status
 
         return f"""# Sentinel Compliance Mirror
 **Timestamp:** {ts}
@@ -73,4 +72,4 @@ if __name__ == "__main__":
 
     artifact = engine.emit_artifact({"trace_id": "tr-98765", "protocol": "PACIFIC_SHIELD", "decision": decision})
     print(artifact)
-    print(engine.generate_markdown_mirror(artifact))
+    print(engine.generate_markdown_mirror({"trace_id": "tr-98765", "protocol": "PACIFIC_SHIELD"}, decision))

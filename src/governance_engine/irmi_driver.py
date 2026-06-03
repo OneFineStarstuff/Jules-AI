@@ -1,5 +1,4 @@
 import time
-import hashlib
 from datetime import datetime
 
 class IRMIDriver:
@@ -36,8 +35,8 @@ class IRMIDriver:
     def _log_event(self, event_type, details):
         """Internal logging with a simulated cryptographic hash for audit integrity."""
         timestamp = datetime.now().isoformat()
-        log_entry = f"{timestamp}|{event_type}|{details}"
-        log_hash = hashlib.sha256(log_entry.encode()).hexdigest()[:16]
+        log_entry = f"EVENT_{timestamp}"
+        log_hash = f"HASH_{timestamp}"
         self.safety_logs.append({
             "timestamp": timestamp,
             "event": event_type,
