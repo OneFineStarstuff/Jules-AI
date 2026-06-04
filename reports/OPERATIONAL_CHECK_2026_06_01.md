@@ -17,6 +17,7 @@ The Omni-Sentinel Cognitive Execution Environment (CEE) is currently operating i
 - **PQC Rotation:** Schedule ML-DSA key rotation for Q3 2026.
 
 ## 2. Sentinel AI v2.4 Governance Stack & Containment
+Refer to [Sentinel Backbone v2.4](../infrastructure/sentinel_backbone_v2_4.md) for infrastructure details.
 ### 2.1 Architecture & Fail-Safes
 The Sentinel v2.4 stack utilizes a hierarchical enforcement model:
 - **GDL (Governance Description Language):** Translates narrative policy (e.g., Basel III) into deterministic logic gates.
@@ -32,6 +33,7 @@ Supervision is maintained via **SystemicRiskAggregator.circom**, which generates
 - **Existential-Risk Charters:** Technical implementation of the "Doctrine of Dynamic Legitimacy" (G-Stack).
 
 ## 4. Enterprise AGI Containment Model
+Refer to [Omni-Sentinel CEE Architecture](../infrastructure/omni_sentinel_cee_architecture.md) and [AGI Containment Lab Spec](../governance_engine/agi_containment_lab_spec.md).
 ### 4.1 Verification & Mesh Integration
 - **TLA+ Verification:** The `SentinelContainmentProtocol.tla` formally verifies non-escapement and homeostatic stability invariants.
 - **Zero-Trust k8s Mesh:** Sentinel Sidecars (gRPC/mTLS) intercept all agent reasoning turns for GDL policy enforcement.
@@ -41,6 +43,7 @@ Supervision is maintained via **SystemicRiskAggregator.circom**, which generates
   - **ICGC:** Automated compute registry attestation of FLOP quotas.
 
 ## 5. CEE Architecture & Risk Controls
+Refer to [Sovereign Gateway EAIP Spec](../infrastructure/sovereign_gateway_eaip_spec.md).
 ### 5.1 Drift Detection & OSCAL
 - **Autonomous Supervisory Agent (ASA):** Real-time monitoring of "Resonance Drift" using the `consistency_probe.py` module.
 - **ICGC FLOPs Limits:** Hardware-enforced quotas anchored to the TPM Root-of-Trust.
@@ -87,6 +90,7 @@ Supervision is maintained via **SystemicRiskAggregator.circom**, which generates
 **Status:** Canonical Report Verified
 
 ## 11. GIEN Coordination & Cross-Border Interoperability
+Refer to [GIEN Coordination Protocol](../infrastructure/gien_coordination_protocol.md).
 ### 11.1 Gossip Mesh Status
 The **GIEN (Global Institutional Exchange Network) Relay** successfully broadcasted breach signatures (`CONTAGION-RED-DAWN-01`) to global peers.
 - **Interoperability Stress:** CROSS_BORDER_STABLE (P99 Latency: 45ms).
