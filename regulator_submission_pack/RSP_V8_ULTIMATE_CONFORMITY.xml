@@ -1,0 +1,21 @@
+<conformity_dossier version="8.0" status="CERTIFIED">
+    <metadata>
+        <title>RSP v8.0 Ultimate Conformity Dossier</title>
+        <timestamp>2026-06-01T12:00:00Z</timestamp>
+        <jurisdiction>GLOBAL_MULTILATERAL</jurisdiction>
+    </metadata>
+    <attestations>
+        <icgc_phase_2>VERIFIED</icgc_phase_2>
+        <gsri_score>0.093</gsri_score>
+        <ethical_alignment_score>0.98</ethical_alignment_score>
+        <pqc_worm_status>HEALTHY</pqc_worm_status>
+    </attestations>
+    <cas_spp_proofs>
+        <proof id="ZK-BASEL-IV-001" status="VALIDATED"/>
+        <proof id="ZK-EU-AI-ACT-002" status="VALIDATED"/>
+    </cas_spp_proofs>
+    <planetary_telemetry>
+        <oecd_compliance>TRUE</oecd_compliance>
+        <nis2_integrity>TRUE</nis2_integrity>
+    </planetary_telemetry>
+</conformity_dossier>

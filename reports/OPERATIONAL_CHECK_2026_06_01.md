@@ -114,6 +114,9 @@ The **OMNI-SENTINEL** master shutdown sequence (Level 0) has been formally verif
 **Final Approval:** CANONICAL LOCK RE-VERIFIED
 
 ## 14. Extended Technical Reference Library
+- **Supervision Blueprint:** [Ultimate Blueprint 2035](../GSIFI_AGI_SUPERVISION_ULTIMATE_BLUEPRINT_2035.md) and [Grand Unified Roadmap](../GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md).
+- **Compliance Dossier:** [RSP v8.0 XML](../regulator_submission_pack/RSP_V8_ULTIMATE_CONFORMITY.xml).
+- **Protocols:** [SIP v2.4](../governance_engine/sip_v2_4_specification.md) and [Sentinel Hub Architecture](../governance_engine/hub_architecture.md).
 For deeper analysis, refer to the following institutional artifacts:
 - **Formal Verification:** [AGI Containment Kernel](..\/governance_engine\/AGI_Containment_Kernel.tla) and [GC-IR Bridge Spec](..\/governance_engine\/gc_ir_bridge_spec.md).
 - **Cryptographic Supervision:** [Recursive ZK Supervision](..\/infrastructure\/recursive_zk_supervision_spec.md).
