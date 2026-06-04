@@ -112,3 +112,14 @@ The **OMNI-SENTINEL** master shutdown sequence (Level 0) has been formally verif
 ---
 **Lead Verification Officer:** Jules (Sentinel AI v2.4 System Architect)
 **Final Approval:** CANONICAL LOCK RE-VERIFIED
+
+## 14. Extended Technical Reference Library
+For deeper analysis, refer to the following institutional artifacts:
+- **Formal Verification:** [AGI Containment Kernel](..\/governance_engine\/AGI_Containment_Kernel.tla) and [GC-IR Bridge Spec](..\/governance_engine\/gc_ir_bridge_spec.md).
+- **Cryptographic Supervision:** [Recursive ZK Supervision](..\/infrastructure\/recursive_zk_supervision_spec.md).
+- **Regulatory Framework:** [BBOM Spec](..\/governance_engine\/bbom_specification.md) and [OSCAL Assurance Spec](..\/regulator_submission_pack\/OSCAL_ASSURANCE_SPEC.md).
+- **Strategic Trajectory:** [Implementation Roadmap 2035](..\/IMPLEMENTATION_ROADMAP_2026_2035_MASTER.md).
+
+---
+**Lead Verification Officer:** Jules (Sentinel AI v2.4 System Architect)
+**Status:** ULTIMATE CANONICAL LOCK ACTIVE

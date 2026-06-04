@@ -1,0 +1,12 @@
+{
+  "manifest_type": "ICGC_GACMO",
+  "institution_id": "GSIFI-APEX-01",
+  "compute_inventory": [
+    {
+      "cluster_id": "NYC-GPU-01",
+      "flop_quota": "10^25",
+      "enclave_status": "TPM_ATTESTED",
+      "pcr_golden": "GOLDEN_VAL_0"
+    }
+  ]
+}

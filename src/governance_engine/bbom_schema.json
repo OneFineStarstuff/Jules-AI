@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Behavioral Bill of Materials (BBOM)",
+  "type": "object",
+  "required": ["axiomatic_signatures", "epistemic_bounds"],
+  "properties": {
+    "version": { "type": "string" },
+    "axiomatic_signatures": { "type": "array", "items": { "type": "string" } },
+    "epistemic_bounds": { "type": "object" },
+    "resonance_threshold": { "type": "number", "default": 0.85 }
+  }
+}

@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: Regulator Audit Gateway API
+  version: 1.0.0
+paths:
+  /telemetry/stream:
+    post:
+      summary: Ingest R-SGQL streaming telemetry
+      responses:
+        '200':
+          description: Success
+  /proofs/verify:
+    post:
+      summary: Verify CAS-SPP v2.0 zk-SNARK proofs
+      responses:
+        '200':
+          description: Verified
