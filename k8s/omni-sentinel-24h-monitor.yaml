@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omni-sentinel-24h-monitor
+  namespace: sentinel
+  labels:
+    app: omni-sentinel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: omni-sentinel
+  template:
+    metadata:
+      labels:
+        app: omni-sentinel
+      annotations:
+        sentinel.ai/containment-level: "high"
+    spec:
+      containers:
+      - name: monitor
+        image: sentinel-ai/governance-suite:v2.4
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+        volumeMounts:
+        - name: audit-logs
+          mountPath: /app/logs
+      volumes:
+      - name: audit-logs
+        persistentVolumeClaim:
+          claimName: sentinel-worm-pvc
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: omni-sentinel-daily-check
+  namespace: sentinel
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: monitor
+            image: sentinel-ai/governance-suite:v2.4
+            command: ["python3", "omni_sentinel_24h_monitor.py"]
+          restartPolicy: OnFailure
