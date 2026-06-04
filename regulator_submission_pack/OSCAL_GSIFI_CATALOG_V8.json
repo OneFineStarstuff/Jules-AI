@@ -1,0 +1,30 @@
+{
+  "catalog": {
+    "uuid": "7a3d-4f2b-9e1c-5d8a",
+    "metadata": {
+      "title": "Sentinel G-SIFI Control Catalog (v8.0)",
+      "last-modified": "2026-06-01T00:00:00Z",
+      "version": "8.0",
+      "oscal-version": "1.1.2"
+    },
+    "groups": [
+      {
+        "id": "EU_AI_ACT_ANNEX_IV",
+        "title": "Annex IV: Technical Documentation Requirements",
+        "controls": [
+          {"id": "IV-1", "title": "Algorithmic Transparency and Logic Explanation"},
+          {"id": "IV-2", "title": "Data Lineage and Governance Attestation"},
+          {"id": "IV-3", "title": "Hardware Root-of-Trust and PCR Match"}
+        ]
+      },
+      {
+        "id": "BASEL_IV_RESILIENCE",
+        "title": "Basel IV Capital Buffer and Resilience",
+        "controls": [
+          {"id": "B4-1", "title": "G-SRI Real-time Risk Weighting"},
+          {"id": "B4-2", "title": "PQC-WORM Audit Immutability"}
+        ]
+      }
+    ]
+  }
+}
