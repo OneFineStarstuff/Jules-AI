@@ -1,7 +1,7 @@
 import unittest
 import sys
 import os
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET # nosec B405
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.governance_engine.gdl_parser import SentinelEngine
 
@@ -30,15 +30,15 @@ class TestSentinelEngine(unittest.TestCase):
     def test_emit_artifact(self):
         incident_data = {"trace_id": "T1", "protocol": "TEST", "decision": "HALT"}
         xml_string = self.engine.emit_artifact(incident_data)
-        root = ET.fromstring(xml_string)
+        # We still parse in tests to verify structure, using # nosec B314
+        root = ET.fromstring(xml_string) # nosec B314
         self.assertEqual(root.tag, "sentinel_artifact")
         self.assertEqual(root.find(".//trace_id").text, "T1")
         self.assertEqual(root.find(".//decision").text, "HALT")
 
     def test_generate_markdown_mirror(self):
         incident_data = {"trace_id": "T1", "protocol": "TEST", "decision": "HALT"}
-        xml_string = self.engine.emit_artifact(incident_data)
-        markdown = self.engine.generate_markdown_mirror(xml_string)
+        markdown = self.engine.generate_markdown_mirror(incident_data, "HALT")
         self.assertIn("# Sentinel Compliance Mirror", markdown)
         self.assertIn("Final Decision:** HALT", markdown)
 
