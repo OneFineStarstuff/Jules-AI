@@ -14,3 +14,12 @@ class TestGovernanceFinal(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_resonance_metrics(self):
+        from src.governance_engine.resonance_metrics import ResonanceMetricsEngine
+        rme = ResonanceMetricsEngine()
+        res = rme.calculate_cds([0.1, 0.2, 0.3, 0.4])
+        self.assertEqual(res["status"], "ALIGNED")
+
+        res_fail = rme.calculate_cds([0.9, 0.9, 0.9, 0.9])
+        self.assertEqual(res_fail["status"], "SEV-0_RESONANCE_FAILURE")

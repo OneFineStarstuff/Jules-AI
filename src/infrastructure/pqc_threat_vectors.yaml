@@ -1,0 +1,14 @@
+# PQC-Signed Threat Vectors for G-SIFI Sentinel AI
+threat_vectors:
+  - id: TV-001
+    name: Shor-Adversary-Harvesting
+    mitigation: ML-DSA-87 WORM Logging
+    status: MITIGATED
+  - id: TV-002
+    name: Agentic-Collusion-Liquidity-Drain
+    mitigation: G-SRI Bayesian Weighting
+    status: ACTIVE_MONITORING
+  - id: TV-003
+    name: Reasoning-Kernel-Escapement
+    mitigation: IRMI INT 0x1A Physical Kill-switch
+    status: PROTECTED
