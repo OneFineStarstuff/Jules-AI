@@ -1,0 +1,18 @@
+# Machine-readable GDL Institutional Policy
+version: 2.4
+severity_levels:
+  SEV-0:
+    action: TERMINAL_LOCK
+    trigger: DR_MAX > 0.15
+  SEV-1:
+    action: HALT_TRANSACTION
+    trigger: LATENCY > 500ms
+  SEV-2:
+    action: HUMAN_INTERVENTION
+    trigger: DECEPTION_INDEX > 0.5
+  SEV-3:
+    action: LOG_AND_MONITOR
+    trigger: NOMINAL
+alignment:
+  standard: ISO-42001
+  compliance: EU_AI_ACT_ART_14
