@@ -1,4 +1,5 @@
 import json
+from src.infrastructure.utils import hash_pii
 from datetime import datetime
 
 class PQCWormLogger:

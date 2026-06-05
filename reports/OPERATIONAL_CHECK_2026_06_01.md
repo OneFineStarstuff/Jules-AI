@@ -30,7 +30,7 @@ The Sentinel v2.4 stack utilizes a hierarchical enforcement model:
 Supervision is maintained via **SystemicRiskAggregator.circom**, which generates zk-SNARK proofs of G-SIFI capital buffer compliance without revealing proprietary trading strategies.
 - **TPM-Based Attestation:** Ensures reasoning kernels remain isolated within Nitro Enclaves.
 - **Post-Quantum Signatures:** ML-DSA-87 secures the WORM audit trail against harvesting attacks by future Shor-capable adversaries.
-- **Existential-Risk Charters:** Technical implementation of the "Doctrine of Dynamic Legitimacy" (G-Stack).
+- **Existential-risk charters:** Technical implementation of the "Doctrine of Dynamic Legitimacy" (G-Stack).
 
 ## 4. Enterprise AGI Containment Model
 Refer to [Omni-Sentinel CEE Architecture](../infrastructure/omni_sentinel_cee_architecture.md) and [AGI Containment Lab Spec](../governance_engine/agi_containment_lab_spec.md).
@@ -45,7 +45,7 @@ Refer to [Omni-Sentinel CEE Architecture](../infrastructure/omni_sentinel_cee_ar
 ## 5. CEE Architecture & Risk Controls
 Refer to [Sovereign Gateway EAIP Spec](../infrastructure/sovereign_gateway_eaip_spec.md).
 ### 5.1 Drift Detection & OSCAL
-- **Autonomous Supervisory Agent (ASA):** Real-time monitoring of "Resonance Drift" using the `consistency_probe.py` module.
+- **AutonomousSupervisoryAgent (ASA):** Real-time monitoring of "Resonance Drift" using the `consistency_probe.py` module.
 - **ICGC FLOPs Limits:** Hardware-enforced quotas anchored to the TPM Root-of-Trust.
 - **OSCAL Controls:** Machine-readable SSP mappings for EU AI Act and NIST AI RMF, ensuring 100% control auditability.
 
