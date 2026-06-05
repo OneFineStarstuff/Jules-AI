@@ -1,0 +1,10 @@
+<conformity_dossier version="6.0">
+    <metadata>
+        <title>RSP v6.0 G-Stack Conformity Dossier</title>
+        <timestamp>2025-12-01T09:00:00Z</timestamp>
+    </metadata>
+    <attestations>
+        <eu_ai_act_annex_iv>COMPLIANT</eu_ai_act_annex_iv>
+        <basel_iv_capital>VERIFIED</basel_iv_capital>
+    </attestations>
+</conformity_dossier>
