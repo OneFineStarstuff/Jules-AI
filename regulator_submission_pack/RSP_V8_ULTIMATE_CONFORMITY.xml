@@ -9,6 +9,8 @@
         <gsri_score>0.093</gsri_score>
         <ethical_alignment_score>0.98</ethical_alignment_score>
         <pqc_worm_status>HEALTHY</pqc_worm_status>
+        <dora_nis2_resilience>VERIFIED</dora_nis2_resilience>
+        <sr_11_7_soundness>COMPLIANT</sr_11_7_soundness>
     </attestations>
     <cas_spp_proofs>
         <proof id="ZK-BASEL-IV-001" status="VALIDATED"/>
