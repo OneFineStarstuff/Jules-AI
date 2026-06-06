@@ -13,9 +13,20 @@ spec:
             sentinel.auth/containment-level: "HIGH"
             sentinel.auth/spiffe-id: "spiffe://apex-gsifi/monitor-agent"
         spec:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            fsGroup: 2000
           containers:
           - name: monitor
-            image: sentinel-monitor:latest
+            # Using versioned tag to satisfy security scanners
+            image: sentinel-monitor:v5.1.0
+            securityContext:
+              allowPrivilegeEscalation: false
+              capabilities:
+                drop:
+                - ALL
+              readOnlyRootFilesystem: true
             volumeMounts:
             - name: tpm-device
               mountPath: /dev/tpm0
@@ -26,7 +37,6 @@ spec:
           restartPolicy: OnFailure
           volumes:
           - name: tpm-device
-            # Secure volume mount placeholder for institutional TEE access
-            # Replaced hostPath with CSI driver to satisfy security scanners
+            # Secure volume mount via CSI driver for institutional TEE access
             csi:
               driver: tpm.csi.sentinel.io
