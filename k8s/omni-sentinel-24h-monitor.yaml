@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: omni-sentinel-24h-monitor
+  namespace: sentinel-governance
+spec:
+  schedule: "@daily"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          annotations:
+            sentinel.auth/containment-level: "HIGH"
+            sentinel.auth/spiffe-id: "spiffe://apex-gsifi/monitor-agent"
+        spec:
+          containers:
+          - name: monitor
+            image: sentinel-monitor:latest
+            volumeMounts:
+            - name: tpm-device
+              mountPath: /dev/tpm0
+            env:
+            - name: AWS_S3_BUCKET
+              value: "gsifi-worm-audit"
+          restartPolicy: OnFailure
+          volumes:
+          - name: tpm-device
+            hostPath:
+              path: /dev/tpm0

@@ -1,0 +1,19 @@
+{
+  "manifest_id": "GACMO-GSIFI-2026-001",
+  "organization": "Apex-G-SIFI",
+  "compute_inventory": [
+    {
+      "cluster_id": "NITRO-CORE-01",
+      "tflops_quota": 1000000,
+      "region": "us-east-1",
+      "enclave_status": "LOCKED",
+      "attestation": "PCR_MATCH_VERIFIED"
+    }
+  ],
+  "planetary_limit_alignment": {
+    "icgc_version": "2.0",
+    "total_training_flops": "10^26",
+    "compliance_status": "WITHIN_LIMITS"
+  },
+  "last_updated": "2026-06-06T00:00:00Z"
+}
