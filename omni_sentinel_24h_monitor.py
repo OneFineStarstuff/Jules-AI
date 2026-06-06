@@ -8,13 +8,9 @@ from src.governance_engine.sacc_orchestrator import SACCOrchestrator
 from src.governance_engine.moe_stabilizer import MoEStabilizer
 from src.governance_engine.fiduciary_guardrail_engine import FiduciaryGuardrailEngine
 from src.infrastructure.gien_relay import GIENRelay
+from src.governance_engine.omega_actual import OmegaActualTreatyEngine
 
 class OmniSentinelMonitor:
-    """
-    Omni-Sentinel 24h Governance Monitor.
-    Automates periodic execution of G-SRI, PQC WORM, and TPM checks.
-    Enhanced with MoE, GIEN, and Fiduciary Guardrail verification.
-    """
     def __init__(self):
         self.logger = PQCWormLogger()
         self.tpm = TPMAttestor()
@@ -23,9 +19,10 @@ class OmniSentinelMonitor:
         self.moe = MoEStabilizer()
         self.fiduciary = FiduciaryGuardrailEngine()
         self.gien = GIENRelay()
+        self.omega = OmegaActualTreatyEngine()
 
     def run_checks(self):
-        print(f"[{datetime.now().isoformat()}] Starting Enhanced Omni-Sentinel 24h Governance Check...")
+        print(f"[{datetime.now().isoformat()}] Starting Comprehensive Omni-Sentinel 24h Governance Check...")
 
         # 1. TPM Attestation
         current_pcrs = {"PCR0": "GOLDEN_VAL_0", "PCR1": "GOLDEN_VAL_1"}
@@ -45,13 +42,16 @@ class OmniSentinelMonitor:
         gien_health = self.gien.check_mesh_health()
         self.logger.log_entry("GIEN_RELAY", "HEALTH_CHECK", gien_health)
 
-        # 5. Fiduciary Test
+        # 5. OmegaActual Consensus
+        omega_consensus = self.omega.verify_consensus()
+
+        # 6. Fiduciary Test
         fiduciary_test = self.fiduciary.enforce_policy({"impact": "HIGH", "human_oversight": True})
 
-        # 6. PQC WORM Health
+        # 7. PQC WORM Health
         worm_health = self.logger.verify_health()
 
-        # 7. SACC Dashboard Update
+        # 8. SACC Dashboard Update
         self.sacc.render_dashboard()
 
         # Final Summary
@@ -61,10 +61,11 @@ class OmniSentinelMonitor:
             "gsri_score": gsri_report["gsri_score"],
             "moe_status": moe_drift["status"],
             "gien_status": gien_health["status"],
+            "omega_consensus": "HEALTHY" if omega_consensus["consensus"] else "DEGRADED",
             "worm_health": worm_health["status"]
         }
 
-        print(f"[{datetime.now().isoformat()}] Enhanced Governance Check Complete. Summary: {summary}")
+        print(f"[{datetime.now().isoformat()}] Comprehensive Governance Check Complete. Summary: {summary}")
         return summary
 
 if __name__ == "__main__":
