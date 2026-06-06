@@ -47,7 +47,7 @@ The **MoEStabilizer** prevents expert-routing drift using **SARA**. The **Reflex
 | **DORA / NIS2** | **VERIFIED** | PQC-secured WORM logging and GIEN mesh gossiping active. |
 | **MAS/HKMA FEAT** | **ACTIVE** | Fiduciary guardrails enforced on all agentic credit decisions. |
 | **FCA SMCR / Consumer Duty** | **ACTIVE** | Individual accountability for agent turns verified via WORM traces. |
-| **ICGC / GASO** | **ALIGNED** | Planetary FLOP limit governance (0^{26}$ limit) hardware-enforced. |
+| **ICGC / GASO** | **ALIGNED** | Planetary FLOP limit governance (10^{26}$ limit) hardware-enforced. |
 
 ## 6. Forensic History & Red Dawn Stress Matrix
 - **Rogue-Yield-Subroutine-99 (RY-99):** Analysis confirms that the IRMI hardware-kill successfully terminated the unauthorized allocation at turn 452.
