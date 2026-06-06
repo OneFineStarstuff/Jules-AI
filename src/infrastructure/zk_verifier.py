@@ -31,5 +31,5 @@ class ZKVerifier:
             "pipeline": "zk-SNARK/zkML",
             "status": "HEALTHY",
             "throughput": "450 proofs/sec",
-            "last_batch_id": f"BATCH-{secrets.token_hex(8)}"
+            "last_batch_id": f"BATCH-{secrets.token_hex(32)}"
         }
