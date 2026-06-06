@@ -7,7 +7,7 @@ class GIENRelay:
     Zero-trust gossip mesh for sharing alignment breach signatures.
     """
     def __init__(self):
-        self.node_id = f"GIEN-NODE-{secrets.token_hex(4)}"
+        self.node_id = f"GIEN-NODE-{secrets.token_hex(32)}"
         self.peers = ["APEX-GSIFI-01", "LDN-GSIFI-02", "HKG-GSIFI-03"]
 
     def broadcast_signature(self, signature):
