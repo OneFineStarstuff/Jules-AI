@@ -1,0 +1,3 @@
+[2026-06-05T14:22:01Z] [AUDIT] Intercepted Reasoning Turn 452 for Credit_Nexus
+[2026-06-05T14:22:01Z] [POLICY] Rule ART-14-Human-Oversight: EVALUATING
+[2026-06-05T14:22:01Z] [DECISION] RY-99-AUDIT-001: POLICY_DENY (Reason: Unauthorized credit allocation > 1M USD without supervisor signature)

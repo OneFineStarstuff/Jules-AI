@@ -1,0 +1,3 @@
+[2026-06-05T14:22:02Z] [TPM] PCR0 Mismatch Detected in Enclave NITRO-CORE-01
+[2026-06-05T14:22:02Z] [SECURITY] Potential sidecar bypass attempt detected via eBPF exploit
+[2026-06-05T14:22:02Z] [IRMI] Invoking Hardware Kill-Switch INT 0x1A
