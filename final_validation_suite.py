@@ -2,11 +2,12 @@ import unittest
 from omni_sentinel_24h_monitor import OmniSentinelMonitor
 from simulate_red_dawn import run_red_dawn_simulation
 from simulate_incident import run_simulation
+from simulate_civilizational_homeostasis import run_homeostasis_drill
 
 class FinalValidationSuite(unittest.TestCase):
     """
     Definitive end-to-end verification of the 24h Governance Monitor
-    and global contagion simulations to confirm G-SIFI operational readiness.
+    and civilizational safety simulations to confirm G-SIFI operational readiness.
     """
     def test_24h_monitor_workflow(self):
         monitor = OmniSentinelMonitor()
@@ -21,6 +22,10 @@ class FinalValidationSuite(unittest.TestCase):
     def test_pacific_shield_incident(self):
         # Verification that the simulation runs without error
         run_simulation()
+
+    def test_civilizational_homeostasis(self):
+        report = run_homeostasis_drill()
+        self.assertEqual(report["status"], "SUCCESS")
 
 if __name__ == "__main__":
     unittest.main()
