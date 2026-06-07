@@ -1,0 +1,18 @@
+openapi: 3.0.0
+info:
+  title: Regulator Audit Gateway
+  version: 1.0.0
+  description: API for supranational oversight of G-SIFI AGI governance telemetry.
+paths:
+  /telemetry/gsri:
+    get:
+      summary: Get latest G-SRI scores
+      responses:
+        '200':
+          description: Successful response
+  /proofs/zk-stark:
+    post:
+      summary: Submit zk-STARK compliance proofs
+      responses:
+        '201':
+          description: Proof accepted

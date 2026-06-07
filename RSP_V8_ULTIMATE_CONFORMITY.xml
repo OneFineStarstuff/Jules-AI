@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conformity_dossier version="8.0" timestamp="2026-06-06T12:00:00Z">
+    <attestations>
+        <icgc_compute_quota status="COMPLIANT">10^26 FLOP limit verified via GACMO</icgc_compute_quota>
+        <gsri_systemic_risk status="NOMINAL">0.093 baseline</gsri_systemic_risk>
+        <pqc_worm_logging status="VERIFIED">ML-DSA-87 signatures active</pqc_worm_logging>
+    </attestations>
+    <governance_artifacts>
+        <tla_proof id="SentinelContainmentProtocol.tla"/>
+        <zk_proof_pipeline id="SnarkPack-v2.0"/>
+    </governance_artifacts>
+</conformity_dossier>

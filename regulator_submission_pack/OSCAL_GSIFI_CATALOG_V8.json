@@ -1,0 +1,28 @@
+{
+  "catalog": {
+    "uuid": "GSIFI-CAT-V8-2026",
+    "metadata": {
+      "title": "OSCAL G-SIFI Control Catalog",
+      "version": "8.0",
+      "last-modified": "2026-06-06T00:00:00Z"
+    },
+    "groups": [
+      {
+        "id": "EU-AI-ACT",
+        "title": "EU AI Act Implementation",
+        "controls": [
+          {"id": "ART-14", "title": "Human Oversight", "mapping": "src/infrastructure/policies/eu_ai_act_compliance.rego"},
+          {"id": "ART-15", "title": "Accuracy, Robustness and Cybersecurity", "mapping": "src/infrastructure/tpm_attestor.py"},
+          {"id": "ART-51", "title": "Systemic Risk GPAI", "mapping": "src/governance_engine/gsri_scoring_engine.py"}
+        ]
+      },
+      {
+        "id": "BASEL-IV",
+        "title": "Basel IV Capital Buffer Compliance",
+        "controls": [
+          {"id": "G-SRI-01", "title": "Global Systemic Risk Score Monitoring", "mapping": "src/governance_engine/gsri_scoring_engine.py"}
+        ]
+      }
+    ]
+  }
+}
