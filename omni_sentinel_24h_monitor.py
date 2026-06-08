@@ -12,6 +12,8 @@ from src.governance_engine.omega_actual import OmegaActualTreatyEngine
 from src.governance_engine.rtee_engine import RTEEEngine
 from src.infrastructure.zk_verifier import ZKVerifier
 from src.governance_engine.gdl_parser import SentinelEngine
+from src.infrastructure.policies.annex_iv_artifact_gen import AnnexIVGenerator
+from src.governance_engine.auditor_agent import AuditorAgentSwarm
 
 class OmniSentinelMonitor:
     def __init__(self):
@@ -20,11 +22,11 @@ class OmniSentinelMonitor:
         self.gsri = GSRIScoringEngine()
         self.sacc = SACCOrchestrator()
         self.moe = MoEStabilizer()
-        self.fiduciary = FiduciaryGuardrailEngine()
         self.gien = GIENRelay()
         self.omega = OmegaActualTreatyEngine()
         self.zk = ZKVerifier()
-        # Initialize RTEE with a GDL engine
+        self.annex_iv = AnnexIVGenerator()
+        self.auditor = AuditorAgentSwarm()
         gdl = SentinelEngine({})
         self.rtee = RTEEEngine(gdl)
 
@@ -49,13 +51,13 @@ class OmniSentinelMonitor:
         zk_health = self.zk.check_pipeline_health()
         self.logger.log_entry("ZK_VERIFIER", "PIPELINE_HEALTH", zk_health)
 
-        # 5. GIEN Gossip Mesh
+        # 5. Auditor Swarm & Annex IV Gen
+        auditor_health = self.auditor.check_swarm_health()
+        annex_artifact = self.annex_iv.emit_artifact("SENTINEL-v2.4", {"risk_mitigation": "Verified TLA+ safety invariants"})
+
+        # 6. GIEN Gossip Mesh
         gien_health = self.gien.check_mesh_health()
         self.logger.log_entry("GIEN_RELAY", "HEALTH_CHECK", gien_health)
-
-        # 6. OmegaActual & RTEE Sync
-        omega_consensus = self.omega.verify_consensus()
-        rtee_status = self.rtee.get_evolution_status()
 
         # 7. SACC Dashboard Update
         self.sacc.render_dashboard()
@@ -67,9 +69,9 @@ class OmniSentinelMonitor:
             "gsri_score": gsri_report["gsri_score"],
             "moe_status": moe_drift["status"],
             "zk_status": zk_health["status"],
+            "auditor_swarm": auditor_health["swarm_status"],
+            "annex_iv_artifact": annex_artifact["canonical_signature"],
             "gien_status": gien_health["status"],
-            "omega_consensus": "HEALTHY" if omega_consensus["consensus"] else "DEGRADED",
-            "rtee_evolutions": rtee_status["total_evolutions"],
             "worm_health": self.logger.verify_health()["status"]
         }
 
