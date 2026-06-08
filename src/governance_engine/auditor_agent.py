@@ -8,7 +8,7 @@ class AuditorAgentSwarm:
     """
     def __init__(self):
         self.swarm_size = 5
-        self.auditor_ids = [f"AUDITOR-{secrets.token_hex(4).upper()}" for _ in range(self.swarm_size)]
+        self.auditor_ids = [f"AUDITOR-{secrets.token_hex(32).upper()}" for _ in range(self.swarm_size)]
 
     def run_backtesting_audit(self, traces):
         """
