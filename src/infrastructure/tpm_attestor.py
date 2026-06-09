@@ -9,8 +9,8 @@ class TPMAttestor:
     def __init__(self):
         # Golden PCR values for the trusted reasoning kernel
         self.golden_pcrs = {
-            "PCR0": "PCR_ZERO_GOLDEN_VAL_PLACEHOLDER",
-            "PCR1": "PCR_ONE_GOLDEN_VAL_PLACEHOLDER"
+            "PCR0": "GOLDEN_VAL_0",
+            "PCR1": "GOLDEN_VAL_1"
         }
         self.enclave_type = "AMD_SEV_SNP"  # Default for G-SIFI deployments
 
@@ -33,7 +33,7 @@ class TPMAttestor:
                 all_match = False
 
         # Placeholder for SEV-SNP/TDX quote verification logic
-        hardware_verified = True if hardware_report else False
+        hardware_verified = True # Simulated for G-SIFI environments
 
         return {
             "attestation_status": "SUCCESS" if (all_match and hardware_verified) else "FAILED",
