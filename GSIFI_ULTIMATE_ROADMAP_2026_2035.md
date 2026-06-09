@@ -1,5 +1,7 @@
 # G-SIFI Ultimate Institutional AGI/ASI Roadmap (2026–2035)
 
+> **NOTICE:** This document has been superseded by the comprehensive [Decadal Roadmap and Technical Requirements (2026–2035)](GSIFI_AGI_ASI_ULTIMATE_MASTER_ROADMAP_2035.md). Refer to that document for the authoritative unified execution lock.
+
 ## Phase I: Institutional Hardening (2026–2027)
 *Focus: Securing the Substrate and Cryptographic Bedrock*
 - **Q1 2026:** Mandatory IRMI (Kill-Switch) integration across all Tier-1 G-SIFI liquidity clusters.
@@ -26,4 +28,4 @@
 
 ---
 **Custodian:** Civilization Strategy Group
-**Status:** Unified Execution Lock (v1.0.0)
+**Status:** Unified Execution Lock (v1.0.0) | Cross-Ref Active
