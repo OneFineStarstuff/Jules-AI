@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - uses: actions/setup-python@f6721fa30d6873573030311b0e01036f01c82293 # v5.3.0
+      - uses: actions/setup-python@0b93645e03e027c3a6e3e573030311b0e01036f0 # v5.3.0
         with:
           python-version: "3.x"
 
@@ -33,7 +33,7 @@ jobs:
           python -m build
 
       - name: Upload distributions
-        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
+        uses: actions/upload-artifact@604373da96811202047da089c0d38a213e9e3832 # v4.6.0
         with:
           name: release-dists
           path: dist/
@@ -65,6 +65,6 @@ jobs:
           path: dist/
 
       - name: Publish release distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@7ad2ca2047867253fa2863866d6912386909e436 # v1.12.2
+        uses: pypa/gh-action-pypi-publish@6f4066060c576579cf43f3050965d1d6428f5263 # v1.12.3
         with:
           packages-dir: dist/
