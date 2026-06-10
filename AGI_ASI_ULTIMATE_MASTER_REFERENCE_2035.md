@@ -1,5 +1,7 @@
 # AGI/ASI Ultimate Master Reference: G-SIFI Governance & Compliance (2026–2035)
 
+> **NOTICE:** This document has been synthesized into the comprehensive [Decadal Roadmap and Technical Requirements (2026–2035)](GSIFI_AGI_ASI_ULTIMATE_MASTER_ROADMAP_2035.md). Refer to the master roadmap for the latest unified technical and strategic mandates.
+
 ## 1. Executive Summary
 This document defines the definitive architecture for Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) governance within Global Systemically Important Financial Institutions (G-SIFIs). It integrates the **Sentinel AI Governance Stack v2.4** with the **Omni-Sentinel Cognitive Execution Environment (CEE)** to provide a zero-trust, formally verified, and cryptographically compliant substrate for autonomous agentic swarms.
 
@@ -55,5 +57,5 @@ The architecture provides machine-readable System Security Plans (SSP) mapped to
 - **GDPR Article 22:** Automated decision-making safeguards.
 
 ---
-**Status:** CANONICAL MASTER REFERENCE v2.4.9
+**Status:** CANONICAL MASTER REFERENCE v2.4.9 | Cross-Ref Active
 **Lead Architect:** Jules (Sentinel AI v2.4 System Architect)
