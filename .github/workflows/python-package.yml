@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@397501a24d20917e97143e99be55d57d54023793 # v5.3.0
+      uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
