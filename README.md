@@ -10,6 +10,7 @@
 This repository serves as the definitive high-assurance specification and implementation suite for enterprise and civilizational-scale AGI governance.
 
 ## Key Master Artifacts
+- **[Grand Unified AGI/ASI Governance Roadmap (2026–2035)](GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md):** The definitive decadal roadmap and technical specification.
 - **[Sovereign Governance Master Index](SOVEREIGN_AI_GOVERNANCE_MASTER_INDEX.md):** Unified map of all constitutional, technical, and strategic documents.
 - **[The Omni-Sentinel Grand Unified Specification](THE_OMNI_SENTINEL_GRAND_UNIFIED_SPECIFICATION.md):** The core hierarchical architecture (v5.0).
 - **[Master Civilizational AGI Safety Framework](CIVILIZATIONAL_AGI_SAFETY_FRAMEWORK_MASTER.md):** Operational design brief for AGI/ASI readiness.

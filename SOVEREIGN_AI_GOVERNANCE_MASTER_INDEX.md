@@ -3,6 +3,7 @@
 This compendium contains the complete set of restricted-distribution strategic, technical, and regulatory artifacts for G-7 leadership and G-SIFI institutional oversight.
 
 ## I. Strategic Whitepapers & Global Policy
+- **[GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md](GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md):** Decadal roadmap and technical requirements (2026–2035) for G-SIFI AGI/ASI governance.
 - **GSIFI_GLOBAL_AI_GOVERNANCE_REPORT_2024.md:** Hierarchical compliance framework, Omni-Sentinel Constitution, and APAC/EU regulatory integration.
 - **GLOBAL_FSB_AI_GOVERNANCE_FRAMEWORK.md:** FSB/BCBS blueprint for high-agency AI, Digital Supervisor Nodes, and liability models.
 - **STEM_AGI_STRATEGIC_FRAMEWORK_2036.md:** 10-year roadmap for Scientific Superintelligence and the Treaty on Scientific Singularity.
