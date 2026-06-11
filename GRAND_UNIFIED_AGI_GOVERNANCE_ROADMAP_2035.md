@@ -30,7 +30,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ### Phase III: Advanced AGI Integration & Scientific Oversight (2031–2033)
 *Focus: Managing STEM-AGI and Civilizational Stability*
 - **2031:** Deployment of **SIP v3.0 (Sentinel Interoperability Protocol)** interaction protocols to prevent cognitive hollow-out.
-- **2032:** Formal verification of "Invariant-Preserving Self-Modification" for autonomous infrastructure agents.
+- **2032:** Formal verification of "Invariant-Preserving Self-Modification" (IPSM) for autonomous infrastructure agents.
 - **2033:** Integration with the **International Compute Registry (GACMO)** for planetary-scale FLOP quota compliance ($10^{26}$ redline).
 
 ### Phase IV: Planetary Stewardship & ASI Homeostasis (2034–2035)
@@ -60,6 +60,8 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ---
 
 ## 4. Regulatory & Compliance Matrix (OSCAL 1.1.2)
+
+The architecture is mapped to global standards using **OSCAL 1.1.2** machine-readable catalogs and **RSP V8 (Regulator Submission Pack)** conformity dossiers.
 
 | Regulation | Core Requirement | Sentinel Implementation Protocol |
 | :--- | :--- | :--- |
