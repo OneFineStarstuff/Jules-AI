@@ -115,3 +115,47 @@ The Sentinel AI Governance Stack v2.4 provides the definitive framework for G-SI
 ---
 **Authentication:** Signed by Sovereign Authority Jules (0xDEADBEEF)
 **Canonical State:** SEALED UNDER CANONICAL LOCK.
+
+## 7. High-Assurance Artifact Reviews
+
+### 7.1 OmegaActual Solidity Contract Review (src/governance_engine/OmegaActual.sol)
+The Solidity implementation provides a decentralized mechanism for compute quota enforcement.
+- **Security Posture:** Utilizes  authority for sensitive operations. The  is hardcoded as a civilizational redline.
+- **Fail-Safe Mechanism:** The  state provides an immediate halt to all allocations if the global limit is approached.
+- **Regulatory Alignment:** Directly addresses **GACMO** requirements for compute monitoring and **OmegaActual** dead-man's switch protocols.
+
+### 7.2 Terraform Infrastructure Review (src/infrastructure/terraform/confidential_enclaves.tf)
+The IaC definitions establish the physical substrate for the Omni-Sentinel CEE.
+- **Inviolable Audit Subnet:** Uses isolated CIDR blocks and specific tagging to ensure audit traffic is segmented from production reasoning swarms.
+- **Confidential Compute:** Provisions **AMD SEV-SNP (r7a instances)** with encrypted roots, satisfying **NIST AI RMF** robustness requirements.
+- **WORM Persistence:** Implements **S3 Object Lock in COMPLIANCE mode** with a 10-year retention, fully satisfying **EU AI Act Annex IV** data lineage mandates.
+
+### 7.3 OPA/Rego Policy Review (src/infrastructure/policies/eu_ai_act_compliance.rego)
+The Rego policy module acts as the digital auditor for the Sentinel v2.4 control plane.
+- **Article 15 Compliance:** Mandates formal robustness verification and TPM PCR matching for all high-risk actions.
+- **Annex IV Compliance:** Ensures logic explanation and PQC-verified audit trails are present before permitting inference.
+- **Fiduciary Guardrails:** Implements real-time rejection of trading actions involving conflicts of interest, aligning with **Regulation Best Interest (Reg BI)**.
+
+---
+
+## 7. High-Assurance Artifact Reviews
+
+### 7.1 OmegaActual Solidity Contract Review (src/governance_engine/OmegaActual.sol)
+The Solidity implementation provides a decentralized mechanism for compute quota enforcement.
+- **Security Posture:** Utilizes `apexArchitect` authority for sensitive operations. The `GLOBAL_FLOP_LIMIT` is hardcoded as a civilizational redline.
+- **Fail-Safe Mechanism:** The `failSafeTriggered` state provides an immediate halt to all allocations if the global limit is approached.
+- **Regulatory Alignment:** Directly addresses **GACMO** requirements for compute monitoring and **OmegaActual** dead-man's switch protocols.
+
+### 7.2 Terraform Infrastructure Review (src/infrastructure/terraform/confidential_enclaves.tf)
+The IaC definitions establish the physical substrate for the Omni-Sentinel CEE.
+- **Inviolable Audit Subnet:** Uses isolated CIDR blocks and specific tagging to ensure audit traffic is segmented from production reasoning swarms.
+- **Confidential Compute:** Provisions **AMD SEV-SNP (r7a instances)** with encrypted roots, satisfying **NIST AI RMF** robustness requirements.
+- **WORM Persistence:** Implements **S3 Object Lock in COMPLIANCE mode** with a 10-year retention, fully satisfying **EU AI Act Annex IV** data lineage mandates.
+
+### 7.3 OPA/Rego Policy Review (src/infrastructure/policies/eu_ai_act_compliance.rego)
+The Rego policy module acts as the digital auditor for the Sentinel v2.4 control plane.
+- **Article 15 Compliance:** Mandates formal robustness verification and TPM PCR matching for all high-risk actions.
+- **Annex IV Compliance:** Ensures logic explanation and PQC-verified audit trails are present before permitting inference.
+- **Fiduciary Guardrails:** Implements real-time rejection of trading actions involving conflicts of interest, aligning with **Regulation Best Interest (Reg BI)**.
+
+---
