@@ -11,18 +11,32 @@ contract OmegaActual {
     uint256 public lastHeartbeat;
     bool public isFailSafeTriggered;
 
+    mapping(address => bool) public authorizedInstitutions;
+
     event HeartbeatReceived(uint256 timestamp);
     event FailSafeTriggered(string reason);
     event ComputeComplianceLogged(address indexed institution, uint256 flops);
+    event InstitutionAuthorized(address indexed institution);
 
     modifier onlySovereign() {
         require(msg.sender == sovereign, "Unauthorized: Not Sovereign Authority");
         _;
     }
 
+    modifier onlyAuthorized() {
+        require(authorizedInstitutions[msg.sender] || msg.sender == sovereign, "Unauthorized: Not an Authorized Institution");
+        _;
+    }
+
     constructor() {
         sovereign = msg.sender;
         lastHeartbeat = block.timestamp;
+        authorizedInstitutions[msg.sender] = true;
+    }
+
+    function authorizeInstitution(address institution) external onlySovereign {
+        authorizedInstitutions[institution] = true;
+        emit InstitutionAuthorized(institution);
     }
 
     /**
@@ -36,7 +50,7 @@ contract OmegaActual {
     /**
      * @dev Logs compute usage for institutional attestation.
      */
-    function logComputeUsage(uint256 flops) external {
+    function logComputeUsage(uint256 flops) external onlyAuthorized {
         if (flops > COMPUTE_LIMIT_FLOP) {
             _triggerFailSafe("Planetary FLOP Limit Exceeded");
         }

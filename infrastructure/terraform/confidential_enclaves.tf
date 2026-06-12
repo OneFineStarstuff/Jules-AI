@@ -69,7 +69,7 @@ resource "azurerm_linux_virtual_machine" "sentinel_tdx" {
   location            = var.az_primary_region
   size                = "Standard_ND96asr_v4" # Placeholder for TDX enabled high-performance SKU
 
-  admin_username      = "sentinel_admin"
+  admin_username      = var.admin_username
   network_interface_ids = [azurerm_network_interface.sentinel_nic.id]
 
   # Confidential Compute Settings
@@ -86,7 +86,7 @@ resource "azurerm_linux_virtual_machine" "sentinel_tdx" {
     publisher = "sentinel-governance"
     offer     = "sentinel-os-v2"
     sku       = "stable"
-    version   = "latest"
+    version   = "v5.1.0"
   }
 
   tags = {
@@ -113,4 +113,9 @@ variable "sentinel_ami_id" {
 
 variable "az_resource_group" {
   type = string
+}
+
+variable "admin_username" {
+  type    = string
+  default = "sentinel_admin"
 }

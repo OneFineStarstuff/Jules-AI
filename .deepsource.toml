@@ -3,3 +3,11 @@ version = 1
 [[analyzers]]
 name = "python"
 enabled = true
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+[[analyzers]]
+name = "terraform"
+enabled = true
