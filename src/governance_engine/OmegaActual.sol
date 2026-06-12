@@ -13,6 +13,8 @@ contract OmegaActual {
 
     event ComputeAllocated(address indexed institution, uint256 flops);
     event FailSafeTriggered(string reason);
+    event FailSafeReset(address indexed by);
+    event ApexArchitectTransferred(address indexed previousArchitect, address indexed newArchitect);
 
     modifier onlyApex() {
         require(msg.sender == apexArchitect, "Unauthorized: Requires Apex Architect authority");
@@ -22,6 +24,7 @@ contract OmegaActual {
     constructor() {
         apexArchitect = msg.sender;
         failSafeTriggered = false;
+        emit ApexArchitectTransferred(address(0), msg.sender);
     }
 
     /**
@@ -46,5 +49,15 @@ contract OmegaActual {
      */
     function resetFailSafe() external onlyApex {
         failSafeTriggered = false;
+        emit FailSafeReset(msg.sender);
+    }
+
+    /**
+     * @dev Transfers Apex authority to a new address.
+     */
+    function transferApexAuthority(address newArchitect) external onlyApex {
+        require(newArchitect != address(0), "New architect is the zero address");
+        emit ApexArchitectTransferred(apexArchitect, newArchitect);
+        apexArchitect = newArchitect;
     }
 }

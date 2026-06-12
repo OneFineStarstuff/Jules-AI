@@ -7,24 +7,29 @@ provider "aws" {
 
 variable "region" {
   description = "The AWS region for enclave deployment"
+  type        = string
   default     = "us-east-1"
 }
 
 variable "vpc_id" {
   description = "The VPC ID"
+  type        = string
 }
 
 variable "ami_id" {
   description = "The AMI ID"
+  type        = string
 }
 
 variable "kms_key_arn" {
   description = "The KMS Key ARN"
+  type        = string
 }
 
 variable "allowed_telemetry_cidr" {
   description = "CIDR block for authorized telemetry endpoints"
-  default     = "10.0.0.0/8" # Restricted to internal G-SIFI network
+  type        = string
+  default     = "10.0.0.0/8"
 }
 
 # Inviolable Audit Subnet
@@ -32,7 +37,7 @@ resource "aws_subnet" "audit_subnet" {
   vpc_id                  = var.vpc_id
   cidr_block              = "10.0.100.0/24"
   availability_zone       = "${var.region}a"
-  map_public_ip_on_launch = false # Security Hardening
+  map_public_ip_on_launch = false
 
   tags = {
     Name        = "Sentinel-Inviolable-Audit-Subnet"
@@ -47,14 +52,13 @@ resource "aws_security_group" "kernel_sg" {
   description = "Restrictive security group for Sentinel reasoning kernel"
   vpc_id      = var.vpc_id
 
-  # No ingress (Zero Trust)
-
+  # Egress restricted to internal HTTPS telemetry
   egress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = [var.allowed_telemetry_cidr]
-    description = "Allow HTTPS egress to internal telemetry endpoints"
+    description = "Allow HTTPS egress to internal telemetry"
   }
 
   tags = {
@@ -82,14 +86,13 @@ resource "aws_instance" "confidential_reasoning_kernel" {
     device_index         = 0
   }
 
-  # Security Hardening
   ebs_optimized               = true
   monitoring                  = true
   associate_public_ip_address = false
 
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = "required" # IMDSv2 mandatory
+    http_tokens                 = "required"
     http_put_response_hop_limit = 1
     instance_metadata_tags      = "enabled"
   }
@@ -105,6 +108,10 @@ resource "aws_instance" "confidential_reasoning_kernel" {
     Security = "TPM-PCR-MATCH-TRUE"
   }
 }
+
+# -----------------------------------------------------------------------------
+# S3 BUCKET HARDENING
+# -----------------------------------------------------------------------------
 
 # Access logging bucket
 resource "aws_s3_bucket" "log_bucket" {
@@ -197,13 +204,17 @@ resource "aws_s3_bucket_object_lock_configuration" "worm_policy" {
   }
 }
 
-# SSL enforcement policies
+# -----------------------------------------------------------------------------
+# BUCKET POLICIES (SSL & LOGGING)
+# -----------------------------------------------------------------------------
+
 resource "aws_s3_bucket_policy" "worm_ssl_only" {
   bucket = aws_s3_bucket.worm_audit_sink.id
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
+        Sid       = "AllowSSLRequestsOnly"
         Action    = "s3:*"
         Effect    = "Deny"
         Principal = "*"
@@ -216,17 +227,18 @@ resource "aws_s3_bucket_policy" "worm_ssl_only" {
             "aws:SecureTransport" = "false"
           }
         }
-      },
+      }
     ]
   })
 }
 
-resource "aws_s3_bucket_policy" "log_ssl_only" {
+resource "aws_s3_bucket_policy" "log_bucket_policy" {
   bucket = aws_s3_bucket.log_bucket.id
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
+        Sid       = "AllowSSLRequestsOnly"
         Action    = "s3:*"
         Effect    = "Deny"
         Principal = "*"
@@ -240,6 +252,22 @@ resource "aws_s3_bucket_policy" "log_ssl_only" {
           }
         }
       },
+      {
+        Sid = "S3ServerAccessLogsPolicy"
+        Effect = "Allow"
+        Principal = {
+          Service = "logging.s3.amazonaws.com"
+        }
+        Action = "s3:PutObject"
+        Resource = "${aws_s3_bucket.log_bucket.arn}/*"
+        Condition = {
+          StringEquals = {
+            "aws:SourceAccount" = data.aws_caller_identity.current.account_id
+          }
+        }
+      }
     ]
   })
 }
+
+data "aws_caller_identity" "current" {}
