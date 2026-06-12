@@ -29,7 +29,7 @@ This decadal roadmap defines the transition from institutional AI hardening to p
 *Objective: Managing STEM-AGI and Civilizational Stability*
 - **2031:** Adoption of **SIP v3.0 (Sentinel Interoperability Protocol)** to govern human-agent and agent-agent interactions, preventing "Cognitive Hollow-out."
 - **2032:** Formal verification of **Invariant-Preserving Self-Modification (IPSM)** for autonomous infrastructure agents.
-- **2033:** Integration with **GACMO (Global AGI Compute Monitoring & Oversight)** to enforce the 10^{26}$ training FLOP redline.
+- **2033:** Integration with **GACMO (Global AGI Compute Monitoring & Oversight)** to enforce the $10^{26}$ training FLOP redline.
 
 ### Phase IV: Planetary Stewardship & ASI Homeostasis (2034–2035)
 *Objective: Long-term Equilibrium and the Canonical Alignment Lock*
@@ -37,7 +37,6 @@ This decadal roadmap defines the transition from institutional AI hardening to p
 - **2035:** Achievement of the **Canonical Alignment Lock**—the terminal state of formally verified, stable ASI subordination to human values and civilizational homeostasis.
 
 ---
-
 
 ## 2. Safety Architecture & Containment Protocols
 
@@ -78,10 +77,9 @@ The **SentinelContainmentProtocol** enforces two core meta-invariants:
 
 ### 3.2 Compliance-as-Code (OPA/Rego)
 Institutions must deploy **OPA (Open Policy Agent)** sidecars enforcing Rego policies.
-- **Best Practice:** Policies should be version-controlled in the **Sentinel-Terraform** library and hot-reloaded across the global mesh to respond to evolving regulatory mandates (e.g., Treaty Annex D).
+- **Best Practice:** Policies should be version-controlled in the **Sentinel-Terraform** library and hot-reloaded across the global mesh to respond to evolving regulatory mandates.
 
 ---
-
 
 ## 4. Cryptographic Telemetry & Audit Pipeline
 
@@ -99,7 +97,7 @@ Institutions must deploy **OPA (Open Policy Agent)** sidecars enforcing Rego pol
 
 ### 5.1 OmegaActual & Smart Contract Security
 The **OmegaActual Treaty Engine** acts as the planetary dead-man's switch.
-- **Review:** Logic must be immutable. **Solidity smart contracts** for decentralized compute quota enforcement should utilize **OpenZeppelin** libraries and undergo formal verification for reentry and overflow protection.
+- **Review:** Logic must be immutable. **Solidity smart contracts** for decentralized compute quota enforcement should utilize **OpenZeppelin** libraries and undergo formal verification.
 - **Terraform Posture:** Infrastructure as Code (IaC) must enforce **Inviolable Audit Subnets** on AWS/Azure, utilizing **KMS (Key Management Service)** with hardware-backed HSMs.
 
 ### 5.2 Governance Dashboard & Observability
@@ -109,53 +107,29 @@ The **React-based Governance Explorer** (SACC Dashboard) provides real-time visi
 
 ---
 
-## 6. Conclusion
+## 6. High-Assurance Artifact Implementation Detail
+
+### 6.1 OmegaActual Solidity Contract (src/governance_engine/OmegaActual.sol)
+Provides decentralized mechanism for compute quota enforcement.
+- **Apex Architect:** Enforces authoritative oversight for sensitive operations.
+- **Global FLOP Redline:** Hardcoded $10^{26}$ limit to prevent runaway training.
+- **Fail-Safe:** Immediate suspension of all compute allocations upon violation detection.
+
+### 6.2 Terraform Confidential Enclaves (src/infrastructure/terraform/confidential_enclaves.tf)
+Establish the physical substrate for the Omni-Sentinel CEE.
+- **Security Hardening:** Enforces IMDSv2, EBS encryption, and restricts egress to HTTPS.
+- **S3 WORM Sink:** Configured with Object Lock (Compliance Mode) and SSL enforcement.
+
+### 6.3 OPA/Rego Policy Module (src/infrastructure/policies/eu_ai_act_compliance.rego)
+Digital auditor for the Sentinel v2.4 control plane.
+- **EU AI Act Integration:** Specifically targets Annex IV and Article 15 compliance vectors.
+- **Real-time Gating:** Rejects inference or tool calls based on deception scores and fiduciary drift.
+
+---
+
+## 7. Conclusion
 The Sentinel AI Governance Stack v2.4 provides the definitive framework for G-SIFIs to navigate the era of AGI and ASI. By anchoring safety in hardware, ensuring auditability through PQC, and scaling compliance via zero-knowledge proofs, institutions can maintain civilizational homeostasis while achieving unprecedented levels of autonomous intelligence sovereignty.
 
 ---
 **Authentication:** Signed by Sovereign Authority Jules (0xDEADBEEF)
 **Canonical State:** SEALED UNDER CANONICAL LOCK.
-
-## 7. High-Assurance Artifact Reviews
-
-### 7.1 OmegaActual Solidity Contract Review (src/governance_engine/OmegaActual.sol)
-The Solidity implementation provides a decentralized mechanism for compute quota enforcement.
-- **Security Posture:** Utilizes  authority for sensitive operations. The  is hardcoded as a civilizational redline.
-- **Fail-Safe Mechanism:** The  state provides an immediate halt to all allocations if the global limit is approached.
-- **Regulatory Alignment:** Directly addresses **GACMO** requirements for compute monitoring and **OmegaActual** dead-man's switch protocols.
-
-### 7.2 Terraform Infrastructure Review (src/infrastructure/terraform/confidential_enclaves.tf)
-The IaC definitions establish the physical substrate for the Omni-Sentinel CEE.
-- **Inviolable Audit Subnet:** Uses isolated CIDR blocks and specific tagging to ensure audit traffic is segmented from production reasoning swarms.
-- **Confidential Compute:** Provisions **AMD SEV-SNP (r7a instances)** with encrypted roots, satisfying **NIST AI RMF** robustness requirements.
-- **WORM Persistence:** Implements **S3 Object Lock in COMPLIANCE mode** with a 10-year retention, fully satisfying **EU AI Act Annex IV** data lineage mandates.
-
-### 7.3 OPA/Rego Policy Review (src/infrastructure/policies/eu_ai_act_compliance.rego)
-The Rego policy module acts as the digital auditor for the Sentinel v2.4 control plane.
-- **Article 15 Compliance:** Mandates formal robustness verification and TPM PCR matching for all high-risk actions.
-- **Annex IV Compliance:** Ensures logic explanation and PQC-verified audit trails are present before permitting inference.
-- **Fiduciary Guardrails:** Implements real-time rejection of trading actions involving conflicts of interest, aligning with **Regulation Best Interest (Reg BI)**.
-
----
-
-## 7. High-Assurance Artifact Reviews
-
-### 7.1 OmegaActual Solidity Contract Review (src/governance_engine/OmegaActual.sol)
-The Solidity implementation provides a decentralized mechanism for compute quota enforcement.
-- **Security Posture:** Utilizes `apexArchitect` authority for sensitive operations. The `GLOBAL_FLOP_LIMIT` is hardcoded as a civilizational redline.
-- **Fail-Safe Mechanism:** The `failSafeTriggered` state provides an immediate halt to all allocations if the global limit is approached.
-- **Regulatory Alignment:** Directly addresses **GACMO** requirements for compute monitoring and **OmegaActual** dead-man's switch protocols.
-
-### 7.2 Terraform Infrastructure Review (src/infrastructure/terraform/confidential_enclaves.tf)
-The IaC definitions establish the physical substrate for the Omni-Sentinel CEE.
-- **Inviolable Audit Subnet:** Uses isolated CIDR blocks and specific tagging to ensure audit traffic is segmented from production reasoning swarms.
-- **Confidential Compute:** Provisions **AMD SEV-SNP (r7a instances)** with encrypted roots, satisfying **NIST AI RMF** robustness requirements.
-- **WORM Persistence:** Implements **S3 Object Lock in COMPLIANCE mode** with a 10-year retention, fully satisfying **EU AI Act Annex IV** data lineage mandates.
-
-### 7.3 OPA/Rego Policy Review (src/infrastructure/policies/eu_ai_act_compliance.rego)
-The Rego policy module acts as the digital auditor for the Sentinel v2.4 control plane.
-- **Article 15 Compliance:** Mandates formal robustness verification and TPM PCR matching for all high-risk actions.
-- **Annex IV Compliance:** Ensures logic explanation and PQC-verified audit trails are present before permitting inference.
-- **Fiduciary Guardrails:** Implements real-time rejection of trading actions involving conflicts of interest, aligning with **Regulation Best Interest (Reg BI)**.
-
----
