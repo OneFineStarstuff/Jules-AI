@@ -24,9 +24,10 @@ variable "kms_key_arn" {
 
 # Inviolable Audit Subnet
 resource "aws_subnet" "audit_subnet" {
-  vpc_id            = var.vpc_id
-  cidr_block        = "10.0.100.0/24"
-  availability_zone = "${var.region}a"
+  vpc_id                  = var.vpc_id
+  cidr_block              = "10.0.100.0/24"
+  availability_zone       = "${var.region}a"
+  map_public_ip_on_launch = false # Security Hardening
 
   tags = {
     Name        = "Sentinel-Inviolable-Audit-Subnet"
@@ -41,13 +42,14 @@ resource "aws_security_group" "kernel_sg" {
   description = "Restrictive security group for Sentinel reasoning kernel"
   vpc_id      = var.vpc_id
 
-  # Egress restricted to HTTPS for telemetry
+  # No ingress by default (Zero Trust)
+
   egress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "Allow HTTPS egress for telemetry and logs"
+    description = "Allow HTTPS egress for telemetry"
   }
 
   tags = {
@@ -64,7 +66,7 @@ resource "aws_network_interface" "kernel_nic" {
 # Confidential Compute Instance (AMD SEV-SNP enabled)
 resource "aws_instance" "confidential_reasoning_kernel" {
   ami           = var.ami_id
-  instance_type = "r7a.xlarge" # AMD EPYC based instance with SEV-SNP support
+  instance_type = "r7a.xlarge"
 
   cpu_options {
     amd_sev_snp = "enabled"
@@ -75,13 +77,13 @@ resource "aws_instance" "confidential_reasoning_kernel" {
     device_index         = 0
   }
 
-  # Security Hardening
-  ebs_optimized = true
-  monitoring    = true
+  ebs_optimized               = true
+  monitoring                  = true
+  associate_public_ip_address = false
 
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = "required" # IMDSv2 mandatory
+    http_tokens                 = "required"
     http_put_response_hop_limit = 1
     instance_metadata_tags      = "enabled"
   }
@@ -101,25 +103,34 @@ resource "aws_instance" "confidential_reasoning_kernel" {
 # Access logging bucket
 resource "aws_s3_bucket" "log_bucket" {
   bucket = "gsifi-audit-logs-access"
+  force_destroy = true
+}
 
-  tags = {
-    Purpose = "AccessLogging"
+resource "aws_s3_bucket_ownership_controls" "log_bucket_ownership" {
+  bucket = aws_s3_bucket.log_bucket.id
+  rule {
+    object_ownership = "BucketOwnerPreferred"
   }
+}
+
+resource "aws_s3_bucket_acl" "log_bucket_acl" {
+  depends_on = [aws_s3_bucket_ownership_controls.log_bucket_ownership]
+  bucket = aws_s3_bucket.log_bucket.id
+  acl    = "log-delivery-write"
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "log_encryption" {
   bucket = aws_s3_bucket.log_bucket.id
-
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
+      kms_master_key_id = var.kms_key_arn
+      sse_algorithm     = "aws:kms"
     }
   }
 }
 
 resource "aws_s3_bucket_public_access_block" "log_public_access_block" {
   bucket = aws_s3_bucket.log_bucket.id
-
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
@@ -136,16 +147,16 @@ resource "aws_s3_bucket_versioning" "log_versioning" {
 # Kafka WORM Archive (S3 with Object Lock)
 resource "aws_s3_bucket" "worm_audit_sink" {
   bucket = "gsifi-pqc-worm-audit-ledger"
-
   object_lock_enabled = true
+}
 
-  tags = {
-    StorageMode = "WORM"
-    PQC_Algorithm = "ML-DSA-87"
+resource "aws_s3_bucket_ownership_controls" "worm_bucket_ownership" {
+  bucket = aws_s3_bucket.worm_audit_sink.id
+  rule {
+    object_ownership = "BucketOwnerEnforced"
   }
 }
 
-# Enable versioning (required for object lock)
 resource "aws_s3_bucket_versioning" "worm_versioning" {
   bucket = aws_s3_bucket.worm_audit_sink.id
   versioning_configuration {
@@ -153,10 +164,8 @@ resource "aws_s3_bucket_versioning" "worm_versioning" {
   }
 }
 
-# Enforce encryption and public access blocking for S3 WORM sink
 resource "aws_s3_bucket_server_side_encryption_configuration" "worm_encryption" {
   bucket = aws_s3_bucket.worm_audit_sink.id
-
   rule {
     apply_server_side_encryption_by_default {
       kms_master_key_id = var.kms_key_arn
@@ -167,7 +176,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "worm_encryption" 
 
 resource "aws_s3_bucket_public_access_block" "worm_public_access_block" {
   bucket = aws_s3_bucket.worm_audit_sink.id
-
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
@@ -176,14 +184,12 @@ resource "aws_s3_bucket_public_access_block" "worm_public_access_block" {
 
 resource "aws_s3_bucket_logging" "worm_logging" {
   bucket = aws_s3_bucket.worm_audit_sink.id
-
   target_bucket = aws_s3_bucket.log_bucket.id
   target_prefix = "log/"
 }
 
 resource "aws_s3_bucket_object_lock_configuration" "worm_policy" {
   bucket = aws_s3_bucket.worm_audit_sink.id
-
   rule {
     default_retention {
       mode = "COMPLIANCE"
@@ -192,7 +198,7 @@ resource "aws_s3_bucket_object_lock_configuration" "worm_policy" {
   }
 }
 
-# Bucket policy to enforce SSL for WORM sink
+# SSL enforcement policy
 resource "aws_s3_bucket_policy" "worm_ssl_only" {
   bucket = aws_s3_bucket.worm_audit_sink.id
   policy = jsonencode({
@@ -216,7 +222,6 @@ resource "aws_s3_bucket_policy" "worm_ssl_only" {
   })
 }
 
-# Bucket policy to enforce SSL for logging bucket
 resource "aws_s3_bucket_policy" "log_ssl_only" {
   bucket = aws_s3_bucket.log_bucket.id
   policy = jsonencode({
