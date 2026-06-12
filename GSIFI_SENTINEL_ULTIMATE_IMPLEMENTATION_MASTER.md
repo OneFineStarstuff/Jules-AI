@@ -29,7 +29,7 @@ This decadal roadmap defines the transition from institutional AI hardening to p
 *Objective: Managing STEM-AGI and Civilizational Stability*
 - **2031:** Adoption of **SIP v3.0 (Sentinel Interoperability Protocol)** to govern human-agent and agent-agent interactions, preventing "Cognitive Hollow-out."
 - **2032:** Formal verification of **Invariant-Preserving Self-Modification (IPSM)** for autonomous infrastructure agents.
-- **2033:** Integration with **GACMO (Global AGI Compute Monitoring & Oversight)** to enforce the 0^{26}$ training FLOP redline.
+- **2033:** Integration with **GACMO (Global AGI Compute Monitoring & Oversight)** to enforce the 10^{26}$ training FLOP redline.
 
 ### Phase IV: Planetary Stewardship & ASI Homeostasis (2034–2035)
 *Objective: Long-term Equilibrium and the Canonical Alignment Lock*
