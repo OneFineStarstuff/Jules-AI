@@ -1,0 +1,64 @@
+{
+  "catalog": {
+    "uuid": "a1b2c3d4-e5f6-4a5b-bc6c-7d8e9f0a1b2c",
+    "metadata": {
+      "title": "G-SIFI AGI/ASI Governance Control Catalog v1.0",
+      "last-modified": "2026-06-06T12:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.2"
+    },
+    "groups": [
+      {
+        "id": "EU-AI-ACT",
+        "title": "EU AI Act Compliance Mapping",
+        "controls": [
+          {
+            "id": "ANNEX-IV-DOCUMENTATION",
+            "title": "Technical Documentation (Article 11)",
+            "description": "Technical documentation for high-risk AI systems shall be drawn up before that system is placed on the market.",
+            "mappings": [
+              {
+                "target": "Sentinel-PQC-WORM",
+                "method": "Recursive Context Envelope (RCE) Logging"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NIST-AI-RMF",
+        "title": "NIST AI RMF 1.0 Mapping",
+        "controls": [
+          {
+            "id": "GOVERN-1.2",
+            "title": "Risk Management Processes",
+            "description": "Processes are in place to prioritize risk and identify potential impacts.",
+            "mappings": [
+              {
+                "target": "G-SRI Scoring Engine",
+                "method": "Bayesian Systemic Risk Indexing"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BASEL-IV",
+        "title": "Basel IV Operational Resilience",
+        "controls": [
+          {
+            "id": "OP-RES-IRMI",
+            "title": "Immediate Risk Severance",
+            "description": "Ability to decouple systemic AI workloads from the financial substrate in real-time.",
+            "mappings": [
+              {
+                "target": "IRMI Driver",
+                "method": "INT 0x1A Hardware Interrupt"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
