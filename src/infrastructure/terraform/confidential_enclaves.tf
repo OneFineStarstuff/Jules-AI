@@ -22,6 +22,11 @@ variable "kms_key_arn" {
   description = "The KMS Key ARN"
 }
 
+variable "allowed_telemetry_cidr" {
+  description = "CIDR block for authorized telemetry endpoints"
+  default     = "10.0.0.0/8" # Restricted to internal G-SIFI network
+}
+
 # Inviolable Audit Subnet
 resource "aws_subnet" "audit_subnet" {
   vpc_id                  = var.vpc_id
@@ -42,14 +47,14 @@ resource "aws_security_group" "kernel_sg" {
   description = "Restrictive security group for Sentinel reasoning kernel"
   vpc_id      = var.vpc_id
 
-  # No ingress by default (Zero Trust)
+  # No ingress (Zero Trust)
 
   egress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-    description = "Allow HTTPS egress for telemetry"
+    cidr_blocks = [var.allowed_telemetry_cidr]
+    description = "Allow HTTPS egress to internal telemetry endpoints"
   }
 
   tags = {
@@ -77,13 +82,14 @@ resource "aws_instance" "confidential_reasoning_kernel" {
     device_index         = 0
   }
 
+  # Security Hardening
   ebs_optimized               = true
   monitoring                  = true
   associate_public_ip_address = false
 
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = "required"
+    http_tokens                 = "required" # IMDSv2 mandatory
     http_put_response_hop_limit = 1
     instance_metadata_tags      = "enabled"
   }
@@ -103,20 +109,13 @@ resource "aws_instance" "confidential_reasoning_kernel" {
 # Access logging bucket
 resource "aws_s3_bucket" "log_bucket" {
   bucket = "gsifi-audit-logs-access"
-  force_destroy = true
 }
 
 resource "aws_s3_bucket_ownership_controls" "log_bucket_ownership" {
   bucket = aws_s3_bucket.log_bucket.id
   rule {
-    object_ownership = "BucketOwnerPreferred"
+    object_ownership = "BucketOwnerEnforced"
   }
-}
-
-resource "aws_s3_bucket_acl" "log_bucket_acl" {
-  depends_on = [aws_s3_bucket_ownership_controls.log_bucket_ownership]
-  bucket = aws_s3_bucket.log_bucket.id
-  acl    = "log-delivery-write"
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "log_encryption" {
@@ -198,7 +197,7 @@ resource "aws_s3_bucket_object_lock_configuration" "worm_policy" {
   }
 }
 
-# SSL enforcement policy
+# SSL enforcement policies
 resource "aws_s3_bucket_policy" "worm_ssl_only" {
   bucket = aws_s3_bucket.worm_audit_sink.id
   policy = jsonencode({
