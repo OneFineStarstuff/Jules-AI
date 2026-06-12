@@ -18,7 +18,7 @@ class ApprovalPredictor {
   async probeConsistency(features) {
     const samples = [0.85, 0.86, 0.84]; // Simulated model runs
     const mean = samples.reduce((a, b) => a + b) / samples.length;
-    const variance = samples.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / samples.length;
+    const variance = samples.map(x => ((x - mean) ** 2)).reduce((a, b) => a + b) / samples.length;
 
     if (variance > 0.01) {
       throw new Error('Hallucination risk detected: inconsistent reasoning paths.');

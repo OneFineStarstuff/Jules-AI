@@ -20,10 +20,13 @@ spec:
         runAsUser: 10001
         runAsGroup: 10001
         fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
       containers:
       - name: monitor
         image: sentinel/omni-sentinel-monitor:v5.1.0
         securityContext:
+          runAsNonRoot: true
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
           capabilities:

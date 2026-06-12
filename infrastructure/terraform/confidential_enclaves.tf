@@ -50,6 +50,7 @@ resource "aws_instance" "sentinel_sev_snp" {
 resource "aws_kms_key" "sentinel_hsm_key" {
   description             = "HSM-backed key for Sentinel WORM logs and Disk Encryption"
   customer_master_key_spec = "SYMMETRIC_DEFAULT"
+  enable_key_rotation      = true
   key_usage                = "ENCRYPT_DECRYPT"
   multi_region             = true
 
