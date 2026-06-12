@@ -27,6 +27,13 @@ resource "aws_instance" "sentinel_sev_snp" {
   ami           = var.sentinel_ami_id
   instance_type = "p5.48xlarge" # Optimized for LLM/AGI training & inference
 
+  monitoring = true # Fix: Enable detailed monitoring
+
+  metadata_options {
+    http_endpoint = "enabled"
+    http_tokens   = "required" # Fix: Enforce IMDSv2
+  }
+
   cpu_options {
     amd_sev_snp = "enabled"
   }
@@ -72,6 +79,8 @@ resource "azurerm_linux_virtual_machine" "sentinel_tdx" {
 
   admin_username      = var.admin_username
   network_interface_ids = [azurerm_network_interface.sentinel_nic.id]
+
+  encryption_at_host_enabled = true # Fix: Enable host-level encryption
 
   # Confidential Compute Settings
   vtpm_enabled        = true
