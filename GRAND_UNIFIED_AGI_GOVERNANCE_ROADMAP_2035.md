@@ -61,7 +61,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 
 ## 4. Regulatory & Compliance Matrix (OSCAL 1.1.2)
 
-The architecture is mapped to global standards using **OSCAL 1.1.2** machine-readable catalogs and **RSP V8 (Regulator Submission Pack)** conformity dossiers.
+The architecture is mapped to global standards using **OSCAL 1.1.2** machine-readable catalogs (e.g., `GSIFI_OSCAL_SSP_V8.json`) and **RSP V8 (Regulator Submission Pack)** conformity dossiers.
 
 | Regulation | Core Requirement | Sentinel Implementation Protocol |
 | :--- | :--- | :--- |
