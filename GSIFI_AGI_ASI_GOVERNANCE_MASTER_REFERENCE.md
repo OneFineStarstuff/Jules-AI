@@ -1,4 +1,4 @@
-# G-SIFI AGI/ASI and AI Governance Master Reference (2026–2030)
+# G-SIFI AGI/ASI and AI Governance Master Reference (2026–2035)
 
 ## 1. Executive Summary: The Intelligence Sovereignty Mandate
 The transition from narrow, deterministic AI to autonomous, reasoning swarms and potential Artificial General Intelligence (AGI) represents a non-linear shift in the global risk landscape. For Global Systemically Important Financial Institutions (G-SIFIs) and Fortune 500 enterprises, this necessitates the transition from "Model Validation" to "Alignment Verification." This reference defines the technical and governance infrastructure required to safely harness autonomous agency while maintaining civilizational-scale stability.
@@ -87,7 +87,8 @@ Measures the semantic delta between "Institutional Intent" and "Agentic Action."
 ### 7.2 AGI Crisis Simulations
 Quarterly "Red-Swarm" exercises testing institutional resilience against rogue AGI logic and swarm-based exfiltration attempts.
 
-## 8. Implementation Roadmap: 2026–2030
+## 8. Implementation Roadmap: 2026–2035
+For the definitive decadal roadmap, see [GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md](GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md).
 
 - **Year 1 (Foundation)**: Rollout of SPIFFE identity and Kafka WORM logging for all Tier-1 systems.
 - **Year 2 (Integration)**: Deployment of EAIP 3.0 and OPA sidecars across high-risk trading substrates.
