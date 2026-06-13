@@ -24,7 +24,9 @@ def verify_artifacts():
         "src/infrastructure/gai_soc_telemetry_spec.md",
         "src/governance_engine/icgc_zk_verified_controls.md",
         "G_STACK_TECHNICAL_SPEC.md",
-        "reports/OPERATIONAL_CHECK_2026_06_13.md"
+        "reports/OPERATIONAL_CHECK_2026_06_13.md",
+        "src/governance_engine/workflow_ai_pro_spec.md",
+        "src/infrastructure/GIEN_NETWORK_SPEC.md"
     ]
 
     success = True

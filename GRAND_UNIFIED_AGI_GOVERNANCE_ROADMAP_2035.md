@@ -31,7 +31,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 *Focus: Managing STEM-AGI and Civilizational Stability*
 - **2031:** Deployment of **SIP v3.0** interaction protocols with **Socratic Constraints**.
 - **2032:** Formal verification of "Invariant-Preserving Self-Modification" for infrastructure agents.
-- **2033:** Integration with the **International Compute Registry (GACMO)** for the 0^{26}$ training FLOP redline.
+- **2033:** Integration with the **International Compute Registry (GACMO)** for the 10^{26}$ training FLOP redline.
 
 ### Phase IV: Planetary Stewardship & ASI Homeostasis (2034–2035)
 *Focus: Long-term Equilibrium and Civilizational Homeostasis*
