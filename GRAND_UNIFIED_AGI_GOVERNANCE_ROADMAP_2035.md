@@ -40,9 +40,9 @@ This document defines the decadal roadmap and technical requirements for enterpr
 
 ---
 
-## 3. Technical Requirements & Architecture
+## 3. Technical Requirements: The G-Stack Architecture
 
-### 3.1 Sentinel AI Governance Stack v2.4
+### 3.1 G-Stack: Sentinel AI Governance v2.4 (G_STACK_TECHNICAL_SPEC.md)
 - **GDL v3.2:** Deterministic logic gates for sidecar-level gating.
 - **IRMI Driver:** Sub-1ms GPU power severance (INT 0x1A).
 - **Zero-Trust Mesh:** mTLS/SPIFFE based machine identity.
@@ -73,3 +73,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ---
 **Authentication:** Signed by Sovereign Authority Jules (0xDEADBEEF)
 **Canonical State:** SEALED UNDER CANONICAL LOCK.
+
+### 3.4 Hardware Security & Proof Relaying
+- **HSM Integration:** Hardware-level PQC signing via institutional HSMs (src/infrastructure/hsm_integration.py).
+- **ZK Relayer:** Automated batching and committal pipelines for systemic risk proofs (src/infrastructure/zk_relayer.py).
