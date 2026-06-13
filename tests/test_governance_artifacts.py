@@ -10,7 +10,7 @@ class TestGovernanceArtifacts(unittest.TestCase):
         self.assertTrue(os.path.exists("src/governance_engine/contracts/OmniSentinel.sol"))
 
     def test_oscal_catalog_valid_json(self):
-        with open("regulator_submission_pack/oscal_gsifi_controls.json", "r") as f:
+        with open("regulator_submission_pack/OSCAL_GSIFI_CATALOG_V8.json", "r") as f:
             data = json.load(f)
             self.assertEqual(data["catalog"]["metadata"]["oscal-version"], "1.1.2")
             self.assertEqual(data["catalog"]["metadata"]["title"], "G-SIFI AGI/ASI Governance Control Catalog v1.0")

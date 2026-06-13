@@ -9,7 +9,7 @@ def verify_artifacts():
         "infrastructure/terraform/confidential_enclaves.tf",
         "src/governance_engine/contracts/OmegaActual.sol",
         "src/governance_engine/contracts/OmniSentinel.sol",
-        "regulator_submission_pack/oscal_gsifi_controls.json",
+        "regulator_submission_pack/OSCAL_GSIFI_CATALOG_V8.json",
         "src/infrastructure/policies/compliance_rules.rego",
         "src/adaptive-ui/GovernanceDashboard.tsx",
         "src/infrastructure/zk_relayer.py",
