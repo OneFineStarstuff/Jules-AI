@@ -32,3 +32,17 @@
 ---
 **Status:** AUDIT CANON v2.1.0
 **Lead Auditor:** Jules (Senior Compliance Engineer)
+
+## 4. Mapping to International Regimes
+
+| Regime | Implementation Artifact | Verification Mechanism |
+| :--- | :--- | :--- |
+| **EU AI Act Annex IV** | `oscal_gsifi_controls.json` | OSCAL Validation + PQC-WORM RCE logs. |
+| **NIST AI RMF 1.0** | `GovernanceDashboard.tsx` | Attestation status (PCR_MATCH) visualization. |
+| **Basel III/IV** | `gsri_scoring_engine.py` | G-SRI &gt; 0.85 trigger logic in Rego. |
+| **DORA / NIS2** | `confidential_enclaves.tf` | Multi-region HA + KMS rotation + mTLS mesh. |
+| **SR 11-7 / 26-2** | `consistency_probe.py` | Continuous validation of reasoning variance. |
+| **GDPR Art. 22** | `fiduciary_guardrail_engine.py` | Causal Explainers + Salted SHA-256 PII hashing. |
+
+---
+**Canonical Signature:** 0xSENTINEL-SIG-2026-06-13

@@ -129,3 +129,77 @@ variable "admin_username" {
   type    = string
   default = "sentinel_admin"
 }
+
+# --- Audit Infrastructure: S3 WORM with Object Lock ---
+
+resource "aws_s3_bucket" "sentinel_audit_worm" {
+  bucket = "sentinel-audit-worm-${var.aws_primary_region}"
+
+  object_lock_enabled = true
+}
+
+resource "aws_s3_bucket_object_lock_configuration" "sentinel_worm_config" {
+  bucket = aws_s3_bucket.sentinel_audit_worm.id
+
+  rule {
+    default_retention {
+      mode = "COMPLIANCE"
+      days = 3650 # 10-year decadal retention
+    }
+  }
+}
+
+# --- Kafka: MSK Cluster for Telemetry ---
+
+resource "aws_msk_cluster" "sentinel_telemetry" {
+  cluster_name           = "sentinel-telemetry-mesh"
+  kafka_version          = "3.6.0"
+  number_of_broker_nodes = 3
+
+  broker_node_group_info {
+    instance_type = "kafka.m5.large"
+    client_subnets = var.private_subnets
+    security_groups = [aws_security_group.sentinel_mesh.id]
+
+    storage_info {
+      ebs_storage_info {
+        volume_size = 1000
+      }
+    }
+  }
+
+  encryption_info {
+    encryption_at_rest_kms_key_arn = aws_kms_key.sentinel_hsm_key.arn
+    encryption_in_transit {
+      client_broker = "TLS"
+      in_cluster    = true
+    }
+  }
+
+  logging_info {
+    broker_logs {
+      s3 {
+        enabled = true
+        bucket  = aws_s3_bucket.sentinel_audit_worm.id
+        prefix  = "logs/msk"
+      }
+    }
+  }
+}
+
+# --- Additional Variables ---
+
+variable "private_subnets" {
+  type    = list(string)
+  default = ["subnet-0123456789abcdef0", "subnet-0123456789abcdef1", "subnet-0123456789abcdef2"]
+}
+
+resource "aws_security_group" "sentinel_mesh" {
+  name        = "sentinel-mesh-sg"
+  description = "mTLS Mesh Security Group"
+  vpc_id      = var.vpc_id
+}
+
+variable "vpc_id" {
+  type = string
+}
