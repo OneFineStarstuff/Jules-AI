@@ -40,7 +40,9 @@ def verify_artifacts():
         "simulate_civilizational_homeostasis.py",
         "FINAL_SUBMISSION_MANIFEST.md",
         "src/adaptive-ui/ExecutiveReportStyles.css",
-        "src/infrastructure/kafka_worm_sink.py"
+        "src/infrastructure/kafka_worm_sink.py",
+        "REGULATORY_CONFORMITY_REPORT_ULTIMATE.md",
+        "src/governance_engine/red_dawn_contagion_sim.py"
     ]
 
     success = True
@@ -52,7 +54,7 @@ def verify_artifacts():
             success = False
 
     if success:
-        print("All artifacts verified.")
+        print("All 42 core governance artifacts verified.")
     return success
 
 if __name__ == "__main__":
