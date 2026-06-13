@@ -38,7 +38,9 @@ def verify_artifacts():
         "HSM_KMS_HARDENING_GUIDE.md",
         "src/governance_engine/resonance_metrics.py",
         "simulate_civilizational_homeostasis.py",
-        "FINAL_SUBMISSION_MANIFEST.md"
+        "FINAL_SUBMISSION_MANIFEST.md",
+        "src/adaptive-ui/ExecutiveReportStyles.css",
+        "src/infrastructure/kafka_worm_sink.py"
     ]
 
     success = True

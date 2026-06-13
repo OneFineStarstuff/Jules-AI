@@ -22,6 +22,11 @@
 2. **Rego Sync:** Propagate `compliance_rules.rego` to the sidecars.
 3. **ZK Pipeline:** Initialize the ZK-Relayer with the smart contract addresses.
 
+## 4.5 Risk Simulation: Red Dawn Stage 6
+1. **Initialization:** Deploy the contagion model via `simulate_incident.py`.
+2. **Monitoring:** Verify IRMI hardware severance occurs if risk > 85.
+3. **Forensics:** Extract PQC logs and verify via `audit_pipeline_simulator.py`.
+
 ## 5. Verification & Acceptance
 1. **Homeostasis Drill:** Run `simulate_civilizational_homeostasis.py`.
 2. **Conformity Audit:** Generate and sign the `RSP_V8_ULTIMATE_CONFORMITY.xml`.
