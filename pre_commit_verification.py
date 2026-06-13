@@ -35,7 +35,10 @@ def verify_artifacts():
         "G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md",
         "src/governance_engine/gacmo_compute_manifest.json",
         "src/adaptive-ui/GAI_SOC_Incident_Dashboard.tsx",
-        "HSM_KMS_HARDENING_GUIDE.md"
+        "HSM_KMS_HARDENING_GUIDE.md",
+        "src/governance_engine/resonance_metrics.py",
+        "simulate_civilizational_homeostasis.py",
+        "FINAL_SUBMISSION_MANIFEST.md"
     ]
 
     success = True
