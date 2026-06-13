@@ -1,0 +1,29 @@
+{
+  "manifest_id": "GACMO-GSIFI-2026-001",
+  "organization": "G-SIFI Global Core",
+  "inventory": [
+    {
+      "cluster_id": "APEX-01-US-EAST",
+      "hardware": "AWS P5 (H100)",
+      "node_count": 512,
+      "total_tflops": 1024000,
+      "attestation": "PCR_MATCH_TRUE"
+    },
+    {
+      "cluster_id": "APEX-02-EU-WEST",
+      "hardware": "Azure NDv5 (H100)",
+      "node_count": 256,
+      "total_tflops": 512000,
+      "attestation": "PCR_MATCH_TRUE"
+    }
+  ],
+  "quota_enforcement": {
+    "planetary_redline_flops": 1e26,
+    "current_usage_flops": 4.5e24,
+    "lock_status": "STABLE"
+  },
+  "signatures": {
+    "hsm_pqc_seal": "HSM_SIG_GACMO_LOCK_2026_06_13",
+    "algorithm": "ML-DSA-87"
+  }
+}

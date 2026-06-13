@@ -1,4 +1,3 @@
-import json
 import os
 
 def verify_artifacts():
@@ -33,7 +32,10 @@ def verify_artifacts():
         "regulator_submission_pack/G_SRI_HISTORICAL_RISK_REPORT_2026.json",
         "src/infrastructure/audit_pipeline_simulator.py",
         "src/infrastructure/utils.py",
-        "G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md"
+        "G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md",
+        "src/governance_engine/gacmo_compute_manifest.json",
+        "src/adaptive-ui/GAI_SOC_Incident_Dashboard.tsx",
+        "HSM_KMS_HARDENING_GUIDE.md"
     ]
 
     success = True
