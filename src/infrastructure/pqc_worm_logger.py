@@ -1,6 +1,15 @@
 import json
 from datetime import datetime
 
+# Robust import for hash_pii
+try:
+    from src.infrastructure.utils import hash_pii
+except ImportError:
+    import sys
+    import os
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+    from src.infrastructure.utils import hash_pii
+
 class PQCWormLogger:
     """
     Post-Quantum Cryptographic (PQC) WORM Logger.
@@ -21,11 +30,17 @@ class PQCWormLogger:
         Signs and logs an entry to the WORM audit sink using a hybrid PQC signature scheme.
         """
         timestamp = datetime.now().isoformat()
+
+        # Privacy-Preserving Logging: Hash PII identifiers before storage
+        safe_details = details.copy()
+        if "user_id" in safe_details:
+            safe_details["user_id"] = hash_pii(safe_details["user_id"])
+
         payload = {
             "timestamp": timestamp,
             "component": component,
             "event": event,
-            "details": details
+            "details": safe_details
         }
 
         # Simulating multiple PQC signatures for deep immutability
