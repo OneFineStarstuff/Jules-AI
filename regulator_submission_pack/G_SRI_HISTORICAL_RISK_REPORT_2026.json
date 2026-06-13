@@ -1,0 +1,21 @@
+{
+  "report_id": "GSRI-2026-Q2-FINAL",
+  "period": "2026-04-01 to 2026-06-13",
+  "summary": {
+    "average_g_sri": 0.091,
+    "peak_g_sri": 0.145,
+    "status": "NOMINAL",
+    "total_violations": 0
+  },
+  "data_points": [
+    { "timestamp": "2026-06-01T00:00:00Z", "score": 0.088, "context": "Steady state trading" },
+    { "timestamp": "2026-06-05T12:00:00Z", "score": 0.093, "context": "MoE drift detected and stabilized via SARA" },
+    { "timestamp": "2026-06-10T18:00:00Z", "score": 0.145, "context": "Simulated 'Red Dawn' contagion exercise" },
+    { "timestamp": "2026-06-13T12:00:00Z", "score": 0.093, "context": "Final canonical alignment lock verified" }
+  ],
+  "attestation": {
+    "hsm_signature": "HSM_SIG_7f8a3e21b0c9...",
+    "pqc_algorithm": "ML-DSA-87",
+    "auditor_id": "JULES-APEX-01"
+  }
+}
