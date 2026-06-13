@@ -2,9 +2,9 @@
   "catalog": {
     "uuid": "a1b2c3d4-e5f6-4a5b-bc6c-7d8e9f0a1b2c",
     "metadata": {
-      "title": "G-SIFI AGI/ASI Governance Control Catalog v1.0",
-      "last-modified": "2026-06-06T12:00:00Z",
-      "version": "1.0.0",
+      "title": "G-SIFI AGI/ASI Governance Control Catalog v8.0",
+      "last-modified": "2026-06-13T12:00:00Z",
+      "version": "8.0.0",
       "oscal-version": "1.1.2"
     },
     "groups": [
@@ -15,11 +15,22 @@
           {
             "id": "ANNEX-IV-DOCUMENTATION",
             "title": "Technical Documentation (Article 11)",
-            "description": "Technical documentation for high-risk AI systems shall be drawn up before that system is placed on the market.",
+            "description": "Technical documentation for high-risk AI systems.",
             "mappings": [
               {
                 "target": "Sentinel-PQC-WORM",
                 "method": "Recursive Context Envelope (RCE) Logging"
+              }
+            ]
+          },
+          {
+            "id": "ART-15-CYBER",
+            "title": "Cybersecurity (Article 15)",
+            "description": "High-risk AI systems shall be resilient against attempts to alter their use.",
+            "mappings": [
+              {
+                "target": "Confidential Enclaves",
+                "method": "AMD SEV-SNP / Intel TDX Memory Encryption"
               }
             ]
           }
@@ -32,11 +43,22 @@
           {
             "id": "GOVERN-1.2",
             "title": "Risk Management Processes",
-            "description": "Processes are in place to prioritize risk and identify potential impacts.",
+            "description": "Processes are in place to prioritize risk.",
             "mappings": [
               {
                 "target": "G-SRI Scoring Engine",
                 "method": "Bayesian Systemic Risk Indexing"
+              }
+            ]
+          },
+          {
+            "id": "TRUST-1.1",
+            "title": "Trustworthiness & Bias",
+            "description": "Bias mitigation and fairness checks.",
+            "mappings": [
+              {
+                "target": "Fiduciary Guardrail Engine",
+                "method": "MAS FEAT / UK Consumer Duty Gating"
               }
             ]
           }
@@ -49,7 +71,7 @@
           {
             "id": "A.5.2",
             "title": "AI System Lifecycle",
-            "description": "Establish and maintain a process for the AI system lifecycle.",
+            "description": "AI system lifecycle management.",
             "mappings": [
               {
                 "target": "Sentinel Registry",
@@ -60,17 +82,51 @@
         ]
       },
       {
-        "id": "FED-SR-11-7",
-        "title": "Federal Reserve SR 11-7 / OCC 2011-12",
+        "id": "BASEL-IV",
+        "title": "Basel IV Operational Resilience",
         "controls": [
           {
-            "id": "MODEL-VAL-CONTINUOUS",
-            "title": "Continuous Model Validation",
-            "description": "Effective model risk management requires robust model development, implementation, and use.",
+            "id": "OP-RES-IRMI",
+            "title": "Immediate Risk Severance",
+            "description": "Real-time decoupling of systemic AI workloads.",
             "mappings": [
               {
-                "target": "Recursive Goal-Preservation Probe",
-                "method": "Deceptive Alignment Detection (Variance < 0.02)"
+                "target": "IRMI Driver",
+                "method": "INT 0x1A Hardware Interrupt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DORA-NIS2",
+        "title": "DORA & NIS2 Systemic Resilience",
+        "controls": [
+          {
+            "id": "ICT-RISK-MGMT",
+            "title": "ICT Risk Management",
+            "description": "Framework for digital operational resilience.",
+            "mappings": [
+              {
+                "target": "GIEN Relay",
+                "method": "Zero-Trust Collective Defense Gossip Mesh"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FED-SR-11-7",
+        "title": "Federal Reserve SR 11-7",
+        "controls": [
+          {
+            "id": "MODEL-VALIDATION",
+            "title": "Continuous Validation",
+            "description": "Effective model risk management.",
+            "mappings": [
+              {
+                "target": "Consistency Probe",
+                "method": "Deceptive Alignment Variance Check"
               }
             ]
           }
@@ -78,16 +134,16 @@
       },
       {
         "id": "FED-SR-26-2",
-        "title": "Federal Reserve SR 26-2 (Agentic Audit)",
+        "title": "Federal Reserve SR 26-2",
         "controls": [
           {
-            "id": "AGENT-AUDITABILITY",
-            "title": "Auditability of Autonomous Agents",
-            "description": "Ensuring agentic swarms are subject to internal audit and non-repudiation.",
+            "id": "AGENT-AUDIT",
+            "title": "Agentic Auditability",
+            "description": "Internal audit of agentic swarms.",
             "mappings": [
               {
-                "target": "PQC WORM Logger",
-                "method": "CRYSTALS-Dilithium Signed Audit Trails"
+                "target": "ZK Relayer",
+                "method": "Succinct Verification of Reasoning Traces"
               }
             ]
           }
@@ -98,13 +154,13 @@
         "title": "GDPR Article 22",
         "controls": [
           {
-            "id": "EXPLAINABILITY-SAFEGUARD",
-            "title": "Automated Decision-Making Safeguards",
-            "description": "Right of the data subject to obtain human intervention and an explanation.",
+            "id": "AUTO-DECISION-SAFEGUARD",
+            "title": "Automated Decision Safeguards",
+            "description": "Safeguards for the data subject.",
             "mappings": [
               {
-                "target": "Fiduciary Guardrail Engine",
-                "method": "Causal Inference Explainers (Explainable Boosting Machines)"
+                "target": "WorkflowAI Pro",
+                "method": "EBM-based Causal Inference Explainers"
               }
             ]
           }

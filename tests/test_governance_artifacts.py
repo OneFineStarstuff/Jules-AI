@@ -13,7 +13,7 @@ class TestGovernanceArtifacts(unittest.TestCase):
         with open("regulator_submission_pack/OSCAL_GSIFI_CATALOG_V8.json", "r") as f:
             data = json.load(f)
             self.assertEqual(data["catalog"]["metadata"]["oscal-version"], "1.1.2")
-            self.assertEqual(data["catalog"]["metadata"]["title"], "G-SIFI AGI/ASI Governance Control Catalog v1.0")
+            self.assertEqual(data["catalog"]["metadata"]["title"], "G-SIFI AGI/ASI Governance Control Catalog v8.0")
 
     def test_terraform_file_exists(self):
         self.assertTrue(os.path.exists("infrastructure/terraform/confidential_enclaves.tf"))
