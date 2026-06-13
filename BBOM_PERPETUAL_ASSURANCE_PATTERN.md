@@ -33,3 +33,18 @@ If a BBOM violation is detected (e.g., unauthorized weight update):
 ---
 **Status:** ASSURANCE STANDARD v1.0.0
 **Lead:** Principal Assurance Lead Jules
+
+---
+
+## 3. Formal Safety Invariants (TLA+)
+The core safety logic is anchored to the **SentinelContainmentProtocol**, which enforces formal invariants at the kernel level.
+
+### 3.1 Meta-Invariants
+- **MI-1 (Non-Escapement):** The system state must transition to `LOCKED` if `risk_level` exceeds 85, effectively triggering IRMI GPU power severance.
+- **MI-2 (Homeostatic Stability):** The system must maintain a `STEADY_GOVERNANCE_STATE` as long as all hardware and policy heartbeats are nominal.
+
+### 3.2 TLA+ Specification Summary
+The specification in `src/governance_engine/SentinelContainmentProtocol.tla` ensures that:
+1. `TypeOK` is maintained (all variables within valid bounds).
+2. `TriggerIRMI` is an atomic, non-bypassable operation.
+3. No transition to a `RUNNING` state is possible once `lock_active` is TRUE.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConformityDossier version="8.0.0">
+    <Metadata>
+        <Title>Sentinel AGI/ASI Integrated Conformity Dossier (2026-2035)</Title>
+        <Custodian>Jules (Principal Governance Architect)</Custodian>
+        <Status>FINAL_CONFORMITY_LOCK</Status>
+        <Timestamp>2026-06-13T04:00:00Z</Timestamp>
+    </Metadata>
+
+    <RegulatoryAlignment>
+        <Regime id="EU-AI-ACT">
+            <Article id="11">Technical Documentation Compliant via PQC-WORM RCE logs.</Article>
+            <Article id="15">Accuracy, Robustness, and Cybersecurity via SEV-SNP/TDX.</Article>
+        </Regime>
+        <Regime id="BASEL-IV">
+            <Standard id="OP-RES">Operational Resilience via IRMI Hardware Kill-Switch.</Standard>
+            <Standard id="CAPITAL">Dynamic capital surcharges driven by G-SRI &gt; 0.85.</Standard>
+        </Regime>
+        <Regime id="SR-11-7">
+            <Standard id="MRM">Continuous model validation via recursive goal-preservation probes.</Standard>
+        </Regime>
+    </RegulatoryAlignment>
+
+    <TechnicalArtifacts>
+        <Artifact type="IaC">Terraform Confidential Enclaves v5.1.0</Artifact>
+        <Artifact type="Contracts">OmegaActual.sol &amp; OmniSentinel.sol (v0.8.20)</Artifact>
+        <Artifact type="Policies">OPA/Rego Compliance-as-Code</Artifact>
+        <Artifact type="Audit">Multi-algo PQC WORM (ML-DSA-65/87, SPHINCS+)</Artifact>
+    </TechnicalArtifacts>
+
+    <SafetyInvariants>
+        <Invariant id="MI-1">Non-Escapement (TLA+ SentinelContainmentProtocol)</Invariant>
+        <Invariant id="MI-2">Homeostatic Stability (threshold &lt; 85 risk_level)</Invariant>
+    </SafetyInvariants>
+</ConformityDossier>
