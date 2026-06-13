@@ -31,7 +31,9 @@ def verify_artifacts():
         "src/governance_engine/STA_R_MOE_SPECIFICATION.md",
         "README_GOVERNANCE_SUITE.md",
         "regulator_submission_pack/G_SRI_HISTORICAL_RISK_REPORT_2026.json",
-        "src/infrastructure/audit_pipeline_simulator.py"
+        "src/infrastructure/audit_pipeline_simulator.py",
+        "src/infrastructure/utils.py",
+        "G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md"
     ]
 
     success = True
