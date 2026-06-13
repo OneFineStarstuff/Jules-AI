@@ -22,7 +22,9 @@ def verify_artifacts():
         "src/infrastructure/circuits/compliance_stark_stub.md",
         "src/governance_engine/gc_ir_bridge_spec.md",
         "src/infrastructure/gai_soc_telemetry_spec.md",
-        "src/governance_engine/icgc_zk_verified_controls.md"
+        "src/governance_engine/icgc_zk_verified_controls.md",
+        "G_STACK_TECHNICAL_SPEC.md",
+        "reports/OPERATIONAL_CHECK_2026_06_13.md"
     ]
 
     success = True
