@@ -3,7 +3,6 @@ package sentinel.compliance
 import future.keywords.if
 
 # DORA (Digital Operational Resilience Act)
-# Requirement: Critical ICT services must have real-time incident reporting.
 dora_compliant if {
     input.telemetry_latency_ms < 100
     input.pqc_worm_status == "HEALTHY"
@@ -11,14 +10,24 @@ dora_compliant if {
 }
 
 # NIS2 Directive
-# Requirement: Supply chain security for essential entities.
 nis2_compliant if {
     input.bbom_verified == true
     input.hardware_attestation == "SUCCESS"
 }
 
-# GDPR Article 22: Automated Decision-Making
-# Requirement: Safeguards for the data subject, including the right to an explanation.
+# ISO/IEC 42001: AI Management System
+iso42001_compliant if {
+    input.registry_status == "SYNCHRONIZED"
+    input.lifecycle_audit_passed == true
+}
+
+# SR 11-7: Model Risk Management
+sr11_7_compliant if {
+    input.validation_variance < 0.02
+    input.independent_review_active == true
+}
+
+# GDPR Article 22
 gdpr_art22_compliant if {
     input.explainability_score > 0.8
     input.human_in_the_loop_available == true
@@ -35,6 +44,8 @@ overall_compliance_score := score if {
     checks := [
         dora_compliant,
         nis2_compliant,
+        iso42001_compliant,
+        sr11_7_compliant,
         gdpr_art22_compliant
     ]
     pass_count := count([c | c := checks[_]; c == true])

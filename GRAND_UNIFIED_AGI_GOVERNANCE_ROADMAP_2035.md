@@ -17,7 +17,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ### Phase I: Institutional Hardening (2026–2027)
 *Focus: Securing the Substrate and Cryptographic Bedrock*
 - **Q1 2026:** Mandatory **IRMI (Integrated Risk Mitigation Interface)** hardware kill-switch integration across all Tier-1 compute clusters.
-- **Q2 2026:** Deployment of **ML-DSA-87 (CRYSTALS-Dilithium)** based WORM audit logging under **NIST FIPS 204**.
+- **Q2 2026:** Deployment of **ML-DSA-65, ML-DSA-87 (CRYSTALS-Dilithium), and SPHINCS+** based WORM audit logging under **NIST FIPS 204**.
 - **Q3 2026:** Rollout of **AMD SEV-SNP / Intel TDX** attested enclaves for frontier model inference.
 - **Q4 2026:** Full migration to **SPIFFE/SPIRE** machine identity and **vTPM** remote attestation (**PCR_MATCH=TRUE**).
 

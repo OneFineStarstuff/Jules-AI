@@ -43,17 +43,68 @@
         ]
       },
       {
-        "id": "BASEL-IV",
-        "title": "Basel IV Operational Resilience",
+        "id": "ISO-IEC-42001",
+        "title": "ISO/IEC 42001 AIMS",
         "controls": [
           {
-            "id": "OP-RES-IRMI",
-            "title": "Immediate Risk Severance",
-            "description": "Ability to decouple systemic AI workloads from the financial substrate in real-time.",
+            "id": "A.5.2",
+            "title": "AI System Lifecycle",
+            "description": "Establish and maintain a process for the AI system lifecycle.",
             "mappings": [
               {
-                "target": "IRMI Driver",
-                "method": "INT 0x1A Hardware Interrupt"
+                "target": "Sentinel Registry",
+                "method": "Immutable GDL Versioning"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FED-SR-11-7",
+        "title": "Federal Reserve SR 11-7 / OCC 2011-12",
+        "controls": [
+          {
+            "id": "MODEL-VAL-CONTINUOUS",
+            "title": "Continuous Model Validation",
+            "description": "Effective model risk management requires robust model development, implementation, and use.",
+            "mappings": [
+              {
+                "target": "Recursive Goal-Preservation Probe",
+                "method": "Deceptive Alignment Detection (Variance < 0.02)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FED-SR-26-2",
+        "title": "Federal Reserve SR 26-2 (Agentic Audit)",
+        "controls": [
+          {
+            "id": "AGENT-AUDITABILITY",
+            "title": "Auditability of Autonomous Agents",
+            "description": "Ensuring agentic swarms are subject to internal audit and non-repudiation.",
+            "mappings": [
+              {
+                "target": "PQC WORM Logger",
+                "method": "CRYSTALS-Dilithium Signed Audit Trails"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GDPR-ART-22",
+        "title": "GDPR Article 22",
+        "controls": [
+          {
+            "id": "EXPLAINABILITY-SAFEGUARD",
+            "title": "Automated Decision-Making Safeguards",
+            "description": "Right of the data subject to obtain human intervention and an explanation.",
+            "mappings": [
+              {
+                "target": "Fiduciary Guardrail Engine",
+                "method": "Causal Inference Explainers (Explainable Boosting Machines)"
               }
             ]
           }
