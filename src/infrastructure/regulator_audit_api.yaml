@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Sentinel Regulator Audit Gateway
+  version: 1.0.0
+  description: API for multi-jurisdictional supervisors to ingest governance telemetry and ZK-proofs.
+paths:
+  /v1/telemetry/g-sri:
+    get:
+      summary: Retrieve real-time Global Systemic Risk Index
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  score: { type: number }
+                  timestamp: { type: string, format: date-time }
+                  pqc_signature: { type: string }
+  /v1/proofs/compliance:
+    get:
+      summary: Download latest SnarkPack compliance proof batches
+      responses:
+        '200':
+          description: Proof bundle
+          content:
+            application/zip:
+              schema: { type: string, format: binary }
+  /v1/incidents/gien:
+    post:
+      summary: Shared incident disclosure (mTLS restricted)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                signature_type: { type: string, enum: [DECEPTIVE_ALIGNMENT, ESCAPEMENT_ATTEMPT, MNPI_LEAK] }
+                node_id: { type: string }
+                proof: { type: string }
+      responses:
+        '202':
+          description: Incident ingested into collective defense mesh

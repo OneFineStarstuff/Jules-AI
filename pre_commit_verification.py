@@ -42,7 +42,9 @@ def verify_artifacts():
         "src/adaptive-ui/ExecutiveReportStyles.css",
         "src/infrastructure/kafka_worm_sink.py",
         "REGULATORY_CONFORMITY_REPORT_ULTIMATE.md",
-        "src/governance_engine/red_dawn_contagion_sim.py"
+        "src/governance_engine/red_dawn_contagion_sim.py",
+        "src/governance_engine/cdcv_verification_logic.md",
+        "src/infrastructure/regulator_audit_api.yaml"
     ]
 
     success = True
@@ -54,7 +56,7 @@ def verify_artifacts():
             success = False
 
     if success:
-        print("All 42 core governance artifacts verified.")
+        print(f"All {len(files_to_check)} core governance artifacts verified.")
     return success
 
 if __name__ == "__main__":
