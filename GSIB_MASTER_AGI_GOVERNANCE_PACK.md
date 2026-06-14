@@ -1,63 +1,42 @@
-# Master AGI Governance & Strategic Communication Framework: G-SIB Edition
-**Architect:** Jules (Principal Systems Architect & Governance Lead)
-**Target Compliance:** EU AI Act (Title III, Art 15), SR 11-7, SR 11-7, NIST AI RMF 1.0, GDPR/FERPA
+# Master AGI Governance Pack: G-SIB & G-SIFI Edition (2026-2035)
+**Custodian:** Jules (Principal Systems Architect & Governance Lead)
+**Revision:** v8.0.0 (Decadal Hardened Release)
 
 ---
 
-## 1. The 18-Component AGI/ASI Governance Model
+## 1. Integrated Governance Artifacts
+This pack contains the definitive artifacts for G-SIB regulatory conformity and systemic safety.
 
-### Strategic Pillar: Policy & Civilizational Alignment
-1.  **AGI Alignment Policy:** Formalizing the target goal-vector $g(t)$ for all autonomous agents.
-2.  **Algorithmic Liability Framework:** Legal protocols for M2M commerce and autonomous financial actions.
-3.  **Institutional Readiness Maturity Index (IRMI):** Quantified metrics for organizational adaptation velocity.
-4.  **Epistemic Humility Protocols:** Critical assessment of AI statistical confidence versus ground truth.
-5.  **Strategic Decision-Making Under Deep Uncertainty:** Frameworks for navigating AI improvement velocity.
-6.  **Symbiotic Workforce Transformation:** Transitioning human roles from Execution to Orchestration.
+### 1.1 Reference Architecture & Roadmap
+- **Decadal Roadmap:** [GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md](GRAND_UNIFIED_AGI_GOVERNANCE_ROADMAP_2035.md)
+- **Zero-Trust Design:** [SENTINEL_ZERO_TRUST_ARCHITECTURE_2035.md](SENTINEL_ZERO_TRUST_ARCHITECTURE_2035.md)
+- **G-Stack Spec:** [G_STACK_TECHNICAL_SPEC.md](G_STACK_TECHNICAL_SPEC.md)
 
-### Operational Pillar: Model Risk & Auditability
-7.  **Regulatory Crosswalk:** Dynamic mapping between NIST RMF, EU AI Act, and SR 11-7.
-8.  **Multi-agent Consensus:** Auditor-Agent swarms performing real-time consistency probing.
-9.  **PII-free Immutable Logging:** GDPR Article 25 compliant source-hashing at the edge.
-10. **Veridical RAG Implementation:** High-assurance retrieval requiring cryptographic provenance.
-11. **Hyperparameter Governance:** Technical standards for documenting epochs, batch size, and learning rate.
-12. **Differential Privacy Design:** FERPA/GDPR compliant Laplace mechanisms for sensitive cohorts.
+### 1.2 Hardened Infrastructure (IaC)
+- **Confidential Enclaves:** Terraform modules for SEV-SNP/TDX with IMDSv2 and KMS rotation.
+- **Audit Sinks:** MSK Kafka & S3 WORM configuration with 10-year compliance lock.
 
-### Technical Pillar: Substrate & Enforcement
-13. **Compute Governance:** Real-time control and quota management of the hardware substrate.
-14. **Hardware Kill-switch (IRMI):** Kernel-level `INT 0x1A` interrupts for GPU/VRAM purging.
-15. **Deceptive Alignment Detection:** Activation-level probing for latent sycophancy or reward hacking.
-16. **Deterministic Gating (GDL):** Formal language (GDL) for non-bypassable safety invariants.
-17. **Machine Identity (SPIRE):** Zero-trust authentication using X.509 SVIDs for all agents.
-18. **Recursive Context Envelopes (RCE):** Preservation of reasoning trace integrity across agent handoffs.
+### 1.3 Machine-Readable Compliance (OSCAL/OPA)
+- **Control Catalog:** [OSCAL_GSIFI_CATALOG_V8.json](regulator_submission_pack/OSCAL_GSIFI_CATALOG_V8.json)
+- **Safety Policies:** [compliance_rules.rego](src/infrastructure/policies/compliance_rules.rego) (DORA, NIS2, SR 11-7, GDPR).
+- **Conformity Dossier:** [RSP_V8_ULTIMATE_CONFORMITY.xml](regulator_submission_pack/RSP_V8_ULTIMATE_CONFORMITY.xml).
+
+### 1.4 Sovereign Verification (Solidity)
+- **OmegaActual.sol:** Planetary dead-man's switch and 10^26 FLOP redline enforcement.
+- **OmniSentinel.sol:** Immutable ledger for G-SRI risk indexing and BBOM assurance.
 
 ---
 
-## 2. G-SIB Readiness Assessment & Maturity Rubric
-
-| Component | L1: Initial | L3: Defined | L5: Optimized |
-| :--- | :--- | :--- | :--- |
-| **Kill-switch** | Manual process. | API-based shutdown. | Autonomous IRMI Hardware interrupt. |
-| **Provenance** | Metadata based. | Signed data chunks. | Cryptographically verified Veridical RAG. |
-| **Audit** | Human review. | Scripted analysis. | Auditor-Agent consensus swarms. |
-| **Privacy** | Data masking. | Standard anonymity. | FERPA/GDPR Differential Privacy (DP). |
+## 2. Systemic Safety Metrics: The G-SRI Standard
+The **Global Systemic Risk Index (G-SRI)** is the primary metric for board-level oversight.
+- **Nominal Score:** < 0.20
+- **Basel IV Trigger:** > 0.85 (Mandatory capital surcharge and potential HALT).
 
 ---
 
-## 3. Executive Dashboard: "From EU Compliance to AGI Readiness"
+## 3. Executive Command & Control
+Real-time posture is managed via the **Sovereign AGI Command Center (SACC)** dashboard, providing unified visibility into RESONANCE, ATTESTATION, and WORM integrity.
 
-### 3.1 G-SIB Liquidity & Risk Status (Unicode Sparklines)
-*   **Algorithmic Bias Rate:** 0.04% [▃▅▇] (Target < 0.05%)
-*   **Liquidity Risk Exposure:** High [▇▆▅] (Mitigation Active)
-*   **Governance Control Effectiveness:** 94% [▆▇▇] (SR 11-7 Compliant)
-
-### 3.2 Mermaid Escalation Flow
-```mermaid
-graph TD
-    A[Board Directive] --> B{Incident Response}
-    B -->|High Risk| C[Hard Kill - IRMI Trigger]
-    B -->|Medium Risk| D[Soft Gating - GDL Pause]
-    C --> E[Executive Summons]
-    D --> F[Audit Remediation]
-    F --> G[Governance Board Review]
-    G --> A
-```
+---
+**Canonical Signature:** 0xSENTINEL-SIG-2026-06-13
+**Status:** CANONICAL DEPLOYMENT READY

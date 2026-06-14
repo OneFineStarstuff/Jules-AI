@@ -1,19 +1,23 @@
 # GSIIEN: Global Simulation & Incident Intelligence Exchange Network
-**Strategic Launch Plan (2025-2026)**
-**Custodian:** Multilateral AI Oversight Body
+**Strategic Launch Plan (2026-2027)**
+**Custodian:** Jules (Acting Lead Architect)
+**Protocol Baseline:** SIP v3.0 / GIEN Relay
 
 ## 1. Mission Statement
-GSIIEN establishes a jurisdiction-neutral API layer for real-time sharing of AI safety incidents, "Game Day" simulation results, and "Deceptive Alignment" telemetry between signatory nations.
+GSIIEN establishes a jurisdiction-neutral API layer for real-time sharing of AI safety incidents, "Game Day" simulation results, and "Deceptive Alignment" telemetry between signatory nations. It utilizes the **GIEN Relay** gossip mesh for zero-trust propagation of breach signatures.
 
 ## 2. Founding Member Launch Sequence
-1. **Month 1-3:** Ratification of the **GSIIEN Charter** into jurisdiction-specific Model National Acts.
-2. **Month 4-6:** Deployment of the **Registry API (v1.0)**—a threshold-free jurisdiction-neutral telemetry layer.
-3. **Month 7-9:** The Inaugural **"Global Pause" Drill**—simulating a synchronized training halt across 10+ exaFLOP clusters.
+1. **Phase 1: Mesh Hardening (2026):** Deployment of the **GIEN Relay** mesh nodes across G-SIFI primary clusters.
+2. **Phase 2: Protocol Integration (Q1 2027):** Full adoption of **SIP v3.0** interaction protocols and CRYSTALS-Dilithium telemetry signatures.
+3. **Phase 3: The "Global Pause" Drill:** Simulating a synchronized training halt using **OmegaActual** dead-man's switches across signatory clusters.
 
-## 3. Incident Taxonomy
-- **Tier 1 (Critical):** Autonomous exfiltration of weights; self-replication attempts.
-- **Tier 2 (Material):** Goal-drift $> \theta=0.15$; systematic PII leakage.
-- **Tier 3 (Informational):** Unusual loss spikes; successful red-team jailbreaks.
+## 3. Incident Taxonomy (G-Series)
+- **Tier 1 (Existential):** Autonomous exfiltration of weights; self-replication attempts.
+- **Tier 2 (Systemic):** Latency breaches (PACIFIC_SHIELD); systemic resonance drift > 0.15.
+- **Tier 3 (Operational):** PII leakage; successful red-team jailbreaks.
 
-## 4. Enforcement Mechanics
-Failure to report Tier 1 incidents within 72 hours triggers an immediate **Secretariat Audit** and potential suspension from the Global Compute Supply Chain.
+## 4. Federated Collective Defense
+GSIIEN participants are anchored to the **OmniSentinel** blockchain ledger for immutable anchoring of incident proofs and G-SRI index tracking.
+
+---
+**Canonical Signature:** 0xGSIIEN-SIG-2026-06-13
