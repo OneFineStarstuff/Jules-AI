@@ -83,7 +83,10 @@ def verify_artifacts():
         "src/governance_engine/basel_iv_capital_verifier.py",
         "src/governance_engine/eu_ai_act_robustness_verifier.py",
         "regulator_submission_pack/MAS_FEAT_FINTECH_2030_DOSSIER.md",
-        "MASTER_INDEX_ENTERPRISE_AI_GOVERNANCE_2026_2035.md"
+        "MASTER_INDEX_ENTERPRISE_AI_GOVERNANCE_2026_2035.md",
+        "src/governance_engine/GOVERNANCE_CONTROL_INVARIANTS.md",
+        "src/infrastructure/KAFKA_WORM_TOPIC_CONFIG.yaml",
+        "regulator_submission_pack/GDPR_DPIA_AGI_ANNEX.md"
     ]
 
     success = True

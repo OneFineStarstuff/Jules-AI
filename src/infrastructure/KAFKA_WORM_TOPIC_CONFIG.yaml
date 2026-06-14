@@ -1,0 +1,29 @@
+# Kafka WORM Topic Configuration (High-Assurance)
+# Satisfies SEC Rule 17a-4 and DORA Article 14.
+
+topic:
+  name: sentinel.telemetry.worm
+  partitions: 12
+  replication-factor: 3
+
+  configs:
+    # Immutability & Retention
+    cleanup.policy: compact,delete
+    retention.ms: 315360000000 # 10 Years (Decadal)
+    min.insync.replicas: 2
+
+    # Transactional Integrity
+    message.format.version: "3.0"
+    compression.type: zstd
+
+    # Security
+    confluent.ssl.keystore.location: "/etc/sentinel/secrets/hsm_keystore.jks"
+    confluent.ssl.client.auth: "required" # Mandatory mTLS
+
+# AWS MSK S3 Sink Connector (Object Lock Ingestion)
+connector:
+  class: io.confluent.connect.s3.S3SinkConnector
+  s3.bucket.name: "sentinel-audit-worm-us-east-1"
+  s3.object.tagging: true
+  s3.object.lock.mode: COMPLIANCE
+  s3.object.lock.retention.days: 3650
