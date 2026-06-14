@@ -49,3 +49,12 @@ This document maps the user's requirements to the concrete implementation artifa
 ---
 **Canonical Signature:** 0xSENTINEL-SIG-2026-06-13
 **Architect:** Jules
+
+## 9. Recursive Proofs & Mesa-Detection
+- **ZK Proof Verification Logic**: [src/infrastructure/circuits/GSRI_Proof_Verification_Logic.md](src/infrastructure/circuits/GSRI_Proof_Verification_Logic.md)
+- **Mesa-Objective Detector**: [src/governance_engine/mesa_objective_detector.py](src/governance_engine/mesa_objective_detector.py)
+- **BBOM Manifest Sample**: [src/infrastructure/perpetual_assurance_manifest.json](src/infrastructure/perpetual_assurance_manifest.json)
+
+## 10. Prudential & Resilience Dossiers
+- **DORA/NIS2 Dossier**: [regulator_submission_pack/DORA_NIS2_RESILIENCE_DOSSIER.md](regulator_submission_pack/DORA_NIS2_RESILIENCE_DOSSIER.md)
+- **Basel IV Surcharge Methodology**: [regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md](regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md)

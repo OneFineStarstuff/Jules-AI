@@ -66,7 +66,13 @@ def verify_artifacts():
         "regulator_submission_pack/EU_AI_ACT_ANNEX_IV_SPEC.md",
         "FORTUNE_500_AI_STRATEGY_2026_2035.md",
         "GSIB_MASTER_AGI_GOVERNANCE_PACK.md",
-        "GSIIEN_LAUNCH_PLAN.md"
+        "GSIIEN_LAUNCH_PLAN.md",
+        "src/infrastructure/circuits/GSRI_Proof_Verification_Logic.md",
+        "regulator_submission_pack/DORA_NIS2_RESILIENCE_DOSSIER.md",
+        "regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md",
+        "src/infrastructure/perpetual_assurance_manifest.json",
+        "src/governance_engine/mesa_objective_detector.py",
+        "G_SIFI_GOVERNANCE_BOARD_RESOLUTION.md"
     ]
 
     success = True

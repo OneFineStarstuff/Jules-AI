@@ -1,0 +1,21 @@
+{
+  "bbom_id": "BBOM-SENTINEL-2026-06-14-001",
+  "kernel": {
+    "version": "v2.4.9",
+    "binary_hash": "sha256:7f8a3e21b0c9d4e5f6a1b2c3d4e5f6a1",
+    "spiffe_id": "spiffe://gsifi.internal/sentinel/kernel"
+  },
+  "weights": {
+    "lora_adapter": "align-v4.2",
+    "merkle_root": "0xABC123...DEF789"
+  },
+  "policy": {
+    "gdl_canon_hash": "0x7f8a...3e21",
+    "rego_hash": "sha256:9d8e...f0a1"
+  },
+  "attestation": {
+    "last_pcr0": "GOLDEN_VAL_0",
+    "last_pcr1": "GOLDEN_VAL_1",
+    "timestamp": "2026-06-14T11:00:00Z"
+  }
+}
