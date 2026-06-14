@@ -48,7 +48,11 @@ def verify_artifacts():
         "src/governance_engine/gdl_master_canon.ebnf",
         "src/governance_engine/sidecar_proxy.py",
         "regulator_submission_pack/SR_26_2_AGENT_AUDIT_DOSSIER.md",
-        "src/infrastructure/spiffe_attestor.py"
+        "src/infrastructure/spiffe_attestor.py",
+        "regulator_submission_pack/SR_11_7_MODEL_RISK_DOSSIER.md",
+        "regulator_submission_pack/GDPR_ARTICLE_22_CONFORMITY_REPORT.md",
+        "G_SRI_TECHNICAL_WHITE_PAPER.md",
+        "src/governance_engine/RTEE_SPECIFICATION.md"
     ]
 
     success = True
