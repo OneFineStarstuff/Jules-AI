@@ -55,14 +55,18 @@ def verify_artifacts():
         "src/governance_engine/RTEE_SPECIFICATION.md",
         "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
         "src/adaptive-ui/RegulatoryMappingDashboard.tsx",
-        "src/governance_engine/IRMI_PROTOCOL_SPEC.md",
-        "src/infrastructure/PQC_WORM_ARCHITECTURE_DEEP_DIVE.md",
-        "src/governance_engine/AGI_ALIGNMENT_VERIFICATION_GUIDE.md",
         "regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md",
         "G_SERIES_GLOBAL_GOVERNANCE_FRAMEWORK.md",
         "src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md",
         "reports/RED_DAWN_STAGE_6_FORENSIC_ANALYSIS.md",
-        "src/governance_engine/incidents/INCIDENT_T2_PACIFIC_SHIELD_POST_MORTEM.md"
+        "src/governance_engine/incidents/INCIDENT_T2_PACIFIC_SHIELD_POST_MORTEM.md",
+        "src/infrastructure/zk_systemic_risk_proof.py",
+        "src/governance_engine/sara_acr_alignment_report.py",
+        "regulator_submission_pack/NIST_AI_RMF_1_0_CONFORMITY.md",
+        "regulator_submission_pack/EU_AI_ACT_ANNEX_IV_SPEC.md",
+        "FORTUNE_500_AI_STRATEGY_2026_2035.md",
+        "GSIB_MASTER_AGI_GOVERNANCE_PACK.md",
+        "GSIIEN_LAUNCH_PLAN.md"
     ]
 
     success = True
