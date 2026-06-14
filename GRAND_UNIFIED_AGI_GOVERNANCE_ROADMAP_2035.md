@@ -41,6 +41,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ---
 
 ## 3. Technical Requirements: The G-Stack Architecture
+See [G_STACK_VISUAL_ARCHITECTURE.md](src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md) for the visual stack integration.
 
 ### 3.1 G-Stack: Sentinel AI Governance v2.4 (G_STACK_TECHNICAL_SPEC.md)
 - **GDL v3.2:** Deterministic logic gates for sidecar-level gating.
@@ -62,6 +63,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 
 ---
 
+See [ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md](regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md) for detailed line-item mappings.
 ## 4. Regulatory & Compliance Matrix (OSCAL 1.1.2)
 
 | Regulation | Core Requirement | Sentinel Implementation Protocol |

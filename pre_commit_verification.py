@@ -54,7 +54,12 @@ def verify_artifacts():
         "G_SRI_TECHNICAL_WHITE_PAPER.md",
         "src/governance_engine/RTEE_SPECIFICATION.md",
         "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
-        "src/adaptive-ui/RegulatoryMappingDashboard.tsx"
+        "src/adaptive-ui/RegulatoryMappingDashboard.tsx",
+        "regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md",
+        "G_SERIES_GLOBAL_GOVERNANCE_FRAMEWORK.md",
+        "src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md",
+        "reports/RED_DAWN_STAGE_6_FORENSIC_ANALYSIS.md",
+        "src/governance_engine/incidents/INCIDENT_T2_PACIFIC_SHIELD_POST_MORTEM.md"
     ]
 
     success = True
