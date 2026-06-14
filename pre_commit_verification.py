@@ -55,6 +55,9 @@ def verify_artifacts():
         "src/governance_engine/RTEE_SPECIFICATION.md",
         "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
         "src/adaptive-ui/RegulatoryMappingDashboard.tsx",
+        "src/governance_engine/IRMI_PROTOCOL_SPEC.md",
+        "src/infrastructure/PQC_WORM_ARCHITECTURE_DEEP_DIVE.md",
+        "src/governance_engine/AGI_ALIGNMENT_VERIFICATION_GUIDE.md",
         "regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md",
         "G_SERIES_GLOBAL_GOVERNANCE_FRAMEWORK.md",
         "src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md",
@@ -72,7 +75,11 @@ def verify_artifacts():
         "regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md",
         "src/infrastructure/perpetual_assurance_manifest.json",
         "src/governance_engine/mesa_objective_detector.py",
-        "G_SIFI_GOVERNANCE_BOARD_RESOLUTION.md"
+        "G_SIFI_GOVERNANCE_BOARD_RESOLUTION.md",
+        "regulator_submission_pack/ISO_IEC_42001_AIMS_CERTIFICATION_DOSSIER.md",
+        "regulator_submission_pack/BASEL_IV_PILLAR_3_DISCLOSURE_TEMPLATE.json",
+        "regulator_submission_pack/NIS2_SUPPLY_CHAIN_SECURITY_AUDIT.md",
+        "tests/test_systemic_integrity.py"
     ]
 
     success = True

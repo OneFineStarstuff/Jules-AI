@@ -1,0 +1,20 @@
+{
+  "institution": "G-SIFI Global Core",
+  "disclosure_id": "P3-AGI-2026-Q2",
+  "date": "2026-06-14",
+  "operational_risk_metrics": {
+    "total_agi_workloads": 12,
+    "enclave_attestation_rate": 1.0,
+    "average_g_sri": 0.093,
+    "irmi_test_success": true
+  },
+  "capital_adequacy": {
+    "g_sri_surcharge_bps": 0,
+    "systemic_buffer_status": "ADEQUATE"
+  },
+  "pqc_audit_integrity": {
+    "status": "VERIFIED",
+    "algorithm": "ML-DSA-87",
+    "signature_hash": "0x7f8a3e21..."
+  }
+}
