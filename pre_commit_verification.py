@@ -24,7 +24,6 @@ def verify_artifacts():
         "src/governance_engine/icgc_zk_verified_controls.md",
         "G_STACK_TECHNICAL_SPEC.md",
         "reports/OPERATIONAL_CHECK_2026_06_13.md",
-        "reports/RED_DAWN_STAGE_6_FORENSIC_ANALYSIS.md",
         "GSIFI_AGI_ASI_GOVERNANCE_MASTER_REFERENCE.md",
         "src/governance_engine/workflow_ai_pro_spec.md",
         "src/infrastructure/GIEN_NETWORK_SPEC.md",
@@ -45,7 +44,11 @@ def verify_artifacts():
         "REGULATORY_CONFORMITY_REPORT_ULTIMATE.md",
         "src/governance_engine/red_dawn_contagion_sim.py",
         "src/governance_engine/cdcv_verification_logic.md",
-        "src/infrastructure/regulator_audit_api.yaml"
+        "src/infrastructure/regulator_audit_api.yaml",
+        "src/governance_engine/gdl_master_canon.ebnf",
+        "src/governance_engine/sidecar_proxy.py",
+        "regulator_submission_pack/SR_26_2_AGENT_AUDIT_DOSSIER.md",
+        "src/infrastructure/spiffe_attestor.py"
     ]
 
     success = True

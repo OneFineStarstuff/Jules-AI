@@ -1,0 +1,18 @@
+(* GDL v3.2: Governance Description Language Grammar *)
+
+policy          = { statement } ;
+statement       = "ASSERT" condition "THEN" action [ "IF" context ] ;
+
+condition       = metric operator value ;
+metric          = "deception_index" | "resonance_drift" | "collusion_prob" | "bias_score" | "latency_ms" ;
+operator        = ">" | "<" | "==" | "!=" ;
+value           = number ;
+
+action          = "ALLOW" | "HALT" | "REDACT" | "KILL_SWITCH" ;
+
+context         = "role==" role_name | "region==" region_name ;
+role_name       = "CFO" | "AUDIT" | "TRADING" | "CITIZEN" ;
+region_name     = "US-EAST" | "EU-WEST" ;
+
+number          = [ "-" ] digit { digit } [ "." digit { digit } ] ;
+digit           = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
