@@ -86,7 +86,11 @@ def verify_artifacts():
         "MASTER_INDEX_ENTERPRISE_AI_GOVERNANCE_2026_2035.md",
         "src/governance_engine/GOVERNANCE_CONTROL_INVARIANTS.md",
         "src/infrastructure/KAFKA_WORM_TOPIC_CONFIG.yaml",
-        "regulator_submission_pack/GDPR_DPIA_AGI_ANNEX.md"
+        "regulator_submission_pack/GDPR_DPIA_AGI_ANNEX.md",
+        "src/infrastructure/circuits/recursive_aggregation.circom",
+        "src/governance_engine/contracts/SentinelVerifier.sol",
+        "src/infrastructure/KAFKA_ACL_PROVISIONING.tf",
+        "regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md"
     ]
 
     success = True

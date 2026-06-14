@@ -58,3 +58,9 @@ This document maps the user's requirements to the concrete implementation artifa
 ## 10. Prudential & Resilience Dossiers
 - **DORA/NIS2 Dossier**: [regulator_submission_pack/DORA_NIS2_RESILIENCE_DOSSIER.md](regulator_submission_pack/DORA_NIS2_RESILIENCE_DOSSIER.md)
 - **Basel IV Surcharge Methodology**: [regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md](regulator_submission_pack/BASEL_IV_CAPITAL_SURCHARGE_METHODOLOGY.md)
+
+## 11. Additional Security & Privacy
+- **GDPR Article 25 Specification**: [regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md](regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md)
+- **Kafka ACL Provisioning**: [src/infrastructure/KAFKA_ACL_PROVISIONING.tf](src/infrastructure/KAFKA_ACL_PROVISIONING.tf)
+- **ZK Verifier Contract**: [src/governance_engine/contracts/SentinelVerifier.sol](src/governance_engine/contracts/SentinelVerifier.sol)
+- **Recursive Aggregation Circuit**: [src/infrastructure/circuits/recursive_aggregation.circom](src/infrastructure/circuits/recursive_aggregation.circom)
