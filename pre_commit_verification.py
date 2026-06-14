@@ -79,7 +79,11 @@ def verify_artifacts():
         "regulator_submission_pack/ISO_IEC_42001_AIMS_CERTIFICATION_DOSSIER.md",
         "regulator_submission_pack/BASEL_IV_PILLAR_3_DISCLOSURE_TEMPLATE.json",
         "regulator_submission_pack/NIS2_SUPPLY_CHAIN_SECURITY_AUDIT.md",
-        "tests/test_systemic_integrity.py"
+        "tests/test_systemic_integrity.py",
+        "src/governance_engine/basel_iv_capital_verifier.py",
+        "src/governance_engine/eu_ai_act_robustness_verifier.py",
+        "regulator_submission_pack/MAS_FEAT_FINTECH_2030_DOSSIER.md",
+        "MASTER_INDEX_ENTERPRISE_AI_GOVERNANCE_2026_2035.md"
     ]
 
     success = True
