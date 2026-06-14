@@ -52,7 +52,9 @@ def verify_artifacts():
         "regulator_submission_pack/SR_11_7_MODEL_RISK_DOSSIER.md",
         "regulator_submission_pack/GDPR_ARTICLE_22_CONFORMITY_REPORT.md",
         "G_SRI_TECHNICAL_WHITE_PAPER.md",
-        "src/governance_engine/RTEE_SPECIFICATION.md"
+        "src/governance_engine/RTEE_SPECIFICATION.md",
+        "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
+        "src/adaptive-ui/RegulatoryMappingDashboard.tsx"
     ]
 
     success = True

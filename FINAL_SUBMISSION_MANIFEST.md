@@ -34,10 +34,12 @@ This document maps the user's requirements to the concrete implementation artifa
 - **GIEN Gossip Mesh**: [src/infrastructure/GIEN_NETWORK_SPEC.md](src/infrastructure/GIEN_NETWORK_SPEC.md)
 - **SIP v3.0 Protocol**: [SIP_V3_0_SPECIFICATION.md](SIP_V3_0_SPECIFICATION.md)
 - **ZK STARK Migration**: [src/infrastructure/circuits/ZK_STARK_MIGRATION_GUIDE.md](src/infrastructure/circuits/ZK_STARK_MIGRATION_GUIDE.md)
+- **ZK-ML Pipeline Spec**: [src/infrastructure/ZK_ML_PIPELINE_SPEC.md](src/infrastructure/ZK_ML_PIPELINE_SPEC.md)
 
 ## 7. Dashboards & Visualization
 - **Executive Dashboard**: [src/adaptive-ui/GovernanceDashboard.tsx](src/adaptive-ui/GovernanceDashboard.tsx)
 - **GAI-SOC Incident View**: [src/adaptive-ui/GAI_SOC_Incident_Dashboard.tsx](src/adaptive-ui/GAI_SOC_Incident_Dashboard.tsx)
+- **Regulatory Mapping Dashboard**: [src/adaptive-ui/RegulatoryMappingDashboard.tsx](src/adaptive-ui/RegulatoryMappingDashboard.tsx)
 
 ## 8. Verification & Deployment
 - **Deployment Runbook**: [G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md](G_SIFI_AGI_ASI_DEPLOYMENT_RUNBOOK.md)
