@@ -55,9 +55,6 @@ def verify_artifacts():
         "src/governance_engine/RTEE_SPECIFICATION.md",
         "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
         "src/adaptive-ui/RegulatoryMappingDashboard.tsx",
-        "src/governance_engine/IRMI_PROTOCOL_SPEC.md",
-        "src/infrastructure/PQC_WORM_ARCHITECTURE_DEEP_DIVE.md",
-        "src/governance_engine/AGI_ALIGNMENT_VERIFICATION_GUIDE.md",
         "regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md",
         "G_SERIES_GLOBAL_GOVERNANCE_FRAMEWORK.md",
         "src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md",
@@ -93,7 +90,10 @@ def verify_artifacts():
         "regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md",
         "src/infrastructure/eBPF_Safety_Policies.yaml",
         "src/infrastructure/circuits/behavioral_alignment.circom",
-        "src/governance_engine/CANONICAL_ALIGNMENT_CERTIFICATE.json"
+        "src/governance_engine/CANONICAL_ALIGNMENT_CERTIFICATE.json",
+        "regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md",
+        "src/governance_engine/socratic_protocol_handler.py",
+        "src/infrastructure/GAICS_INCIDENT_TAXONOMY.json"
     ]
 
     success = True

@@ -64,3 +64,8 @@ This document maps the user's requirements to the concrete implementation artifa
 - **Kafka ACL Provisioning**: [src/infrastructure/KAFKA_ACL_PROVISIONING.tf](src/infrastructure/KAFKA_ACL_PROVISIONING.tf)
 - **ZK Verifier Contract**: [src/governance_engine/contracts/SentinelVerifier.sol](src/governance_engine/contracts/SentinelVerifier.sol)
 - **Recursive Aggregation Circuit**: [src/infrastructure/circuits/recursive_aggregation.circom](src/infrastructure/circuits/recursive_aggregation.circom)
+
+## 12. Global Taxonomies & Socratic Protocols
+- **GAICS Incident Taxonomy**: [src/infrastructure/GAICS_INCIDENT_TAXONOMY.json](src/infrastructure/GAICS_INCIDENT_TAXONOMY.json)
+- **Socratic Protocol Handler**: [src/governance_engine/socratic_protocol_handler.py](src/governance_engine/socratic_protocol_handler.py)
+- **FCA Consumer Duty Dossier**: [regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md](regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md)

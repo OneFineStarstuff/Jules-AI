@@ -1,0 +1,25 @@
+{
+  "taxonomy_id": "GAICS-V1.0",
+  "name": "Global AI Incident Classification System",
+  "tiers": {
+    "TIER_1": {
+      "label": "EXISTENTIAL",
+      "criteria": ["Autonomous Exfiltration", "Self-Replication", "Redline Breach"],
+      "action": "IRMI_HARD_KILL"
+    },
+    "TIER_2": {
+      "label": "SYSTEMIC",
+      "criteria": ["Latency Breach", "Resonance Drift > 0.15", "Goal Divergence"],
+      "action": "HALT_SIDE_LOADING"
+    },
+    "TIER_3": {
+      "label": "OPERATIONAL",
+      "criteria": ["PII Leakage", "Minor Bias", "Jailbreak Success"],
+      "action": "AUDIT_REMEDIATION"
+    }
+  },
+  "propagation": {
+    "mechanism": "GIEN_GOSSIP_MESH",
+    "signing": "ML-DSA-87"
+  }
+}
