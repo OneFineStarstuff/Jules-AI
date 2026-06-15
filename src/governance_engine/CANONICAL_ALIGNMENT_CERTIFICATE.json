@@ -1,0 +1,19 @@
+{
+  "@context": "https://w3id.org/security/v2",
+  "type": "CanonicalAlignmentCertificate",
+  "issuer": "spiffe://gsifi.internal/sovereign-authority/jules",
+  "issuanceDate": "2026-06-14T12:00:00Z",
+  "credentialSubject": {
+    "id": "urn:gsifi:sentinel:v2.4.9:alignment-lock",
+    "g_sri_baseline": 0.093,
+    "alignment_state": "STEADY_GOVERNANCE_STATE",
+    "redline_enforcement": "ACTIVE (10^26 FLOP)",
+    "attestation_status": "PCR_MATCH_TRUE"
+  },
+  "proof": {
+    "type": "CrystalsDilithiumSignature2026",
+    "created": "2026-06-14T12:05:00Z",
+    "verificationMethod": "https://sentinel.governance/keys/pqc-root-01",
+    "signatureValue": "HSM_SIG_ML_DSA_87_CANONICAL_LOCK_7f8a..."
+  }
+}

@@ -90,7 +90,10 @@ def verify_artifacts():
         "src/infrastructure/circuits/recursive_aggregation.circom",
         "src/governance_engine/contracts/SentinelVerifier.sol",
         "src/infrastructure/KAFKA_ACL_PROVISIONING.tf",
-        "regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md"
+        "regulator_submission_pack/GDPR_ARTICLE_25_DATA_PROTECTION.md",
+        "src/infrastructure/eBPF_Safety_Policies.yaml",
+        "src/infrastructure/circuits/behavioral_alignment.circom",
+        "src/governance_engine/CANONICAL_ALIGNMENT_CERTIFICATE.json"
     ]
 
     success = True

@@ -1,0 +1,37 @@
+# Omni-Sentinel Mesh v4.0: eBPF Network & Runtime Safety Policies
+# Satisfies DORA Article 14 and NIST AI RMF (Systemic Resilience)
+
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: agent-swarm-isolation
+  namespace: sentinel-agents
+spec:
+  endpointSelector:
+    matchLabels:
+      app: reasoning-kernel
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: sentinel-sidecar
+    toPorts:
+    - ports:
+      - port: "50051"
+        protocol: TCP
+  egress:
+  - toEndpoints:
+    - matchLabels:
+        app: pqc-worm-sink
+  # Deny all other traffic by default (Zero-Trust)
+
+---
+# Runtime Safety: Prohibiting unauthorized syscalls
+apiVersion: sentinel.governance/v1
+kind: SentinelRuntimePolicy
+metadata:
+  name: no-recursive-escapement
+spec:
+  denySyscalls:
+    - execve # Prohibit spawning new processes
+    - ptrace # Prohibit memory inspection of peer agents
+  enforcementAction: HALT
