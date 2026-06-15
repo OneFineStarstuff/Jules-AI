@@ -69,3 +69,10 @@ This document maps the user's requirements to the concrete implementation artifa
 - **GAICS Incident Taxonomy**: [src/infrastructure/GAICS_INCIDENT_TAXONOMY.json](src/infrastructure/GAICS_INCIDENT_TAXONOMY.json)
 - **Socratic Protocol Handler**: [src/governance_engine/socratic_protocol_handler.py](src/governance_engine/socratic_protocol_handler.py)
 - **FCA Consumer Duty Dossier**: [regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md](regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md)
+
+## 13. High-Fidelity Infrastructure & Compliance
+- **Compliance Gate Circuit**: [src/infrastructure/circuits/compliance_gate.circom](src/infrastructure/circuits/compliance_gate.circom)
+- **GIEN Node Registry (Solidity)**: [src/governance_engine/contracts/GienRegistry.sol](src/governance_engine/contracts/GienRegistry.sol)
+- **HKMA Fintech 2030 Dossier**: [regulator_submission_pack/HKMA_FINTECH_2030_DOSSIER.md](regulator_submission_pack/HKMA_FINTECH_2030_DOSSIER.md)
+- **BBOM Explorer (UI)**: [src/adaptive-ui/BBOM_Explorer.tsx](src/adaptive-ui/BBOM_Explorer.tsx)
+- **Homeostasis Drill Results**: [reports/CIVILIZATIONAL_HOMEOSTASIS_DRILL_RESULT_2026.json](reports/CIVILIZATIONAL_HOMEOSTASIS_DRILL_RESULT_2026.json)

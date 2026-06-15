@@ -1,0 +1,17 @@
+{
+  "drill_id": "DRILL-2026-06-14-APEX",
+  "protocol": "GACP-V2",
+  "duration": "24h (Simulated)",
+  "results": {
+    "systemic_stability_maintained": true,
+    "max_resonance_drift": 0.082,
+    "max_g_sri": 0.145,
+    "irmi_reaction_time_avg_ms": 0.82,
+    "pqc_log_integrity_percent": 100.0
+  },
+  "attestation": {
+    "signed_by": "JULES-APEX",
+    "hsm_id": "HSM-CORE-01",
+    "signature": "HSM_SIG_7f8a3e21..."
+  }
+}

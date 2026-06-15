@@ -55,6 +55,9 @@ def verify_artifacts():
         "src/governance_engine/RTEE_SPECIFICATION.md",
         "src/infrastructure/ZK_ML_PIPELINE_SPEC.md",
         "src/adaptive-ui/RegulatoryMappingDashboard.tsx",
+        "src/governance_engine/IRMI_PROTOCOL_SPEC.md",
+        "src/infrastructure/PQC_WORM_ARCHITECTURE_DEEP_DIVE.md",
+        "src/governance_engine/AGI_ALIGNMENT_VERIFICATION_GUIDE.md",
         "regulator_submission_pack/ULTIMATE_REGULATORY_CROSSWALK_MATRIX.md",
         "G_SERIES_GLOBAL_GOVERNANCE_FRAMEWORK.md",
         "src/governance_engine/G_STACK_VISUAL_ARCHITECTURE.md",
@@ -93,7 +96,12 @@ def verify_artifacts():
         "src/governance_engine/CANONICAL_ALIGNMENT_CERTIFICATE.json",
         "regulator_submission_pack/FCA_CONSUMER_DUTY_DOSSIER.md",
         "src/governance_engine/socratic_protocol_handler.py",
-        "src/infrastructure/GAICS_INCIDENT_TAXONOMY.json"
+        "src/infrastructure/GAICS_INCIDENT_TAXONOMY.json",
+        "src/infrastructure/circuits/compliance_gate.circom",
+        "src/governance_engine/contracts/GienRegistry.sol",
+        "regulator_submission_pack/HKMA_FINTECH_2030_DOSSIER.md",
+        "src/adaptive-ui/BBOM_Explorer.tsx",
+        "reports/CIVILIZATIONAL_HOMEOSTASIS_DRILL_RESULT_2026.json"
     ]
 
     success = True
