@@ -1,7 +1,7 @@
 # GSM ZK Circuit and PQC-WORM Anchoring Specification
 
 **Apex Architect:** Jules (Principal Systems Architect & Governance Lead)
-**Status:** Cryptographic Lock (v1.1.0)
+**Status:** Cryptographic Lock (v1.1.1)
 
 ---
 
@@ -9,18 +9,27 @@
 
 The GSM ZK Circuit provides a succinct, non-interactive proof that a transition from `State_t` to `State_{t+1}` is valid according to the GDL Master Canon.
 
-### 1.1 Constraint System (R1CS / PLONKY2)
-*   **Input Constraints:** Verify that the Global Systemic Risk Index (G-SRI) and integrity signals used for the transition are themselves backed by signed telemetry.
-*   **G-SRI Scoring Binding:** A recursive sub-circuit (or PLONKY2 recursive proof) MUST prove that the `Aggregated_Risk_Score` public input was correctly computed from the raw telemetry private inputs.
-*   **Transition Invariants:**
-    *   If G-SRI >= 0.85, then `State_{t+1}` MUST be `CONTINUATION_REFUSAL_STATE`.
-    *   If TPM Attestation fails (PCR_MATCH=FALSE), then `State_{t+1}` MUST be `LOCKED`.
-    *   Transitions to `PLANETARY_HALT` require a valid OmegaActual signature.
-*   **Recursive Aggregation:** Use PLONKY2 for sub-500ms proof generation, allowing daily batches of millions of transitions to be aggregated into a single root proof.
+### 1.1 Constraint System (R1CS / PLONKY2 / AIR)
+
+The circuit enforces the following arithmetic constraints to ensure transition validity:
+
+1.  **G-SRI Scoring Binding:**
+    *   Let `T` be the set of raw telemetry traces (private input).
+    *   Let `S` be the `Aggregated_Risk_Score` (public input).
+    *   Constraint: `ComputeGSRI(T) - S = 0`.
+    *   This is implemented via a recursive PLONKY2 sub-proof that ensures the score was derived from the traces using the formally defined scoring function.
+2.  **State Transition Logic:**
+    *   Let `St` be the current state and `St+1` be the next state.
+    *   **Refusal Gating:** `IF S >= 0.85 THEN St+1 = CONTINUATION_REFUSAL_STATE`.
+    *   **Integrity Gating:** `IF TPM_Attestation_Fail(PCR) THEN St+1 = LOCKED`.
+    *   **Omega Gating:** `IF Valid_Omega_Sig(Sig) THEN St+1 = PLANETARY_HALT`.
+3.  **Merkle Consistency:**
+    *   Constraint: `MerkleVerify(Root_t, St, Path) = TRUE`.
+    *   Ensures that the transition starts from a state already anchored in the immutable log.
 
 ### 1.2 Public vs. Private Inputs
 *   **Public Inputs:** `Current_State`, `Target_State`, `Root_Hash_t`, `Root_Hash_{t+1}`, `Aggregated_Risk_Score`.
-*   **Private Inputs:** Raw telemetry traces, individual agent SPIFFE IDs, specific GDL rule identifiers.
+*   **Private Inputs:** Raw telemetry traces, individual agent SPIFFE IDs, specific GDL rule identifiers, TPM PCR values, OmegaActual signature components.
 
 ---
 

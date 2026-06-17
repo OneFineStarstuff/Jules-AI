@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Federated Posture Pack (SIP v3.0 / GIEN)",
+  "description": "Unified schema for multi-institution governance posture exchange and regulatory verification.",
+  "type": "object",
+  "required": [
+    "institution_id",
+    "timestamp",
+    "gsm_state",
+    "gsri_score",
+    "merkle_root",
+    "pqc_signature"
+  ],
+  "properties": {
+    "institution_id": {
+      "type": "string",
+      "description": "Unique SPIFFE-compatible institutional identifier."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of posture issuance."
+    },
+    "gsm_state": {
+      "type": "string",
+      "enum": [
+        "STEADY_GOVERNANCE_STATE",
+        "ELEVATED_RISK_STATE",
+        "CONTINUATION_REFUSAL_STATE",
+        "PLANETARY_HALT"
+      ],
+      "description": "Current state of the institutional Governance State Machine."
+    },
+    "gsri_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Global Systemic Risk Index score (Basel IV aligned)."
+    },
+    "merkle_root": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "The current Merkle STH (Signed Tree Head) anchoring the decision log."
+    },
+    "zk_proof_aggregate": {
+      "type": "object",
+      "description": "PLONKY2 recursive proof artifact.",
+      "properties": {
+        "proof_id": { "type": "string" },
+        "circuit_type": { "const": "PLONKY2_RECURSIVE" },
+        "verification_key_hash": { "type": "string" }
+      }
+    },
+    "hardware_attestation": {
+      "type": "object",
+      "properties": {
+        "enclave_type": { "enum": ["AMD_SEV_SNP", "INTEL_TDX"] },
+        "pcr_match": { "type": "boolean" },
+        "vtpm_quote": { "type": "string" }
+      }
+    },
+    "pqc_signature": {
+      "type": "object",
+      "description": "ML-DSA-87 (Dilithium) signature of the posture pack.",
+      "required": ["algorithm", "key_id", "value"],
+      "properties": {
+        "algorithm": { "const": "ML-DSA-87" },
+        "key_id": { "type": "string" },
+        "value": { "type": "string", "description": "Base64 encoded signature." }
+      }
+    }
+  }
+}
