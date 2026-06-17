@@ -1,0 +1,95 @@
+{
+  "catalog": {
+    "uuid": "8d3a6e9a-4c2b-4e1a-8f1b-2d3a6e9a4c2b",
+    "metadata": {
+      "title": "Unified AI Supervisory Control Plane (SCP) G-SIFI Control Catalog",
+      "last-modified": "2026-06-17T16:45:00Z",
+      "version": "8.0.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        { "id": "apex_architect", "title": "Apex Architect" },
+        { "id": "compliance_officer", "title": "Compliance Officer" }
+      ]
+    },
+    "groups": [
+      {
+        "id": "scp-cryptographic-bedrock",
+        "title": "Cryptographic Bedrock Controls",
+        "controls": [
+          {
+            "id": "scp-1",
+            "title": "Post-Quantum WORM Logging",
+            "params": [
+              { "id": "algorithm", "value": "ML-DSA-87 (Dilithium)" }
+            ],
+            "props": [
+              { "name": "framework", "value": "EU AI Act Art. 12" },
+              { "name": "framework", "value": "DORA Art. 12" }
+            ],
+            "description": "All high-risk reasoning traces must be signed with ML-DSA-87 and persisted in a Merkle-anchored WORM log."
+          },
+          {
+            "id": "scp-2",
+            "title": "Recursive ZK-Compliance Proofs",
+            "params": [
+              { "id": "proof-system", "value": "PLONKY2" }
+            ],
+            "props": [
+              { "name": "framework", "value": "SR 11-7 (Model Risk Management)" },
+              { "name": "framework", "value": "Basel IV" }
+            ],
+            "description": "Succinct, non-interactive proofs of GDL/Rego policy compliance for all agent reasoning steps."
+          }
+        ]
+      },
+      {
+        "id": "scp-hardware-anchored-trust",
+        "title": "Hardware and Infrastructure Controls",
+        "controls": [
+          {
+            "id": "scp-3",
+            "title": "TEE Isolation",
+            "params": [
+              { "id": "enclave-type", "value": "AMD SEV-SNP / Intel TDX" }
+            ],
+            "props": [
+              { "name": "framework", "value": "ISO/IEC 42001" },
+              { "name": "framework", "value": "NIS2" }
+            ],
+            "description": "Mandatory execution of the GSM and ZK Prover within memory-encrypted hardware enclaves."
+          },
+          {
+            "id": "scp-4",
+            "title": "vTPM Remote Attestation",
+            "props": [
+              { "name": "framework", "value": "NIST AI RMF 1.0" }
+            ],
+            "description": "Continuous verification of enclave integrity via vTPM PCR_MATCH heartbeats."
+          }
+        ]
+      },
+      {
+        "id": "scp-federated-defense",
+        "title": "Federated Oversight and Interoperability",
+        "controls": [
+          {
+            "id": "scp-5",
+            "title": "SIP v3.0 Interaction Protocol",
+            "props": [
+              { "name": "framework", "value": "EU AI Act Art. 14" }
+            ],
+            "description": "Socratic interaction constraints to preserve human cognitive agency during human-agent collaboration."
+          },
+          {
+            "id": "scp-6",
+            "title": "GIEN Mesh Equivocation Detection",
+            "props": [
+              { "name": "framework", "value": "DORA Systemic Resilience" }
+            ],
+            "description": "Zero-trust gossip protocol for detecting institutional log forks and agentic drift."
+          }
+        ]
+      }
+    ]
+  }
+}
