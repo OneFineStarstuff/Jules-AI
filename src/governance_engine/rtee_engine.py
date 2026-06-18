@@ -41,10 +41,5 @@ def secrets_token():
 
 if __name__ == "__main__":
     engine = RTEEEngine()
-    result = engine.reconcile_policy({"systemic_drift": 0.15})
-    # Sanitize output for logging compliance
-    safe_result = result.copy()
-    if safe_result.get("new_canon_version"):
-        safe_result["new_canon_version"] = "REDACTED"
-    print("Policy reconciliation check completed.")
-    print(json.dumps(safe_result, indent=2))
+    # Execute for side effects or manual testing without sensitive logging
+    engine.reconcile_policy({"systemic_drift": 0.15})
