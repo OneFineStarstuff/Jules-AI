@@ -3,8 +3,8 @@
     "uuid": "8d3a6e9a-4c2b-4e1a-8f1b-2d3a6e9a4c2b",
     "metadata": {
       "title": "Unified AI Supervisory Control Plane (SCP) G-SIFI Control Catalog",
-      "last-modified": "2026-06-17T16:45:00Z",
-      "version": "8.0.0",
+      "last-modified": "2026-06-17T19:15:00Z",
+      "version": "8.1.0",
       "oscal-version": "1.1.2",
       "roles": [
         { "id": "apex_architect", "title": "Apex Architect" },
@@ -24,9 +24,10 @@
             ],
             "props": [
               { "name": "framework", "value": "EU AI Act Art. 12" },
-              { "name": "framework", "value": "DORA Art. 12" }
+              { "name": "framework", "value": "DORA Art. 12" },
+              { "name": "framework", "value": "GDPR Art. 25 (Privacy by Design)" }
             ],
-            "description": "All high-risk reasoning traces must be signed with ML-DSA-87 and persisted in a Merkle-anchored WORM log."
+            "description": "All high-risk reasoning traces must be signed with ML-DSA-87 and persisted in a Merkle-anchored WORM log using Salted SHA-256 for PII obfuscation."
           },
           {
             "id": "scp-2",
@@ -36,9 +37,10 @@
             ],
             "props": [
               { "name": "framework", "value": "SR 11-7 (Model Risk Management)" },
-              { "name": "framework", "value": "Basel IV" }
+              { "name": "framework", "value": "Basel IV" },
+              { "name": "framework", "value": "GDPR Art. 22 (Automated Decisioning)" }
             ],
-            "description": "Succinct, non-interactive proofs of GDL/Rego policy compliance for all agent reasoning steps."
+            "description": "Succinct proofs of policy compliance for agent reasoning steps, ensuring automated decisions remain within human-meaningful safety manifolds."
           }
         ]
       },
@@ -54,7 +56,8 @@
             ],
             "props": [
               { "name": "framework", "value": "ISO/IEC 42001" },
-              { "name": "framework", "value": "NIS2" }
+              { "name": "framework", "value": "NIS2" },
+              { "name": "framework", "value": "DORA Art. 15" }
             ],
             "description": "Mandatory execution of the GSM and ZK Prover within memory-encrypted hardware enclaves."
           },
@@ -62,7 +65,8 @@
             "id": "scp-4",
             "title": "vTPM Remote Attestation",
             "props": [
-              { "name": "framework", "value": "NIST AI RMF 1.0" }
+              { "name": "framework", "value": "NIST AI RMF 1.0" },
+              { "name": "framework", "value": "FIPS 204 Compliance" }
             ],
             "description": "Continuous verification of enclave integrity via vTPM PCR_MATCH heartbeats."
           }
@@ -76,17 +80,20 @@
             "id": "scp-5",
             "title": "SIP v3.0 Interaction Protocol",
             "props": [
-              { "name": "framework", "value": "EU AI Act Art. 14" }
+              { "name": "framework", "value": "EU AI Act Art. 14" },
+              { "name": "framework", "value": "UK Consumer Duty" },
+              { "name": "framework", "value": "MAS FEAT" }
             ],
-            "description": "Socratic interaction constraints to preserve human cognitive agency during human-agent collaboration."
+            "description": "Socratic interaction constraints to preserve human cognitive agency and fulfill fiduciary transparency obligations."
           },
           {
             "id": "scp-6",
             "title": "GIEN Mesh Equivocation Detection",
             "props": [
-              { "name": "framework", "value": "DORA Systemic Resilience" }
+              { "name": "framework", "value": "DORA Systemic Resilience" },
+              { "name": "framework", "value": "Basel IV Operational Risk" }
             ],
-            "description": "Zero-trust gossip protocol for detecting institutional log forks and agentic drift."
+            "description": "Zero-trust gossip protocol for detecting institutional log forks and ensuring global systemic homeostasis."
           }
         ]
       }
