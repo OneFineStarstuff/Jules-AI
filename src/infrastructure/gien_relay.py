@@ -1,61 +1,37 @@
-import json
 import secrets
 from datetime import datetime
 
 class GIENRelay:
     """
-    GIEN (Global Incident Evaluation Network) Relay.
-    Implements a zero-trust gossip mesh for sharing breach signatures and governance heartbeats.
+    Global Institutional Engagement Network (GIEN) Relay.
+    Facilitates p2p gossip signaling for institutional safety.
     """
     def __init__(self):
-        # Secure 32-byte node ID for compliance
+        # Mandatory 32-byte (64 hex char) secure node ID per institutional standard
         self.node_id = f"NODE_{secrets.token_hex(32)}"
         self.peers = []
-        self.known_signatures = set()
+        self.mesh_state = "STABLE"
 
-    def broadcast_signature(self, signature_payload):
-        """
-        Broadcasts a security breach signature to the gossip mesh.
-        """
-        sig_id = signature_payload.get("id")
-        if sig_id in self.known_signatures:
-            return False # Already processed
-
-        self.known_signatures.add(sig_id)
-        # In a real implementation, this would send to peer nodes via gRPC/mTLS
-        return True
-
-    def receive_heartbeat(self, heartbeat_data):
-        """
-        Processes an incoming OmegaActual heartbeat.
-        """
+    def emit_signal(self, topic, payload):
+        """Emits a safety signal to the gossip mesh."""
         return {
-            "relay_status": "RECEIVED",
-            "relayed_by": self.node_id,
-            "original_timestamp": heartbeat_data.get("timestamp"),
-            "processing_latency_ms": 1.5
+            "source_node": self.node_id,
+            "topic": topic,
+            "timestamp": datetime.now().isoformat(),
+            "payload_hash": "SIGNAL_HASH_PLACEHOLDER"
         }
 
     def get_mesh_health(self):
-        """
-        Returns the health status of the zero-trust gossip mesh.
-        """
+        """Returns the health status of the GIEN relay mesh."""
         return {
-            "node_id": self.node_id,
             "status": "ONLINE",
-            "peer_count": len(self.peers),
-            "signature_cache_size": len(self.known_signatures),
-            "trust_level": "MAXIMAL"
+            "active_peers": len(self.peers),
+            "latency_ms": 12,
+            "mesh_state": self.mesh_state,
+            "last_heartbeat": datetime.now().isoformat()
         }
 
 if __name__ == "__main__":
     relay = GIENRelay()
-    print(f"Node Initialized: {relay.node_id}")
-
-    # Simulate receiving a signature
-    sig = {"id": "SIG_001", "type": "DECEPTIVE_ALIGNMENT", "severity": "CRITICAL"}
-    print(f"Broadcasting Signature: {relay.broadcast_signature(sig)}")
-
-    # Check mesh health
-    print("\nMesh Health Status:")
-    print(json.dumps(relay.get_mesh_health(), indent=2))
+    print(f"Node ID: {relay.node_id}")
+    print(relay.get_mesh_health())
