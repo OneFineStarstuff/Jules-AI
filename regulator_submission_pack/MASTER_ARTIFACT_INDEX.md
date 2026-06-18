@@ -1,6 +1,6 @@
 # Master Artifact Index: Unified AI Supervisory Control Plane (SCP)
 
-This index provides a categorized directory of all design, specification, and evidence artifacts included in the SCP suite.
+This index provides a categorized directory of all 23 design, specification, and evidence artifacts included in the SCP suite.
 
 ---
 
@@ -17,7 +17,7 @@ This index provides a categorized directory of all design, specification, and ev
 ## 2. Regulatory Compliance & Assurance
 | Artifact | Purpose | Status |
 | :--- | :--- | :--- |
-| `OSCAL_GSIFI_CATALOG_V8.json` | Machine-readable control mapping (EU AI Act, Basel, DORA). | OSCAL 1.1.2 Compliant |
+| `OSCAL_GSIFI_CATALOG_V8.json` | Machine-readable control mapping (EU AI Act, Basel, DORA, GDPR). | OSCAL 1.1.2 Compliant |
 | `SANDBOX_EXIT_DOSSIER_PRIMARY.md` | Exit Dossier Sections 5, 6, 11, 12. | Regulator-Ready |
 | `SANDBOX_EXIT_DOSSIER_ADDENDA.md` | Exit Dossier Sections 13, 14, 15. | Regulator-Ready |
 | `ASSURANCE_EVALUATION_REPORT.md` | Critical evaluation of G-SIFI exit assurance efficacy. | Certified |
@@ -28,25 +28,27 @@ This index provides a categorized directory of all design, specification, and ev
 ## 3. Regulator Engagement & Operations
 | Artifact | Purpose | Status |
 | :--- | :--- | :--- |
-| `SUPERVISORY_BRIEFING_DECK.md` | 13-slide content for sandbox exit briefing. | Board-Ready |
-| `PHASE_1_ENGAGEMENT_ARTIFACTS.md` | Submission cover note, agenda, and demo checklists. | Active |
+| `COMMUNICATION_AND_ENGAGEMENT_FRAMEWORK.md` | Engagement roles, reporting cadence, and SLAs. | Finalized |
+| `PHASE_1_ENGAGEMENT_ARTIFACTS.md` | Submission cover note, agenda, and acknowledgment. | Active |
 | `MONTHLY_SANDBOX_ARTIFACTS.md` | Checkpoint call agendas and follow-up templates. | Active |
 | `ANNUAL_SUPERVISORY_REVIEW_REPORT.md` | Sample filled 2027 review for board/regulator use. | Narrative Sample |
 | `FEDERATED_POSTURE_PACK_TEMPLATE.json` | JSON schema for multi-institution posture exchange. | Schema Verified |
 | `SIP_V3_VERIFICATION_PATHS.md` | Logical paths for verifying posture packs in GIEN mesh. | Verified |
 | `SIP_V3_SCENARIO_APPENDIX.md` | TLC walkthroughs for normal and equivocation scenarios. | Verified |
+| `REGULATOR_ORIENTATION_GUIDE.md` | Navigation guide for the evidence pipeline and states. | Finalized |
 
 ---
 
 ## 4. Design & Rehearsal Support
 | Artifact | Purpose | Status |
 | :--- | :--- | :--- |
+| `SUPERVISORY_BRIEFING_DECK.md` | 13-slide content for sandbox exit briefing. | Board-Ready |
 | `DEMO_VISUAL_DESIGN_GUIDE.md` | "High-Assurance Terminal" design principles. | Design Lock |
 | `DEMO_EXPERIENCE_AND_READINESS.md` | Journey maps, ceremonial scripts, and readiness scorecard. | Ready for Live Demo |
 | `TEAM_REHEARSAL_PLAN.md` | Internal timing cues and fallback tactics for demos. | Rehearsed |
 | `REGULATOR_DEMO_SCRIPT.md` | 90-minute detailed walkthrough for Phase 1 demo. | Finalized |
-| `REGULATOR_TAKEAWAY_PACKET.md` | Life-cycle map, orientation guide, and FAQ for handoff. | Staged |
-| `MONTHLY_METRICS_TEMPLATE.md` | Data placeholders for proof latency and STH cadence. | Template |
+| `REGULATOR_TAKEAWAY_PACKET.md` | Life-cycle map and FAQ for digital handoff. | Staged |
+| `MONTHLY_METRICS_TEMPLATE.md` | Detailed placeholders for SLA and health monitoring. | Template |
 | `DEBRIEF_TEMPLATES.md` | 24-hour debrief and internal reflection templates. | Template |
 
 ---

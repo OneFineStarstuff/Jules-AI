@@ -50,3 +50,23 @@ This document contains key engagement artifacts for the Phase 1 Sandbox program,
 **Action Items:**
 1. [Action Item 1]
 2. [Action Item 2]
+
+---
+
+## 5. Sandbox Office Acknowledgment Template
+**To:** AGI Governance Steering Committee, [Institution Name]
+**From:** Sandbox Office, [Regulatory Authority]
+**Date:** [Date]
+**Subject:** Acknowledgment of Phase 1 SCP Submission
+
+Dear Steering Committee,
+
+We hereby acknowledge receipt of your submission for the Phase 1 Supervisory Control Plane (SCP) Sandbox, including Dossier Sections 1–4 and the foundational architectural evidence.
+
+Our team will now conduct a preliminary technical review of your CRYSTALS-Dilithium signature implementation and AMD SEV-SNP enclave topology. We have scheduled the Phase 1 Demonstration for [Proposed Date].
+
+Please ensure that your independent Verifier Nodes are accessible to our staff prior to the demonstration.
+
+Regards,
+[Lead Supervisor Name]
+Sandbox Office
