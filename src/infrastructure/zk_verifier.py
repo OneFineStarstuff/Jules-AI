@@ -36,4 +36,5 @@ class ZKVerifier:
 
 if __name__ == "__main__":
     verifier = ZKVerifier()
-    print(json.dumps(verifier.check_pipeline_health(), indent=2))
+    # Perform health check without logging to stdout
+    verifier.check_pipeline_health()

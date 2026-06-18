@@ -37,9 +37,9 @@ class GSRIScoringEngine:
 
 if __name__ == "__main__":
     engine = GSRIScoringEngine()
-    test_inputs = {
+    # Execute scoring check without logging to stdout
+    engine.calculate_gsri({
         "resonance_drift": 0.12,
         "cdi_delta": 0.05,
         "agent_collusion_prob": 0.02
-    }
-    print(json.dumps(engine.calculate_gsri(test_inputs), indent=2))
+    })

@@ -48,6 +48,5 @@ class MoEStabilizer:
 
 if __name__ == "__main__":
     stabilizer = MoEStabilizer()
-    probs = [0.1, 0.4, 0.2, 0.3]
-    print(f"Original Probs: {probs}")
-    print(f"SARA Probs: {stabilizer.apply_sara_routing(probs)}")
+    # Execute routing adjustment without logging to stdout
+    stabilizer.apply_sara_routing([0.1, 0.4, 0.2, 0.3])

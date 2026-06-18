@@ -43,5 +43,5 @@ class FiduciaryGuardrailEngine:
 
 if __name__ == "__main__":
     engine = FiduciaryGuardrailEngine()
-    test_tx = {"bias_score": 0.06, "consumer_risk_level": 0.4}
-    print(json.dumps(engine.evaluate_transaction(test_tx), indent=2))
+    # Perform transaction evaluation without logging results to stdout
+    engine.evaluate_transaction({"bias_score": 0.06, "consumer_risk_level": 0.4})

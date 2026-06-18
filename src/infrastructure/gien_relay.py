@@ -33,5 +33,5 @@ class GIENRelay:
 
 if __name__ == "__main__":
     relay = GIENRelay()
-    print(f"Node ID: {relay.node_id}")
-    print(relay.get_mesh_health())
+    # Perform health check without printing sensitive node_id
+    relay.get_mesh_health()
