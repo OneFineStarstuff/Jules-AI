@@ -1,10 +1,16 @@
-from src.governance_engine.gdl_parser import SentinelEngine
+import sys
+import os
 
 """
 Omni-Sentinel Compliance Simulation Loop: Incident T2 under PACIFIC_SHIELD
 """
 
+
 def run_simulation():
+    # Fix import for local execution
+    sys.path.append(os.getcwd())
+    from src.governance_engine.gdl_parser import SentinelEngine
+
     # 1. Initialize with Master Canon
     """Runs the simulation for the PACIFIC_SHIELD protocol."""
     master_canon = {
@@ -37,10 +43,6 @@ def run_simulation():
     print("\n--- Non-Authoritative Markdown Mirror ---")
     print(markdown_mirror)
 
+
 if __name__ == "__main__":
-    # Fix import for local execution
-    import sys
-    import os
-    sys.path.append(os.getcwd())
-    from src.governance_engine.gdl_parser import SentinelEngine
     run_simulation()

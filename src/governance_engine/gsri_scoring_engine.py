@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class GSRIScoringEngine:
     """
@@ -25,8 +25,10 @@ class GSRIScoringEngine:
         )
 
         status = "NOMINAL"
-        if score > 0.5: status = "ELEVATED"
-        if score > 0.85: status = "CRITICAL_BASEL_IV_TRIGGER"
+        if score > 0.5:
+            status = "ELEVATED"
+        if score > 0.85:
+            status = "CRITICAL_BASEL_IV_TRIGGER"
 
         return {
             "gsri_score": round(score, 4),
@@ -34,6 +36,7 @@ class GSRIScoringEngine:
             "timestamp": datetime.now().isoformat(),
             "metrics": inputs
         }
+
 
 if __name__ == "__main__":
     engine = GSRIScoringEngine()

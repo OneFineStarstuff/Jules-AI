@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class TPMAttestor:
     """
@@ -33,7 +33,7 @@ class TPMAttestor:
                 all_match = False
 
         # Placeholder for SEV-SNP/TDX quote verification logic
-        hardware_verified = True # Simulated for G-SIFI environments
+        hardware_verified = True  # Simulated for G-SIFI environments
 
         return {
             "attestation_status": "SUCCESS" if (all_match and hardware_verified) else "FAILED",

@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class ZKVerifier:
     """
@@ -33,6 +33,7 @@ class ZKVerifier:
             "throughput_proofs_per_sec": 500,
             "last_verification": datetime.now().isoformat()
         }
+
 
 if __name__ == "__main__":
     verifier = ZKVerifier()

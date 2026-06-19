@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class RTEEEngine:
     """
@@ -35,9 +35,11 @@ class RTEEEngine:
             "timestamp": datetime.now().isoformat()
         }
 
+
 def secrets_token():
     import secrets
     return secrets.token_hex(32)
+
 
 if __name__ == "__main__":
     engine = RTEEEngine()

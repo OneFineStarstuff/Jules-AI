@@ -1,6 +1,6 @@
-import json
 import secrets
 from datetime import datetime
+
 
 class OmegaActualTreatyEngine:
     """
@@ -57,6 +57,7 @@ class OmegaActualTreatyEngine:
         """
         # In a real system, this would calculate delta between now and last_received_heartbeat_time
         return "HEARTBEAT_NOMINAL"
+
 
 if __name__ == "__main__":
     engine = OmegaActualTreatyEngine()

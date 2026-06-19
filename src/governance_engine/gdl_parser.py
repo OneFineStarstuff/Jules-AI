@@ -1,11 +1,11 @@
-import json
-import xml.etree.ElementTree as ET # nosec B405
+import xml.etree.ElementTree as ET  # nosec B405
 from datetime import datetime
 
 """
 GDL (Governance Description Language) Enforcement Engine
 Transforms governance state into deterministic XML artifacts.
 """
+
 
 class SentinelEngine:
     def __init__(self, master_canon):
@@ -22,8 +22,10 @@ class SentinelEngine:
         operator = rule['operator']
 
         violation = False
-        if operator == "<" and value > threshold: violation = True
-        if operator == ">" and value < threshold: violation = True
+        if operator == "<" and value > threshold:
+            violation = True
+        if operator == ">" and value < threshold:
+            violation = True
 
         if violation:
             self.status = "CONTINUATION_REFUSAL_STATE"
@@ -59,6 +61,7 @@ class SentinelEngine:
 ---
 *Note: This Markdown file is non-authoritative. Refer to the signed XML for the canonical state.*
 """
+
 
 if __name__ == "__main__":
     canon = {

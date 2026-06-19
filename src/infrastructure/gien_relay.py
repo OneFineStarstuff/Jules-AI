@@ -1,6 +1,7 @@
 import secrets
 from datetime import datetime
 
+
 class GIENRelay:
     """
     Global Institutional Engagement Network (GIEN) Relay.
@@ -30,6 +31,7 @@ class GIENRelay:
             "mesh_state": self.mesh_state,
             "last_heartbeat": datetime.now().isoformat()
         }
+
 
 if __name__ == "__main__":
     relay = GIENRelay()
