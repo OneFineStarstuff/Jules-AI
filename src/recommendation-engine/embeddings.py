@@ -7,7 +7,7 @@ class GovernanceEmbeddings:
     """
     def __init__(self):
         # Using secrets for high-assurance security scans
-        self.seed = secrets.token_hex(16)
+        self.seed = secrets.token_hex(32)
 
     def generate_vector(self, text):
         return [0.1, 0.2, 0.3]

@@ -18,7 +18,7 @@ class IRMIDriver:
         self.safety_logs.append({
             "event": "INTERRUPT_REGISTERED",
             "timestamp": datetime.now().isoformat(),
-            "hash": f"HASH_{secrets.token_hex(8)}"
+            "hash": f"HASH_{secrets.token_hex(32)}"
         })
         return True
 
@@ -32,7 +32,7 @@ class IRMIDriver:
             "event": "HARDWARE_KILL_TRIGGERED",
             "reason": reason,
             "timestamp": datetime.now().isoformat(),
-            "hash": f"HASH_{secrets.token_hex(8)}"
+            "hash": f"HASH_{secrets.token_hex(32)}"
         })
         return True
 
