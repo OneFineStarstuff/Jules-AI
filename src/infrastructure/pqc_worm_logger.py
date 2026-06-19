@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class PQCWormLogger:
     """
@@ -16,7 +16,8 @@ class PQCWormLogger:
         Signs and logs an entry to the WORM audit sink.
         """
         timestamp = datetime.now().isoformat()
-        payload = {
+        # Payload construction for signature simulation
+        _ = {
             "timestamp": timestamp,
             "component": component,
             "event": event,
@@ -26,16 +27,7 @@ class PQCWormLogger:
         # Simulating a CRYSTALS-Dilithium signature
         signature = f"ML_DSA_SIG_{timestamp}_DILITHIUM_V3"
 
-        entry = {
-            "payload": payload,
-            "signature": signature,
-            "algorithm": self.algorithm,
-            "key_id": self.pqc_key_id,
-            "integrity_mode": "S3_OBJECT_LOCK_COMPLIANT"
-        }
-
-        # In a real implementation, this would append to a Kafka stream
-        # with S3 Object Lock as the final persistence layer.
+        # entry structure defined but logging to stream in real implementation
         return signature
 
     def verify_health(self):

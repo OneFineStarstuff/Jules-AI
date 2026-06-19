@@ -1,11 +1,10 @@
 import unittest
-import json
 from omni_sentinel_24h_monitor import OmniSentinelMonitor
 from src.governance_engine.omega_actual import OmegaActualTreatyEngine
 from src.governance_engine.fiduciary_guardrail_engine import FiduciaryGuardrailEngine
 from src.infrastructure.gien_relay import GIENRelay
-from src.infrastructure.zk_verifier import ZKVerifier
 from src.governance_engine.rtee_engine import RTEEEngine
+
 
 class TestFinalValidation(unittest.TestCase):
     def setUp(self):
@@ -23,14 +22,14 @@ class TestFinalValidation(unittest.TestCase):
     def test_omega_actual_failsafe(self):
         """Verifies that OmegaActual triggers a fail-safe on FLOP violation."""
         engine = OmegaActualTreatyEngine()
-        report = engine.verify_compute_compliance(10**27) # Over limit
+        report = engine.verify_compute_compliance(10**27)  # Over limit
         self.assertEqual(report["status"], "FAIL_SAFE_TRIGGERED")
         self.assertEqual(engine.treaty_status, "VIOLATION_DETECTED")
 
     def test_fiduciary_policy_enforcement(self):
         """Verifies that FiduciaryGuardrail rejects non-compliant transactions."""
         engine = FiduciaryGuardrailEngine()
-        tx = {"bias_score": 0.1, "consumer_risk_level": 0.9} # Violates multiple
+        tx = {"bias_score": 0.1, "consumer_risk_level": 0.9}  # Violates multiple
         report = engine.evaluate_transaction(tx)
         self.assertEqual(report["decision"], "REJECTED")
         self.assertIn("MAS_FEAT_BIAS_VIOLATION", report["violations"])
@@ -49,6 +48,7 @@ class TestFinalValidation(unittest.TestCase):
         report = engine.reconcile_policy(telemetry)
         self.assertTrue(report["updates_applied"])
         self.assertIn("REFLEXIVE-PATCH", report["new_canon_version"])
+
 
 if __name__ == "__main__":
     unittest.main()

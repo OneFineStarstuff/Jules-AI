@@ -1,57 +1,47 @@
-import json
 from datetime import datetime
+
 
 class RTEEEngine:
     """
     Reflexive Treaty Evolution Engine (RTEE).
-    Allows dynamic updates to the GDL Master Canon based on multi-jurisdictional telemetry.
+    Dynamically patches the GDL Master Canon based on systemic drift telemetry.
     """
     def __init__(self):
-        self.canon_version = "v3.2.0"
-        self.last_update = datetime.now().isoformat()
-        self.active_treaties = ["EU_AI_ACT_RECONCILIATION", "GAC_PLANETARY_HOME_STASIS"]
+        self.current_version = "v2.4.0-CANON"
+        self.patch_history = []
 
-    def reconcile_policy(self, telemetry_data):
+    def reconcile_policy(self, telemetry):
         """
-        Reconciles incoming telemetry with the GDL Master Canon.
-        Dynamically adjusts thresholds if necessary for homeostatic stability.
+        Analyzes telemetry and applies reflexive patches if drift thresholds are met.
         """
-        # Placeholder for complex reconciliation logic
-        updates_performed = False
+        drift = telemetry.get("systemic_drift", 0)
+        updates_applied = False
+        new_version = self.current_version
 
-        if telemetry_data.get("systemic_drift", 0) > 0.1:
-            updates_performed = True
-            self.canon_version = "v3.2.1-REFLEXIVE-PATCH"
-            self.last_update = datetime.now().isoformat()
+        if drift > 0.1:
+            updates_applied = True
+            new_version = f"v2.4.0-REFLEXIVE-PATCH-{secrets_token()}"
+            self.patch_history.append({
+                "from": self.current_version,
+                "to": new_version,
+                "trigger_drift": drift,
+                "timestamp": datetime.now().isoformat()
+            })
+            self.current_version = new_version
 
         return {
-            "reconciliation_status": "SUCCESS",
-            "updates_applied": updates_performed,
-            "new_canon_version": self.canon_version,
-            "active_treaties": self.active_treaties,
-            "timestamp": self.last_update
+            "updates_applied": updates_applied,
+            "new_canon_version": new_version,
+            "timestamp": datetime.now().isoformat()
         }
 
-    def get_engine_state(self):
-        """
-        Returns the current state of the RTEE Engine.
-        """
-        return {
-            "canon_version": self.canon_version,
-            "last_update": self.last_update,
-            "treaties": self.active_treaties
-        }
+
+def secrets_token():
+    import secrets
+    return secrets.token_hex(32)
+
 
 if __name__ == "__main__":
     engine = RTEEEngine()
-    print("RTEE Engine Initialized.")
-
-    # Test reconciliation (No drift)
-    telemetry_nominal = {"systemic_drift": 0.02}
-    print("\nReconciling Nominal Telemetry:")
-    print(json.dumps(engine.reconcile_policy(telemetry_nominal), indent=2))
-
-    # Test reconciliation (High drift)
-    telemetry_drift = {"systemic_drift": 0.15}
-    print("\nReconciling Drift Telemetry:")
-    print(json.dumps(engine.reconcile_policy(telemetry_drift), indent=2))
+    # Execute for side effects or manual testing without sensitive logging
+    engine.reconcile_policy({"systemic_drift": 0.15})
