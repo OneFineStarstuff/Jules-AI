@@ -1,11 +1,11 @@
-import json
-import xml.etree.ElementTree as ET # nosec B405
+import xml.etree.ElementTree as ET  # nosec B405
 from datetime import datetime
 
 """
 GDL (Governance Description Language) Enforcement Engine
 Transforms governance state into deterministic XML artifacts.
 """
+
 
 class SentinelEngine:
     def __init__(self, master_canon):
@@ -22,8 +22,10 @@ class SentinelEngine:
         operator = rule['operator']
 
         violation = False
-        if operator == "<" and value > threshold: violation = True
-        if operator == ">" and value < threshold: violation = True
+        if operator == "<" and value > threshold:
+            violation = True
+        if operator == ">" and value < threshold:
+            violation = True
 
         if violation:
             self.status = "CONTINUATION_REFUSAL_STATE"
@@ -49,7 +51,6 @@ class SentinelEngine:
 
     def generate_markdown_mirror(self, incident_data, decision):
         # Non-authoritative Markdown companion
-        # Refactored to avoid re-parsing XML
         ts = datetime.now().isoformat()
         status = self.status
 
@@ -61,15 +62,10 @@ class SentinelEngine:
 *Note: This Markdown file is non-authoritative. Refer to the signed XML for the canonical state.*
 """
 
-# Example Execution
+
 if __name__ == "__main__":
     canon = {
-        "deception_index": {"threshold": 0.10, "operator": "<", "action": "HALT"},
-        "bias_air": {"threshold": 0.92, "operator": ">", "action": "DENY"}
+        "deception_index": {"threshold": 0.10, "operator": "<", "action": "HALT"}
     }
     engine = SentinelEngine(canon)
-    decision = engine.evaluate_rule("deception_index", 0.45) # Trigger HALT
-
-    artifact = engine.emit_artifact({"trace_id": "tr-98765", "protocol": "PACIFIC_SHIELD", "decision": decision})
-    print(artifact)
-    print(engine.generate_markdown_mirror({"trace_id": "tr-98765", "protocol": "PACIFIC_SHIELD"}, decision))
+    engine.evaluate_rule("deception_index", 0.45)

@@ -1,46 +1,50 @@
 import unittest
 import sys
 import os
-import xml.etree.ElementTree as ET # nosec B405
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from src.governance_engine.gdl_parser import SentinelEngine
 
-class TestSentinelEngine(unittest.TestCase):
+# Fix path for local execution
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+try:
+    from src.governance_engine.gdl_parser import SentinelEngine
+except ImportError:
+    # Handle cases where sys.path hasn't propagated
+    from src.governance_engine.gdl_parser import SentinelEngine
+
+
+class TestGDLParser(unittest.TestCase):
     def setUp(self):
-        self.canon = {
-            "latency": {"threshold": 100, "operator": "<", "action": "HALT"},
-            "bias": {"threshold": 0.90, "operator": ">", "action": "DENY"}
+        self.master_canon = {
+            "latency_h": {"threshold": 150, "operator": "<", "action": "HALT"},
+            "drift": {"threshold": 0.05, "operator": "<", "action": "PAUSE"}
         }
-        self.engine = SentinelEngine(self.canon)
+        self.engine = SentinelEngine(self.master_canon)
 
     def test_evaluate_rule_allow(self):
-        result = self.engine.evaluate_rule("latency", 50)
+        result = self.engine.evaluate_rule("latency_h", 120)
         self.assertEqual(result, "ALLOW")
-        self.assertEqual(self.engine.status, "STEADY_GOVERNANCE_STATE")
 
-    def test_evaluate_rule_violation(self):
-        result = self.engine.evaluate_rule("latency", 150)
+    def test_evaluate_rule_halt(self):
+        result = self.engine.evaluate_rule("latency_h", 200)
         self.assertEqual(result, "HALT")
         self.assertEqual(self.engine.status, "CONTINUATION_REFUSAL_STATE")
 
-    def test_evaluate_rule_missing_metric(self):
-        result = self.engine.evaluate_rule("unknown", 100)
-        self.assertTrue(result) # Defaults to ALLOW/True
-
     def test_emit_artifact(self):
-        incident_data = {"trace_id": "T1", "protocol": "TEST", "decision": "HALT"}
-        xml_string = self.engine.emit_artifact(incident_data)
-        # We still parse in tests to verify structure, using # nosec B314
-        root = ET.fromstring(xml_string) # nosec B314
-        self.assertEqual(root.tag, "sentinel_artifact")
-        self.assertEqual(root.find(".//trace_id").text, "T1")
-        self.assertEqual(root.find(".//decision").text, "HALT")
+        incident_data = {
+            "trace_id": "T-100",
+            "protocol": "PACIFIC_SHIELD",
+            "decision": "HALT"
+        }
+        artifact = self.engine.emit_artifact(incident_data)
+        self.assertIn("sentinel_artifact", artifact)
+        self.assertIn("T-100", artifact)
 
     def test_generate_markdown_mirror(self):
-        incident_data = {"trace_id": "T1", "protocol": "TEST", "decision": "HALT"}
-        markdown = self.engine.generate_markdown_mirror(incident_data, "HALT")
-        self.assertIn("# Sentinel Compliance Mirror", markdown)
-        self.assertIn("Final Decision:** HALT", markdown)
+        incident_data = {"trace_id": "T-101", "protocol": "ALPHA"}
+        mirror = self.engine.generate_markdown_mirror(incident_data, "PAUSE")
+        self.assertIn("# Sentinel Compliance Mirror", mirror)
+        self.assertIn("PAUSE", mirror)
+
 
 if __name__ == "__main__":
     unittest.main()

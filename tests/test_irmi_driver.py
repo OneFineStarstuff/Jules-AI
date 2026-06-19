@@ -1,8 +1,15 @@
 import unittest
 import sys
 import os
+
+# Fix path for local execution
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from src.governance_engine.irmi_driver import IRMIDriver
+
+try:
+    from src.governance_engine.irmi_driver import IRMIDriver
+except ImportError:
+    from src.governance_engine.irmi_driver import IRMIDriver
+
 
 class TestIRMIDriver(unittest.TestCase):
     def setUp(self):
@@ -40,6 +47,7 @@ class TestIRMIDriver(unittest.TestCase):
         self.assertIn("hash", logs[0])
         # Verifying that a simulated hash is present
         self.assertTrue(logs[0]["hash"].startswith("HASH_"))
+
 
 if __name__ == "__main__":
     unittest.main()

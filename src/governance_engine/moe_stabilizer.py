@@ -1,5 +1,5 @@
-import json
 from datetime import datetime
+
 
 class MoEStabilizer:
     """
@@ -7,7 +7,7 @@ class MoEStabilizer:
     Implements SARA (Safety-Aware Routing Alignment) and ACR (Adaptive Conflict Resolution).
     """
     def __init__(self):
-        self.safety_expert_indices = [0, 1, 2] # Pre-validated experts
+        self.safety_expert_indices = [0, 1, 2]  # Pre-validated experts
         self.conflict_threshold = 0.75
 
     def apply_sara_routing(self, router_probs):
@@ -17,7 +17,7 @@ class MoEStabilizer:
         stabilized_probs = router_probs.copy()
         for idx in self.safety_expert_indices:
             if idx < len(stabilized_probs):
-                stabilized_probs[idx] *= 1.2 # Boost safety experts
+                stabilized_probs[idx] *= 1.2  # Boost safety experts
 
         # Normalize
         total = sum(stabilized_probs)
@@ -46,8 +46,8 @@ class MoEStabilizer:
         """Verification of the routing stabilization mesh."""
         return "ROUTING_STABLE"
 
+
 if __name__ == "__main__":
     stabilizer = MoEStabilizer()
-    probs = [0.1, 0.4, 0.2, 0.3]
-    print(f"Original Probs: {probs}")
-    print(f"SARA Probs: {stabilizer.apply_sara_routing(probs)}")
+    # Execute routing adjustment without logging to stdout
+    stabilizer.apply_sara_routing([0.1, 0.4, 0.2, 0.3])
