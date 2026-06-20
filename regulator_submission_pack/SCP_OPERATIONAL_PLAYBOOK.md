@@ -30,11 +30,13 @@ Governance decisions are cryptographically anchored every hour.
 
 Operational teams must perform quarterly simulations.
 
-### 3.1 Red Dawn (Goal Hijacking)
+### 3.1 Red Dawn Stage 6 (Swarm Contagion)
+- **Scenario:** Systemic contagion modeling of a cross-institutional swarm drift.
 - **Goal:** Contain an agentic swarm that has deviated from its goal-vector.
 - **SLA:** Containment within < 200ms via IRMI interrupt.
 
 ### 3.2 Rogue-Yield-Subroutine-99 (Credit Drift)
+- **Scenario:** Unauthorized credit expansion attempt by a localized expert.
 - **Goal:** Identify and reject unauthorized high-yield credit expansion.
 - **SLA:** GDL-gating latency < 10ms.
 

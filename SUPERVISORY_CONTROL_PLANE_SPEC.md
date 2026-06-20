@@ -65,3 +65,9 @@ This specification serves as the definitive blueprint for institutional AI gover
 ---
 **Signed:** Jules-Apex
 **Hash:** $(SHA256(SCP\_SPEC\_V2.4) \oplus PQC\_SALT)$
+
+## 8. Deployment Posture: Kubernetes & GitOps
+The SCP is deployed using a hardened **GitOps** reconciliation loop (ArgoCD/Flux).
+- **RTEE Containment:** Reflexive Treaty Evolution Engine (RTEE) patches the GDL canon in Git, triggering an immediate rolling update across the K8s cluster.
+- **Enclave Scheduling:** Pods are pinned to TEE-capable nodes using K8s device plugins and runtime classes.
+- **Sidecar Injection:** The Sentinel v2.4 Sidecar is automatically injected into all agentic namespaces to enforce gRPC mTLS and OPA gating.
