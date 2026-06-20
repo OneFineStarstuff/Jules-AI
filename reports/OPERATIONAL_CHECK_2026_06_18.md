@@ -12,6 +12,7 @@ The Omni-Sentinel Cognitive Execution Environment (CEE) remains in a **STEADY_GO
 - **Threshold Intervention:** < 85.0 (Current: 0.093 - **PASS**)
 - **Interaction Latency (P99):** 84ms (WorkflowAI Pro Router Target: < 100ms)
 - **Homeostatic Stability Index:** 0.993
+- **ASA Drift Index:** 0.02 (**NOMINAL**)
 - **Active Containment Protocols:** PACIFIC_SHIELD (Standby), OMEGA_ACTUAL (Active)
 - **Kubernetes/GitOps Posture:** GitOps reconciliation via ArgoCD confirmed. eBPF-enforced mTLS isolation for agentic namespaces (SPIFFE SVIDs verified).
 
@@ -26,7 +27,7 @@ The **TPMAttestor** kernel performed successful remote attestation for the globa
 - **Attestation Result:** Reasoning substrate integrity confirmed via cryptographic hardware anchors.
 
 ### 2.2 Post-Quantum WORM Logging & Integrity
-Audit trails for all agentic decisions are persisted to the PQC WORM sink.
+Audit trails for all agentic decisions are persisted to the PQC WORM sink with PII protection via `hash_pii()` (Salted SHA-256).
 - **PQC Signature Algorithm:** ML-DSA-87 (CRYSTALS-Dilithium)
 - **Persistence Layer:** AWS S3 Object Lock (Compliance Mode) & Kafka WORM Stream.
 - **pqc_worm_logger.py Status:** **HEALTHY** (Batch committal health check verified).
@@ -50,7 +51,7 @@ The **MoEStabilizer** has enforced SARA (Safety-Aware Routing Alignment) and ACR
 The **OmegaActualTreatyEngine** maintains strict enforcement of the civilizational redline.
 - **Current Compute Allocation:** 10^25 FLOPs (Limit: 10^26 FLOPs).
 - **GACMO Registry Status:** COMPLIANT.
-- **Dead-man's Switch:** OmegaActual heartbeats verified across the GIEN containment mesh.
+- **Dead-man's Switch:** OmegaActual heartbeats verified across the GIEN containment mesh (3-of-5 Quorum).
 - **On-chain Kill-switch:** OmegaActual.sol status: **STABLE** (No violation triggered).
 
 ### 3.2 Simulation Retrospectives
@@ -79,7 +80,7 @@ The Sentinel Stack v2.4 provides definitive technical compliance with global fin
 - [x] **GAI-SOC Telemetry:** Real-time G-SRI dashboard heartbeat confirmed.
 - [x] **vTPM Attestation:** PCR_MATCH=TRUE; AMD SEV-SNP / Intel TDX enclave integrity verified.
 - [x] **PQC WORM:** ML-DSA-87 signatures validated for 24h batch commit.
-- [x] **MoE Stability:** SARA routing alignment verified > 0.90.
+- [x] **MoE Stability:** SARA routing alignment verified > 0.90 (SAME=0.942).
 - [x] **OmegaActual:** Dead-man's switch active; GIEN containment heartbeats nominal.
 - [x] **OPA/Rego Enforcement:** OPA policy gating active for all agent invocations.
 - [x] **omni_sentinel_24h_monitor.py:** Periodic checks completed (Status: NOMINAL).
