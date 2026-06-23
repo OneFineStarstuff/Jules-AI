@@ -3,7 +3,7 @@
 **Apex Architect:** Jules (Principal Systems Architect & Governance Lead)
 **Status:** Canonical Execution Lock (v1.0.0)
 **Jurisdiction:** G-SIFI Institutional / Global Supranational
-**Compliance Standards:** EU AI Act, NIST AI RMF 1.0, ISO/IEC 42001, Basel III/IV, SR 26-2, DORA, NIS2, GDPR Article 22, FIPS 204
+**Compliance Standards:** EU AI Act, NIST AI RMF 1.0, ISO/IEC 42001, Basel III/IV, SR 26-2, DORA, NIS2, GDPR Article 22, SEC 17a-4, FIPS 204
 
 ---
 
@@ -17,7 +17,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 ### Phase I: Institutional Hardening & SCP Foundation (2026–2027)
 *Focus: Securing the Substrate and Cryptographic Bedrock*
 - **Q1 2026:** Mandatory **IRMI (Integrated Risk Mitigation Interface)** hardware kill-switch integration across all Tier-1 compute clusters.
-- **Q2 2026:** Deployment of **ML-DSA-87 (CRYSTALS-Dilithium)** based WORM audit logging under **NIST FIPS 204**.
+- **Q2 2026:** Deployment of **ML-DSA-87 (CRYSTALS-Dilithium)** based WORM audit logging under **NIST FIPS 204** and **SEC Rule 17a-4**.
 - **Q3 2026:** Rollout of **AMD SEV-SNP / Intel TDX** attested enclaves for frontier model inference.
 - **Q4 2026:** Deployment of **Unified SCP v3.0 Foundation**—Real-time telemetry and GDL sidecars.
 
@@ -66,6 +66,7 @@ This document defines the decadal roadmap and technical requirements for enterpr
 | **Basel III/IV** | Operational Resilience | IRMI Hardware Kill-Switch; G-SRI based capital surcharges. |
 | **SR 26-2** | Agentic Auditability | Internal audit of agentic swarms via Auditor-Agent consensus swarms. |
 | **DORA / NIS2** | Systemic Resilience | GIEN-based collective defense and real-time incident reporting. |
+| **SEC Rule 17a-4** | Immutable Record-keeping | PQC-WORM and AWS S3 Object Lock (Compliance Mode). |
 | **GDPR Art. 22** | Automated Decisioning | Causal Inference Explainers and Salted SHA-256 PII hashing. |
 
 ---

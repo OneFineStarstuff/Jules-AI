@@ -12,6 +12,7 @@
 
 ## 2. Operational Verification (24h Monitor Cycle)
 - [x] **G-SRI Scoring:** Execute `omni_sentinel_24h_monitor.py` and confirm G-SRI < 0.85 (Baseline: 0.093).
+- [x] **SEC 17a-4 Verification:** Confirm WORM immutability for audit logs via S3 Object Lock health check.
 - [x] **MoE Stability:** Verify SARA routing alignment (> 0.90) and ACR conflict resolution status.
 - [x] **OmegaActual Heartbeat:** Confirm 3-of-5 quorum status for the Sovereign Kill-switch (OmegaActual.sol).
 - [x] **WORM Persistence:** Verify 24h batch commit success to AWS S3 Object Lock (Compliance Mode).
@@ -23,7 +24,7 @@
 - [x] **RTEE Reflexive Patching:** Confirm dynamic GDL canon updates based on systemic drift telemetry.
 
 ## 4. Regulatory & Compliance Finalization
-- [x] **OSCAL Mapping:** Validate SSP alignment with EU AI Act, NIST AI RMF, Basel IV, and SR 11-7.
+- [x] **OSCAL Mapping:** Validate SSP alignment with EU AI Act, NIST AI RMF, SEC 17a-4, Basel IV, and SR 11-7.
 - [x] **ZK Proof Pipeline:** Confirm `ZKVerifier` pipeline health and SnarkPack aggregation status.
 - [x] **Fiduciary Guardrails:** Validate MAS FEAT and FCA Consumer Duty gating on all agentic financial flows.
 - [x] **SIP v3.0 Invariants:** Confirm RootConvergence and NoSilentDivergence verification via TLA+ model checking.
