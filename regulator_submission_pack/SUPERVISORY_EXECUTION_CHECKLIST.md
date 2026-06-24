@@ -11,7 +11,7 @@
 - [x] **mTLS & SPIFFE:** Validate per-pod SPIFFE SVIDs and mTLS encryption for all inter-service gRPC flows.
 
 ## 2. Operational Verification (24h Monitor Cycle)
-- [x] **G-SRI Scoring:** Execute `omni_sentinel_24h_monitor.py` and confirm G-SRI < 0.85 (Baseline: 0.093).
+- [x] **G-SRI Scoring:** Execute `omni_sentinel_24h_monitor.py` and confirm G-SRI < 85.0 (Baseline: 0.093).
 - [x] **SEC 17a-4 Verification:** Confirm WORM immutability for audit logs via S3 Object Lock health check.
 - [x] **MoE Stability:** Verify SARA routing alignment (> 0.90) and ACR conflict resolution status.
 - [x] **OmegaActual Heartbeat:** Confirm 3-of-5 quorum status for the Sovereign Kill-switch (OmegaActual.sol).

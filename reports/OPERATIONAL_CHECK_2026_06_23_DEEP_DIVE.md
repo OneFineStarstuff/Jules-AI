@@ -5,7 +5,7 @@
 **Environment:** Global Systemically Important Financial Institution (G-SIFI) / Fortune 500 Financial Hub
 
 ## 1. Executive Summary: Omni-Sentinel CEE & SCP v3.0 Posture
-The **Omni-Sentinel Governance Stack**, operating within the **Cognitive Execution Environment (CEE)** and orchestrated by the **Unified AI Supervisory Control Plane (SCP v3.0)**, remains in a **STEADY_GOVERNANCE_STATE**. All technical invariants for the **Sentinel AI Governance Stack v2.4** are satisfied. Telemetry dashboard integrity is verified, with all systemic risk metrics well below intervention thresholds.
+The **Omni-Sentinel Governance Stack and Mesh v4.0**, operating within the **Cognitive Execution Environment (CEE)** and orchestrated by the **Unified AI Supervisory Control Plane (SCP v3.0)**, remains in a **STEADY_GOVERNANCE_STATE**. All technical invariants for the **Sentinel AI Governance Stack v2.4** are satisfied. Telemetry dashboard integrity is verified, with all systemic risk metrics well below intervention thresholds.
 
 ### 1.1 SACC Telemetry Dashboard & G-SRI Computation
 - **Global Systemic Risk Index (G-SRI):** 0.093 (**NOMINAL**)
@@ -75,7 +75,7 @@ The Sentinel Stack v2.4 constitutes a "High-Assurance Control Plane" meeting or 
 | **EU AI Act** | Articles 9-15; Annex IV; GPAI Systemic Risk monitoring via OPA/Rego. | **COMPLIANT** |
 | **NIST AI RMF 1.0 / AI 600-1** | Governance, Mapping, and Measurement (AI 600-1) enforced via GDL. | **ALIGNED** |
 | **ISO/IEC 42001 AIMS** | Sentinel Registry lifecycle management and safety risk assessments. | **CERTIFIED** |
-| **Basel III/IV / SR 11-7** | G-SRI scores (>0.85) trigger automated capital surcharges and risk reports. | **COMPLIANT** |
+| **Basel III/IV / SR 11-7** | G-SRI scores (> 85.0) trigger automated capital surcharges and risk reports. | **COMPLIANT** |
 | **SR 26-2 / DORA / NIS2** | PQC-WORM logging and internal audit protocols for agentic swarms. | **VERIFIED** |
 | **SEC Rule 17a-4** | Immutable record-keeping via PQC-WORM and S3 Object Lock. | **VERIFIED** |
 | **GDPR Article 22** | Automated decisioning transparency via Causal Inference Explainers. | **ACTIVE** |
