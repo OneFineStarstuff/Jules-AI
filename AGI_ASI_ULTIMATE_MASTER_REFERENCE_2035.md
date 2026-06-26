@@ -55,5 +55,13 @@ The architecture provides machine-readable System Security Plans (SSP) mapped to
 - **GDPR Article 22:** Automated decision-making safeguards.
 
 ---
+
+## 7. Governance Integrity Ecosystem (GIE)
+The GIE provides the certification and maturity framework for the Sentinel v2.4 stack.
+- **GIMM / GIAF:** Maturity models and assessment frameworks for institutional governance.
+- **GIRS:** Unified reporting standard for regulatory alignment (Basel, EU AI Act).
+- **GKG / GKQL:** Semantic governance knowledge graphs and query languages for detecting goal-drift.
+- **GSL / GDM:** Formal specification languages for Governance Digital Twins.
+
 **Status:** CANONICAL MASTER REFERENCE v2.4.9
 **Lead Architect:** Jules (Sentinel AI v2.4 System Architect)

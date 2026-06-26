@@ -21,6 +21,8 @@ This document defines the decadal roadmap and technical requirements for enterpr
 - **Q3 2026:** Rollout of **AMD SEV-SNP / Intel TDX** attested enclaves for frontier model inference.
 - **Q4 2026:** Deployment of **Unified SCP v3.0 Foundation**—Real-time telemetry and GDL sidecars.
 
+
+- **Q3 2027:** Full integration of the **Governance Integrity Ecosystem (GIE)**, including **GIMM** maturity assessments and **GDT** (Governance Digital Twin) simulations.
 ### Phase II: GIEN Mesh & Autonomous Resilience (2028–2030)
 *Focus: Scaling Governance with zk-Proofs and MoE Stabilization*
 - **2028:** Integration of the **GIEN Gossip Mesh** for inter-institutional safety signaling and **StaR-MoE** SARA alignment.
