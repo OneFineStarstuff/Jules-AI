@@ -56,12 +56,16 @@ The architecture provides machine-readable System Security Plans (SSP) mapped to
 
 ---
 
+
 ## 7. Governance Integrity Ecosystem (GIE)
 The GIE provides the certification and maturity framework for the Sentinel v2.4 stack.
-- **GIMM / GIAF:** Maturity models and assessment frameworks for institutional governance.
-- **GIRS:** Unified reporting standard for regulatory alignment (Basel, EU AI Act).
-- **GKG / GKQL:** Semantic governance knowledge graphs and query languages for detecting goal-drift.
-- **GSL / GDM:** Formal specification languages for Governance Digital Twins.
+- **Governance Maturity:** GIMM, GIAF, GIRS, GIRS-Schema.
+- **Data & Compliance:** GIDD, GICC, GITO, GICTS.
+- **Risk & Knowledge:** GIRA, GOM, GKG, GKQL, GIWL.
+- **Control & Response:** GICF, GIRI, GITAF, GISM, GIFM, GCPM.
+- **Standards & Continuity:** GSL, GDM, GTSS, GWR, GBDRP, GBEC.
+- **Evolutionary Frameworks:** GMF, FGVF, ZKAF, AGA, GEE, GCDF, MCGF, MEPF.
+- **Risk Families:** GDP Tiers, RIG Families.
 
 **Status:** CANONICAL MASTER REFERENCE v2.4.9
 **Lead Architect:** Jules (Sentinel AI v2.4 System Architect)
