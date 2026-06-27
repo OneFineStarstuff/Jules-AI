@@ -67,5 +67,6 @@ The GIE provides the certification and maturity framework for the Sentinel v2.4 
 - **Evolutionary Frameworks:** GMF, FGVF, ZKAF, AGA, GEE, GCDF, MCGF, MEPF.
 - **Risk Families:** GDP Tiers, RIG Families.
 
+- **Standardization:** GIE-STD-001 (G-SRI zk-Proof Binding).
 **Status:** CANONICAL MASTER REFERENCE v2.4.9
 **Lead Architect:** Jules (Sentinel AI v2.4 System Architect)
