@@ -103,3 +103,9 @@ To maintain regulator-grade clarity and mathematical rigor in all GIE documentat
 - **ZK Circuit Documentation:** Must specify the proof system (e.g., Plonky2), the arithmetization (e.g., AIR/R1CS), and a detailed breakdown of all public vs. private inputs to the G-SRI binding circuit.
 - **Formal Verification Reports:** Must include the TLA+ model checking results (e.g., state-space size explored, number of invariants checked) and a narrative explanation of the safety properties verified (e.g., "No path exists to a state where G-SRI > 0.85 without an IRMI interrupt").
 - **Semantic Mapping:** Explicitly map narrative human-intent policies to the specific mathematical constraints used in the **Semantic Preservation Calculus**.
+
+## 5. Canonical GIE Artifacts & Implementation References
+The following technical artifacts provide the normative implementation details for the GIE:
+- **GIRS-Schema.json:** The normative JSON Schema for all regulatory compliance reporting.
+- **GKQL-Reference.md:** The technical specification for the Governance Knowledge Query Language.
+- **GSL-Attestation-Model.tla:** The formal TLA+ model defining cross-enclave attestation invariants for the GIEN mesh.

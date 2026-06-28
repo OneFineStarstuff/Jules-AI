@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Governance Integrity Reporting Standard (GIRS)",
+  "description": "Standardized schema for G-SIFI governance compliance and systemic risk reporting.",
+  "type": "object",
+  "properties": {
+    "report_id": { "type": "string", "pattern": "^GIRS-[0-9]{4}-[A-Z0-9]+$" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "institution_id": { "type": "string" },
+    "gsri_metrics": {
+      "type": "object",
+      "properties": {
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "status": { "enum": ["NOMINAL", "DEGRADED", "CRITICAL"] },
+        "zk_proof_hash": { "type": "string" }
+      },
+      "required": ["score", "status"]
+    },
+    "attestations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "enum": ["vTPM", "PQC_WORM", "ZK_SNARK"] },
+          "status": { "enum": ["SUCCESS", "FAILURE"] },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "regulatory_mapping": {
+      "type": "object",
+      "properties": {
+        "frameworks": {
+          "type": "array",
+          "items": { "enum": ["EU_AI_ACT", "BASEL_IV", "DORA", "NIST_RMF"] }
+        }
+      }
+    }
+  },
+  "required": ["report_id", "timestamp", "institution_id", "gsri_metrics"]
+}
