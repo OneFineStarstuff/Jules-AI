@@ -109,3 +109,10 @@ The following technical artifacts provide the normative implementation details f
 - **GIRS-Schema.json:** The normative JSON Schema for all regulatory compliance reporting.
 - **GKQL-Reference.md:** The technical specification for the Governance Knowledge Query Language.
 - **GSL-Attestation-Model.tla:** The formal TLA+ model defining cross-enclave attestation invariants for the GIEN mesh.
+
+### 3.3.1 Divergence Metrics for Semantic Preservation
+The **Semantic Preservation Calculus** utilizes the following metrics for measuring goal-divergence:
+- **Cosine Similarity ($):** Measures the angular distance between the agent's intent vector ($\vec{I}$) and the policy-anchor vector ($\vec{P}$).
+  7587S_c = \frac{\vec{I} \cdot \vec{P}}{||\vec{I}|| ||\vec{P}||}7587
+- **Goal-Tree Edit Distance ({edit}$):** Measures the structural divergence of an agent's hierarchical goal-decomposition from the GDL-defined task tree.
+- **Resonance Threshold ($\epsilon$):** Defined as  - S_c$. If $\epsilon > 0.05$ for T4 agents, the **GEE** triggers a **HARD_KILL**.
