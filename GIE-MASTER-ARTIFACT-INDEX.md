@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -25,6 +25,9 @@
 | **GIE-SPEC-010** | Mesh Operations | GITO, GITAF, GTSS, GCDF. |
 | **GIE-SPEC-011** | Strategy & Implementation | GIP, GCRF, GFEF. |
 | **GIE-SPEC-012** | Meta-Governance Evolution | MCGF, AGA, GMF, MEPF. |
+| **GIE-SPEC-013** | Control Framework (GICF) | logic-gates and risk tier actions. |
+| **GIE-SPEC-014** | Governance Data Model (GDM) | Relational and Vector schemas. |
+| **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
 
 ## 3. Technical Artifacts & Schemas
 - **GIRS-Schema.json:** Normative reporting schema.
@@ -32,3 +35,5 @@
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
 - **GIE-GDP-RIG-Classification.md:** Data protection and regulatory integrity family groups.
+- **example-gkg-instance.json:** Implementation pattern for intent tracking.
+- **example-girs-report.json:** Implementation pattern for regulatory reporting.

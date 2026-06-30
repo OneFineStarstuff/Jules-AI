@@ -1,0 +1,17 @@
+{
+  "report_id": "GIRS-2026-GSIFI-HUB-01",
+  "timestamp": "2026-07-06T12:00:00Z",
+  "institution_id": "GSIFI-HUB-01",
+  "gsri_metrics": {
+    "score": 0.093,
+    "status": "NOMINAL",
+    "zk_proof_hash": "p2:zkp_f3e4d5c6b7a8"
+  },
+  "attestations": [
+    { "type": "vTPM", "status": "SUCCESS", "signature": "dilithium:sig_v1_001" },
+    { "type": "PQC_WORM", "status": "SUCCESS", "signature": "dilithium:sig_w1_001" }
+  ],
+  "regulatory_mapping": {
+    "frameworks": ["EU_AI_ACT", "BASEL_IV", "DORA"]
+  }
+}
