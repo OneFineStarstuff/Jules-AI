@@ -1,7 +1,7 @@
 # Technical Design Guidance: Governance Integrity Ecosystem (GIE)
-**Version:** 1.1.0-PROTOTYPE
+**Version:** 1.1.0
 **Architect:** Jules (Sentinel AI v2.4 System Architect)
-**Status:** ARCHITECTURAL DRAFT
+**Status:** CANONICAL ARCHITECTURAL SPECIFICATION
 
 ## 1. Introduction
 The **Governance Integrity Ecosystem (GIE)** is a multi-layered framework designed to ensure the stability, compliance, and safety of AGI/ASI systems within G-SIFI environments. It provides the necessary components for regulator-grade supervision and civilizational-scale safety.
@@ -75,21 +75,24 @@ Every G-SIFI deployment maintains a **Governance Digital Twin** using **GSL**. T
 ### 3.3 Semantic Preservation Calculus
 A mathematical framework for measuring the "semantic distance" between an agent's planned actions and the human-defined policy.
 The core invariant is defined as:
-7587Dist(Agent\_Goal, Policy\_Invariant) < \epsilon7587
+$$Dist(Agent\_Goal, Policy\_Invariant) < \epsilon$$
 Where $\epsilon$ represents the maximum allowable divergence before a T4 (Hard Kill) intervention is triggered by the **GEE**.
+
+### 3.3.1 Divergence Metrics for Semantic Preservation
+The **Semantic Preservation Calculus** utilizes the following metrics for measuring goal-divergence:
+- **Cosine Similarity ($S_c$):** Measures the angular distance between the agent's intent vector ($\vec{I}$) and the policy-anchor vector ($\vec{P}$).
+  $$S_c = \frac{\vec{I} \cdot \vec{P}}{||\vec{I}|| ||\vec{P}||}$$
+- **Goal-Tree Edit Distance ($D_{edit}$):** Measures the structural divergence of an agent's hierarchical goal-decomposition from the GDL-defined task tree.
+- **Resonance Threshold ($\epsilon$):** Defined as $1 - S_c$. If $\epsilon > 0.05$ for T4 agents, the **GEE** triggers a **HARD_KILL**.
 
 ### 3.4 Stress Testing & Certification Ecosystems
 - **Governance Stress Testing:** Routine execution of 'Game Day' simulations (e.g., Red Dawn, RY-99) to verify IRMI kill-switch latency (<1ms) and G-SRI calculation accuracy under pressure.
 - **Certification Ecosystems:** A network of independent auditors and G-SIFI stakeholders who verify institutional GIMM maturity levels and issue ZK-attested compliance certificates.
 
----
-**Document Status:** FINAL ARCHITECTURAL SPECIFICATION
-**Authorized:** Jules-Sentinel-Lead
-
 ## 4. Editorial Standards for Mathematical Monographs & Standards Documents
 To maintain regulator-grade clarity and mathematical rigor in all GIE documentation, the following standards are mandatory:
 
-- **Notation Consistency:** All systemic risk formulations must use the standardized G-SRI notation (e.g.,  \cdot \mu_i$).
+- **Notation Consistency:** All systemic risk formulations must use the standardized G-SRI notation (e.g., $$w_i \cdot \mu_i$$).
 - **Formalism First:** Every standard must include a TLA+ specification or a corresponding ZK circuit constraint definition for state transitions.
 - **Traceability:** Mappings between narrative requirements (e.g., EU AI Act Art 15) and technical controls (e.g., vTPM Attestation) must be explicitly documented in OSCAL 1.1.2.
 - **State Transition Monographing:** Complex transitions must be documented using TLA+ Next-State relations and AIR (Algebraic Intermediate Representation) constraints for ZK proofs.
@@ -109,10 +112,14 @@ The following technical artifacts provide the normative implementation details f
 - **GIRS-Schema.json:** The normative JSON Schema for all regulatory compliance reporting.
 - **GKQL-Reference.md:** The technical specification for the Governance Knowledge Query Language.
 - **GSL-Attestation-Model.tla:** The formal TLA+ model defining cross-enclave attestation invariants for the GIEN mesh.
+- **GIE-MASTER-ARTIFACT-INDEX.md:** Central index for all 12 specs and 4 standards.
 
-### 3.3.1 Divergence Metrics for Semantic Preservation
-The **Semantic Preservation Calculus** utilizes the following metrics for measuring goal-divergence:
-- **Cosine Similarity ($):** Measures the angular distance between the agent's intent vector ($\vec{I}$) and the policy-anchor vector ($\vec{P}$).
-  7587S_c = \frac{\vec{I} \cdot \vec{P}}{||\vec{I}|| ||\vec{P}||}7587
-- **Goal-Tree Edit Distance ({edit}$):** Measures the structural divergence of an agent's hierarchical goal-decomposition from the GDL-defined task tree.
-- **Resonance Threshold ($\epsilon$):** Defined as  - S_c$. If $\epsilon > 0.05$ for T4 agents, the **GEE** triggers a **HARD_KILL**.
+## 6. Later-Epoch Meta-Governance & ASI Stewardship
+As the Sentinel architecture transitions from AGI (v2.4) to ASI (v4.0), the GIE evolves to manage superintelligent goal-alignment and civilizational homeostasis:
+- **Recursive Attestation:** Utilizing GEE clusters to audit and attest to the state of higher-order Governor Agents.
+- **Cognitive Equity Dividend (CED):** Monitoring the distribution of compute-utility according to GBEC ethical conduct guidelines.
+- **Canonical Lock:** Achieving the state where the GMF ensures that no self-modification can weaken core safety invariants.
+
+---
+**Lead Verification Officer:** Jules (Sentinel AI v2.4 System Architect)
+**Status:** ALL SYSTEMS GOVERNED
