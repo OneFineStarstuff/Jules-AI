@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -9,6 +9,7 @@
 | **GIE-STD-002** | Semantic Preservation Calculus | Cosine similarity and goal-tree edit distance metrics. |
 | **GIE-STD-003** | Planetary Compute Governance | 10^26 FLOP redline ZK-quota enforcement. |
 | **GIE-STD-004** | Editorial Standards | Regulator-grade documentation rigor. |
+| **GIE-STD-005** | MoE Routing Stability | SAME metric and supervisory-agent drift. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -28,6 +29,7 @@
 | **GIE-SPEC-013** | Control Framework (GICF) | logic-gates and risk tier actions. |
 | **GIE-SPEC-014** | Governance Data Model (GDM) | Relational and Vector schemas. |
 | **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
+| **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
 
 ## 3. Technical Artifacts & Schemas
 - **GIRS-Schema.json:** Normative reporting schema.
