@@ -10,6 +10,8 @@
 | **OPERATIONAL_CHECK_2026_07_07.md** | Daily DevSecOps Verification | Markdown | [VERIFIED] |
 | **SUPERVISORY_SUBMISSION_READINESS_CERTIFICATE.md** | Formal Readiness Certificate | Markdown | [VERIFIED] |
 | **SUPERVISORY_TRANSMITTAL_LETTER.md** | Regulator Cover Letter | Markdown | [VERIFIED] |
+| **DAILY_GIEN_DASHBOARD_CHECKLIST.md** | Operational Checklist | Markdown | [VERIFIED] |
+| **UNIFIED_CORPUS_INDEX_TRACEABILITY_GUIDE.md** | Traceability Guide | Markdown | [VERIFIED] |
 | **PERTURBATION_LIBRARY_SPECIFICATION.md** | Stress Test Parameters | Markdown | [VERIFIED] |
 | **SCENARIO_EXECUTION_TABLE.md** | Stress Test Results | Markdown | [VERIFIED] |
 | **SUPERVISORY_DIGITAL_TWIN_PANEL_15.md** | Panel 15 Replay Guidance | Markdown | [VERIFIED] |
@@ -19,7 +21,7 @@
 
 ## 2. Integrity & Retention Policy
 - **WORM Retention:** 10 Years (S3 Object Lock - Compliance Mode).
-- **Post-Quantum Security:** All artifacts signed with ML-DSA-87 to ensure longevity against cryptanalytic quantum threats.
+- **Post-Quantum Security:** All artifacts signed with ML-DSA-87.
 - **Dossier Status:** **PHASE_I_SEALED**
 
 ---
