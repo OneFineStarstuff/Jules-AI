@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -10,6 +10,7 @@
 | **GIE-STD-003** | Planetary Compute Governance | 10^26 FLOP redline ZK-quota enforcement. |
 | **GIE-STD-004** | Editorial Standards | Regulator-grade documentation rigor. |
 | **GIE-STD-005** | MoE Routing Stability | SAME metric and supervisory-agent drift. |
+| **GIE-STD-006** | Canonical Alignment Lock | Formal verification of ASI subordination. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -31,7 +32,13 @@
 | **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
 | **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
 
-## 3. Technical Artifacts & Schemas
+## 3. Capstone Reports & Synthesis
+| Artifact ID | Title | Purpose |
+| :--- | :--- | :--- |
+| **GIE-SYNTHESIS** | Supervisory Architecture Synthesis | Capstone executive summary for regulators. |
+| **GIE-GUIDANCE** | Technical Design Guidance | capstone high-level implementation guidance. |
+
+## 4. Technical Artifacts & Schemas
 - **GIRS-Schema.json:** Normative reporting schema.
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
@@ -39,3 +46,4 @@
 - **GIE-GDP-RIG-Classification.md:** Data protection and regulatory integrity family groups.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
+- **spc-drift-trace-example.json:** SPC drift trace technical example.
