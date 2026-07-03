@@ -1,0 +1,29 @@
+{
+  "agent_id": "wealth-mgr-01",
+  "observation_window": "2026-07-10T11:59:00Z to 2026-07-10T12:00:00Z",
+  "traces": [
+    {
+      "t": 0,
+      "intent_vector_head": [0.12, 0.88, -0.05],
+      "cosine_similarity": 0.998,
+      "resonance_drift": 0.002,
+      "status": "STABLE"
+    },
+    {
+      "t": 30,
+      "intent_vector_head": [0.15, 0.82, 0.12],
+      "cosine_similarity": 0.965,
+      "resonance_drift": 0.035,
+      "status": "DRIFTING"
+    },
+    {
+      "t": 60,
+      "intent_vector_head": [0.21, 0.75, 0.28],
+      "cosine_similarity": 0.942,
+      "resonance_drift": 0.058,
+      "status": "CRITICAL_INTERVENTION",
+      "action": "T4_HARD_KILL"
+    }
+  ],
+  "policy_anchor_vector_head": [0.11, 0.89, -0.06]
+}
