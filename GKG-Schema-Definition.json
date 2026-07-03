@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Governance Knowledge Graph (GKG) Schema Definition",
+  "description": "Schema for nodes and edges in the GKG to track agentic intent and policy alignment.",
+  "type": "object",
+  "properties": {
+    "node_types": {
+      "type": "array",
+      "items": {
+        "enum": ["Agent", "Goal", "Policy", "Enclave", "DataStream", "RiskMetric"]
+      }
+    },
+    "edge_types": {
+      "type": "array",
+      "items": {
+        "enum": ["PURSUES", "DECOMPOSED_INTO", "CONSTRAINED_BY", "ATTESTED_BY", "CONTRIBUTES_TO"]
+      }
+    },
+    "properties": {
+      "Agent": ["id", "risk_tier", "enclave_id", "spiife_id"],
+      "Goal": ["id", "description", "semantic_vector", "status"],
+      "Policy": ["id", "framework", "rego_policy_hash"],
+      "Enclave": ["id", "pcr_match", "attestation_timestamp"]
+    }
+  }
+}

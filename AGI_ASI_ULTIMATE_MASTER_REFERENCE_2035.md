@@ -55,5 +55,14 @@ The architecture provides machine-readable System Security Plans (SSP) mapped to
 - **GDPR Article 22:** Automated decision-making safeguards.
 
 ---
+
+
+
+## 8. Governance Integrity Ecosystem (GIE) Definitive Suite
+The GIE provides the exhaustive technical and formal substrate for Omni-Sentinel governance.
+- **Specifications:** GIE-SPEC-001 to GIE-SPEC-016 (Detailed implementation of the G-Series).
+- **Standards:** GIE-STD-001 to GIE-STD-006 (Mathematical monographs for ZK-binding, SPC, GACMO, and Alignment Lock).
+- **Artifacts:** GIRS Reporting Schema, GKG Intent Ontology, and TLA+ Attestation Models.
+
 **Status:** CANONICAL MASTER REFERENCE v2.4.9
 **Lead Architect:** Jules (Sentinel AI v2.4 System Architect)

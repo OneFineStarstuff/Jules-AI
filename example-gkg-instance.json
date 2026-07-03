@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    { "id": "agent-001", "type": "Agent", "risk_tier": "T4", "enclave_id": "enclave-alpha-01" },
+    { "id": "goal-001", "type": "Goal", "description": "Optimize global liquidity flow", "status": "ACTIVE" },
+    { "id": "policy-001", "type": "Policy", "framework": "BASEL_IV", "rego_policy_hash": "sha256:abc123def456" }
+  ],
+  "edges": [
+    { "source": "agent-001", "target": "goal-001", "type": "PURSUES" },
+    { "source": "agent-001", "target": "policy-001", "type": "CONSTRAINED_BY" }
+  ]
+}
