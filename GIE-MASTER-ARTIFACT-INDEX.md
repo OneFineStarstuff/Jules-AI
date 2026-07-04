@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.6.0
+**Version:** 1.7.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -15,6 +15,7 @@
 | **GIE-STD-008** | PQC-WORM Continuity | STH issuance and Merkle domain separation. |
 | **GIE-STD-009** | Equivocation Detection | Identifying divergent nodes in the GIEN mesh. |
 | **GIE-STD-010** | Inception Protection | Metrics for detecting cognitive manipulation. |
+| **GIE-STD-011** | ASI Equilibrium | Terminal stability of superintelligent governance. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -36,6 +37,8 @@
 | **GIE-SPEC-014** | Governance Data Model (GDM) | Relational and Vector schemas. |
 | **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
 | **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
+| **GIE-SPEC-017** | GIE Certification Authority | Certification lifecycle and auditor-agent roles. |
+| **GIE-SPEC-018** | GKQL Safety Library | Patterns for collusion and drift detection. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
