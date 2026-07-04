@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.4.0
+**Version:** 1.6.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -13,10 +13,13 @@
 | **GIE-STD-006** | Canonical Alignment Lock | Formal verification of ASI subordination. |
 | **GIE-STD-007** | ACR Logic | Game-theoretic equilibrium for goal-conflicts. |
 | **GIE-STD-008** | PQC-WORM Continuity | STH issuance and Merkle domain separation. |
+| **GIE-STD-009** | Equivocation Detection | Identifying divergent nodes in the GIEN mesh. |
+| **GIE-STD-010** | Inception Protection | Metrics for detecting cognitive manipulation. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
+| **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
 | **GIE-SPEC-001** | GIRI and GEE | Response Interface and Enforcement Engine. |
 | **GIE-SPEC-002** | Financial Integrity (GIFM) | Basel IV capital surcharges. |
 | **GIE-SPEC-003** | GWR and GBDRP | WORM Persistence and Disaster Recovery. |
@@ -34,12 +37,16 @@
 | **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
 | **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
 
-## 3. Capstone Reports & Synthesis
+## 3. Integrated Models & Handbooks
+- **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
+- **GIE-TLA-MODEL:** Sentinel GIE Integrated TLA+ (Unified model).
+
+## 4. Capstone Reports & Synthesis
 - **GIE-SYNTHESIS:** Supervisory Architecture Synthesis.
 - **GIE-GUIDANCE:** Technical Design Guidance capstone.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
-## 4. Technical Artifacts & Schemas
+## 5. Technical Artifacts & Schemas
 - **GIRS-Schema.json:** Normative reporting schema.
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
