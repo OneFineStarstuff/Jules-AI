@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.3.0
+**Version:** 1.4.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -11,6 +11,8 @@
 | **GIE-STD-004** | Editorial Standards | Regulator-grade documentation rigor. |
 | **GIE-STD-005** | MoE Routing Stability | SAME metric and supervisory-agent drift. |
 | **GIE-STD-006** | Canonical Alignment Lock | Formal verification of ASI subordination. |
+| **GIE-STD-007** | ACR Logic | Game-theoretic equilibrium for goal-conflicts. |
+| **GIE-STD-008** | PQC-WORM Continuity | STH issuance and Merkle domain separation. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -33,10 +35,9 @@
 | **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
 
 ## 3. Capstone Reports & Synthesis
-| Artifact ID | Title | Purpose |
-| :--- | :--- | :--- |
-| **GIE-SYNTHESIS** | Supervisory Architecture Synthesis | Capstone executive summary for regulators. |
-| **GIE-GUIDANCE** | Technical Design Guidance | capstone high-level implementation guidance. |
+- **GIE-SYNTHESIS:** Supervisory Architecture Synthesis.
+- **GIE-GUIDANCE:** Technical Design Guidance capstone.
+- **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 4. Technical Artifacts & Schemas
 - **GIRS-Schema.json:** Normative reporting schema.
