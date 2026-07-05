@@ -8,10 +8,10 @@ The GIE is the exhaustive technical and formal substrate for Artificial General 
 
 ## 2. Structural Hierarchy
 The ecosystem is structured into four primary layers of assurance:
-1. **Substrate Layer:** vTPM/TEE, PQC-WORM, gRPC/mTLS.
-2. **Telemetry & Enforcement Layer:** G-SRI, GEE, GIRI, GICF.
-3. **Intent & Knowledge Layer:** SPC, GKG, GKQL, GIWL.
-4. **Meta-Governance Layer:** GMF, FGVF, ZKAF, ASI Lock.
+1. **Substrate Layer:** vTPM/TEE, PQC-WORM, gRPC/mTLS. (Specs: 003, 006, 010, 020)
+2. **Telemetry & Enforcement Layer:** G-SRI, GEE, GIRI, GICF. (Specs: 001, 004, 013)
+3. **Intent & Knowledge Layer:** SPC, GKG, GKQL, GIWL. (Specs: 005, 014, 018)
+4. **Meta-Governance Layer:** GMF, FGVF, ZKAF, ASI Lock. (Specs: 007, 012, 016)
 
 ## 3. Core Standards & Compliance
 | Domain | Standard ID | Regulatory Alignment |
@@ -20,12 +20,13 @@ The ecosystem is structured into four primary layers of assurance:
 | **Intent Drift** | GIE-STD-002 | EU AI Act Art 14-15 |
 | **Compute Quota** | GIE-STD-003 | ICGC/GASO |
 | **Mesh Integrity** | GIE-STD-009 | DORA, NIS2 |
+| **Compiler Logic** | GIE-STD-012 | SR 11-7, ISO 42001 |
 
-## 4. Operational Maintenance
-Deployment and maintenance are orchestrated via the **GIE Implementation Handbook**, utilizing GitOps for policy distribution and GIRS for automated regulatory reporting.
+## 4. Operational Maintenance & Certification
+Orchestrated via the **GIE Implementation Handbook** and **GIE-SPEC-022**, utilizing decentralized **Auditor-Agents** and independent stakeholder nodes to issue ZK-attested certificates.
 
 ## 5. Transition to Permanent Homeostasis
-The GIE manages the transition to ASI stewardship, achieving **Canonical Alignment Lock** through recursive attestation and Achievement of lock-state parameters.
+The GIE manages the transition to ASI stewardship, achieving **Canonical Alignment Lock** (GIE-STD-006) and **Cognitive Equilibrium** (GIE-STD-011) through recursive attestation and Achievement of lock-state parameters.
 
 ---
 **Lead Verification Officer:** Jules-Apex

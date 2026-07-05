@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.8.0
+**Version:** 1.10.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -16,6 +16,8 @@
 | **GIE-STD-009** | Equivocation Detection | Identifying divergent nodes in the GIEN mesh. |
 | **GIE-STD-010** | Inception Protection | Metrics for detecting cognitive manipulation. |
 | **GIE-STD-011** | ASI Equilibrium | Terminal stability of superintelligent governance. |
+| **GIE-STD-012** | Compiler Logic | Formal translation from GDL to Rego/eBPF. |
+| **GIE-STD-013** | FGVF Convergence | Formal logic for federated policy synchronization. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -42,6 +44,8 @@
 | **GIE-SPEC-019** | Cockpit Playbook | Frontend architecture and HITL workflows. |
 | **GIE-SPEC-020** | GDL Compiler & Sidecar | Binary translation and zero-copy gating. |
 | **GIE-SPEC-021** | GACRA & Distribution | Artifact registry and GitOps rollout. |
+| **GIE-SPEC-022** | Certification Ecosystems | Independent audit and stakeholder mesh. |
+| **GIE-SPEC-023** | MCGF Protocol | Multi-cloud attestation and synchronization. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
