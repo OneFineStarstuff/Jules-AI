@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.13.0
+**Version:** 1.14.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -23,6 +23,7 @@
 | **GIE-STD-016** | RCE Formalism | Structure of the Recursive Context Envelope. |
 | **GIE-STD-017** | OmegaActual Formalism | Formal logic for the sovereign kill-switch. |
 | **GIE-STD-018** | State Transition AIR | ZK circuit constraints for GSM transitions. |
+| **GIE-STD-019** | ASI Goal-Invariants | Formal invariants for superintelligent goal-decomposition. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -31,6 +32,8 @@
 | **GIE-SPEC-001** | GIRI and GEE | Response Interface and Enforcement Engine. |
 | **GIE-SPEC-027** | Agentic Forensics | Forensic reconstruction from PQC-WORM evidence. |
 | **GIE-SPEC-028** | SAIM Identity | Hierarchical key management for the Sovereign mesh. |
+| **GIE-SPEC-029** | GIRS Pipeline | Automated validation and reporting pipeline. |
+| **GIE-SPEC-030** | GICTS Dashboard | Real-time control effectiveness visualization. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
@@ -46,5 +49,9 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
+- **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
+- **GIE-IMPLEMENTATION-HANDBOOK.md:** Step-by-step institutional DevOps guide.
+- **example-gkg-instance.json:** Implementation pattern for intent tracking.
+- **example-girs-report.json:** Implementation pattern for regulatory reporting.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.
