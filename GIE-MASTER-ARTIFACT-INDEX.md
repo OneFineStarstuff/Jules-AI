@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.7.0
+**Version:** 1.8.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -39,6 +39,9 @@
 | **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
 | **GIE-SPEC-017** | GIE Certification Authority | Certification lifecycle and auditor-agent roles. |
 | **GIE-SPEC-018** | GKQL Safety Library | Patterns for collusion and drift detection. |
+| **GIE-SPEC-019** | Cockpit Playbook | Frontend architecture and HITL workflows. |
+| **GIE-SPEC-020** | GDL Compiler & Sidecar | Binary translation and zero-copy gating. |
+| **GIE-SPEC-021** | GACRA & Distribution | Artifact registry and GitOps rollout. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
