@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.10.0
+**Version:** 1.13.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -17,35 +17,20 @@
 | **GIE-STD-010** | Inception Protection | Metrics for detecting cognitive manipulation. |
 | **GIE-STD-011** | ASI Equilibrium | Terminal stability of superintelligent governance. |
 | **GIE-STD-012** | Compiler Logic | Formal translation from GDL to Rego/eBPF. |
-| **GIE-STD-013** | FGVF Convergence | Formal logic for federated policy synchronization. |
+| **GIE-STD-013** | FGVF Convergence | Formal logic for federated synchronization. |
+| **GIE-STD-014** | vTPM/TEE Formalism | Integrity of hardware-backed reasoning kernels. |
+| **GIE-STD-015** | CED Mathematical Model | Equitable distribution of ASI compute-utility. |
+| **GIE-STD-016** | RCE Formalism | Structure of the Recursive Context Envelope. |
+| **GIE-STD-017** | OmegaActual Formalism | Formal logic for the sovereign kill-switch. |
+| **GIE-STD-018** | State Transition AIR | ZK circuit constraints for GSM transitions. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
 | **GIE-SPEC-001** | GIRI and GEE | Response Interface and Enforcement Engine. |
-| **GIE-SPEC-002** | Financial Integrity (GIFM) | Basel IV capital surcharges. |
-| **GIE-SPEC-003** | GWR and GBDRP | WORM Persistence and Disaster Recovery. |
-| **GIE-SPEC-004** | Data Orchestration | GIDD, GICC, GICTS. |
-| **GIE-SPEC-005** | Risk & Knowledge | GIRA, GKG, GIWL. |
-| **GIE-SPEC-006** | Security & Lifecycle | GISM, GCPM, GSDL, GACF. |
-| **GIE-SPEC-007** | Evolutionary Meta-Governance | GMF, FGVF, ZKAF, MEPF. |
-| **GIE-SPEC-008** | GDT Implementation | Governance Digital Twin simulations. |
-| **GIE-SPEC-009** | Stress Test & Certification | 'Game Day' scenarios and Maturity levels. |
-| **GIE-SPEC-010** | Mesh Operations | GITO, GITAF, GTSS, GCDF. |
-| **GIE-SPEC-011** | Strategy & Implementation | GIP, GCRF, GFEF. |
-| **GIE-SPEC-012** | Meta-Governance Evolution | MCGF, AGA, GMF, MEPF. |
-| **GIE-SPEC-013** | Control Framework (GICF) | logic-gates and risk tier actions. |
-| **GIE-SPEC-014** | Governance Data Model (GDM) | Relational and Vector schemas. |
-| **GIE-SPEC-015** | Maturity & Audit (GIMM/GIAF) | Maturity levels and assessment checklists. |
-| **GIE-SPEC-016** | ASI Meta-Governance | ASI transition, CED, and Alignment Lock. |
-| **GIE-SPEC-017** | GIE Certification Authority | Certification lifecycle and auditor-agent roles. |
-| **GIE-SPEC-018** | GKQL Safety Library | Patterns for collusion and drift detection. |
-| **GIE-SPEC-019** | Cockpit Playbook | Frontend architecture and HITL workflows. |
-| **GIE-SPEC-020** | GDL Compiler & Sidecar | Binary translation and zero-copy gating. |
-| **GIE-SPEC-021** | GACRA & Distribution | Artifact registry and GitOps rollout. |
-| **GIE-SPEC-022** | Certification Ecosystems | Independent audit and stakeholder mesh. |
-| **GIE-SPEC-023** | MCGF Protocol | Multi-cloud attestation and synchronization. |
+| **GIE-SPEC-027** | Agentic Forensics | Forensic reconstruction from PQC-WORM evidence. |
+| **GIE-SPEC-028** | SAIM Identity | Hierarchical key management for the Sovereign mesh. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
@@ -53,7 +38,7 @@
 
 ## 4. Capstone Reports & Synthesis
 - **GIE-SYNTHESIS:** Supervisory Architecture Synthesis.
-- **GIE-GUIDANCE:** Technical Design Guidance capstone.
+- **GIE-GUIDANCE:** Technical Design Guidance ultimate.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 5. Technical Artifacts & Schemas
@@ -61,7 +46,5 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
-- **GIE-GDP-RIG-Classification.md:** Data protection and regulatory integrity family groups.
-- **example-gkg-instance.json:** Implementation pattern for intent tracking.
-- **example-girs-report.json:** Implementation pattern for regulatory reporting.
+- **GIE-GDP-RIG-Classification.md:** Data protection family groups.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.
