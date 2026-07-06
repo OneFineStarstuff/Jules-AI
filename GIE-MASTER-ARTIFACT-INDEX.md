@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.16.0
+**Version:** 1.18.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -25,6 +25,8 @@
 | **GIE-STD-018** | State Transition AIR | ZK circuit constraints for GSM transitions. |
 | **GIE-STD-019** | ASI Goal-Invariants | Formal invariants for ASI goal-decomposition. |
 | **GIE-STD-020** | Audit Consensus Logic | Multi-institutional ZK-audit consensus. |
+| **GIE-STD-021** | Recursive Audit | Triple-A protocol (AGI-Auditing-AGI) logic. |
+| **GIE-STD-022** | Containment Invariants | Sub-millisecond IRMI interrupt formalisms. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -50,7 +52,9 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
+- **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
+- **GIE-IMPLEMENTATION-HANDBOOK.md:** Step-by-step institutional DevOps guide.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.
