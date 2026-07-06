@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.18.0
+**Version:** 1.20.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -27,16 +27,18 @@
 | **GIE-STD-020** | Audit Consensus Logic | Multi-institutional ZK-audit consensus. |
 | **GIE-STD-021** | Recursive Audit | Triple-A protocol (AGI-Auditing-AGI) logic. |
 | **GIE-STD-022** | Containment Invariants | Sub-millisecond IRMI interrupt formalisms. |
+| **GIE-STD-023** | CED Redistribution | Formal logic for compute-utility redistribution. |
+| **GIE-STD-024** | Cognitive Autonomy | Formal model for human reasoning preservation. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
 | **GIE-SPEC-001** | GIRI and GEE | Response Interface and Enforcement Engine. |
-| **GIE-SPEC-027** | Agentic Forensics | Forensic reconstruction from PQC-WORM evidence. |
-| **GIE-SPEC-028** | SAIM Identity | Hierarchical key management for the Sovereign mesh. |
-| **GIE-SPEC-029** | GIRS Pipeline | Automated validation and reporting pipeline. |
-| **GIE-SPEC-030** | GICTS Dashboard | Real-time control effectiveness visualization. |
+| **GIE-SPEC-031** | GIE-SOC Procedures | 24/7 technical monitoring and triage. |
+| **GIE-SPEC-032** | MASR Framework | Multi-agent systemic risk stress-testing. |
+| **GIE-SPEC-033** | GBEC Protocols | Ethical audit workflows and HITL quorum. |
+| **GIE-SPEC-034** | Psi Calibration | Terminal stability parameter management. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
