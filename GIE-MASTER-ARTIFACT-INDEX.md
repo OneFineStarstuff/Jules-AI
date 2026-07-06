@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.14.0
+**Version:** 1.16.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -23,7 +23,8 @@
 | **GIE-STD-016** | RCE Formalism | Structure of the Recursive Context Envelope. |
 | **GIE-STD-017** | OmegaActual Formalism | Formal logic for the sovereign kill-switch. |
 | **GIE-STD-018** | State Transition AIR | ZK circuit constraints for GSM transitions. |
-| **GIE-STD-019** | ASI Goal-Invariants | Formal invariants for superintelligent goal-decomposition. |
+| **GIE-STD-019** | ASI Goal-Invariants | Formal invariants for ASI goal-decomposition. |
+| **GIE-STD-020** | Audit Consensus Logic | Multi-institutional ZK-audit consensus. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -40,8 +41,8 @@
 - **GIE-TLA-MODEL:** Sentinel GIE Integrated TLA+ (Unified model).
 
 ## 4. Capstone Reports & Synthesis
-- **GIE-SYNTHESIS:** Supervisory Architecture Synthesis.
-- **GIE-GUIDANCE:** Technical Design Guidance ultimate.
+- **GIE-ULTIMATE-SYNTHESIS:** Supervisory Architecture Synthesis.
+- **GIE-TECHNICAL-GUIDANCE:** Technical Design Guidance ultimate.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 5. Technical Artifacts & Schemas
@@ -49,9 +50,7 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
-- **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
-- **GIE-IMPLEMENTATION-HANDBOOK.md:** Step-by-step institutional DevOps guide.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.
