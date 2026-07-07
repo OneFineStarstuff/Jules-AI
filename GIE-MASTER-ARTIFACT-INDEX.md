@@ -31,12 +31,19 @@
 | **GIE-STD-024** | Cognitive Autonomy | Formal model for human reasoning preservation. |
 | **GIE-STD-025** | GIE-SOC Verification | Formal logic for SOC triage and escalation. |
 | **GIE-STD-026** | ZK-Audit Consistency | Mathematical proof of Merkle consistency. |
+| **GIE-STD-027** | GIRA Formulation | Bayesian risk synthesis for G-SRI calculation. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
+| **GIE-SPEC-031** | GIE-SOC Procedures | 24/7 technical monitoring and triage. |
+| **GIE-SPEC-032** | MASR Framework | Multi-agent systemic risk stress-testing. |
+| **GIE-SPEC-033** | GBEC Protocols | Ethical audit workflows and HITL quorum. |
+| **GIE-SPEC-034** | Psi Calibration | Terminal stability parameter management. |
 | **GIE-SPEC-035** | Editorial Standards | Structural and linguistic precision for G-STD. |
+| **GIE-SPEC-036** | GDM Implementation | Vector-graph hybrid intent tracking. |
+| **GIE-SPEC-037** | GSDL Implementation | Governance-by-design for software development. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
@@ -44,7 +51,7 @@
 
 ## 4. Capstone Reports & Synthesis
 - **GIE-ULTIMATE-SYNTHESIS:** Supervisory Architecture Synthesis.
-- **GIE-GUIDANCE:** Technical Design Guidance ultimate.
+- **GIE-TECHNICAL-GUIDANCE:** Technical Design Guidance ultimate.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 5. Technical Artifacts & Schemas
@@ -52,7 +59,6 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
-- **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
