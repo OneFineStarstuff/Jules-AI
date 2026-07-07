@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.20.0
+**Version:** 1.21.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -29,16 +29,14 @@
 | **GIE-STD-022** | Containment Invariants | Sub-millisecond IRMI interrupt formalisms. |
 | **GIE-STD-023** | CED Redistribution | Formal logic for compute-utility redistribution. |
 | **GIE-STD-024** | Cognitive Autonomy | Formal model for human reasoning preservation. |
+| **GIE-STD-025** | GIE-SOC Verification | Formal logic for SOC triage and escalation. |
+| **GIE-STD-026** | ZK-Audit Consistency | Mathematical proof of Merkle consistency. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
-| **GIE-SPEC-001** | GIRI and GEE | Response Interface and Enforcement Engine. |
-| **GIE-SPEC-031** | GIE-SOC Procedures | 24/7 technical monitoring and triage. |
-| **GIE-SPEC-032** | MASR Framework | Multi-agent systemic risk stress-testing. |
-| **GIE-SPEC-033** | GBEC Protocols | Ethical audit workflows and HITL quorum. |
-| **GIE-SPEC-034** | Psi Calibration | Terminal stability parameter management. |
+| **GIE-SPEC-035** | Editorial Standards | Structural and linguistic precision for G-STD. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
@@ -46,7 +44,7 @@
 
 ## 4. Capstone Reports & Synthesis
 - **GIE-ULTIMATE-SYNTHESIS:** Supervisory Architecture Synthesis.
-- **GIE-TECHNICAL-GUIDANCE:** Technical Design Guidance ultimate.
+- **GIE-GUIDANCE:** Technical Design Guidance ultimate.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 5. Technical Artifacts & Schemas
@@ -56,7 +54,6 @@
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
 - **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
-- **GIE-IMPLEMENTATION-HANDBOOK.md:** Step-by-step institutional DevOps guide.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.
