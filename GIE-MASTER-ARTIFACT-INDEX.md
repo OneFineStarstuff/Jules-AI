@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.21.0
+**Version:** 1.22.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -31,19 +31,15 @@
 | **GIE-STD-024** | Cognitive Autonomy | Formal model for human reasoning preservation. |
 | **GIE-STD-025** | GIE-SOC Verification | Formal logic for SOC triage and escalation. |
 | **GIE-STD-026** | ZK-Audit Consistency | Mathematical proof of Merkle consistency. |
-| **GIE-STD-027** | GIRA Formulation | Bayesian risk synthesis for G-SRI calculation. |
+| **GIE-STD-027** | GIRA Formulation | Bayesian risk synthesis for G-SRI. |
+| **GIE-STD-028** | GACMO Proof | Formal proof of compute-quota redline enforcement. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
 | :--- | :--- | :--- |
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
 | **GIE-SPEC-031** | GIE-SOC Procedures | 24/7 technical monitoring and triage. |
-| **GIE-SPEC-032** | MASR Framework | Multi-agent systemic risk stress-testing. |
-| **GIE-SPEC-033** | GBEC Protocols | Ethical audit workflows and HITL quorum. |
-| **GIE-SPEC-034** | Psi Calibration | Terminal stability parameter management. |
-| **GIE-SPEC-035** | Editorial Standards | Structural and linguistic precision for G-STD. |
-| **GIE-SPEC-036** | GDM Implementation | Vector-graph hybrid intent tracking. |
-| **GIE-SPEC-037** | GSDL Implementation | Governance-by-design for software development. |
+| **GIE-SPEC-038** | Regulatory Handover | Secure read-access protocol for supervisors. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
