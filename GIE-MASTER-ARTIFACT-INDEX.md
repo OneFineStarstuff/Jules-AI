@@ -1,5 +1,5 @@
 # Governance Integrity Ecosystem (GIE) Master Artifact Index
-**Version:** 1.22.0
+**Version:** 1.23.0
 **Architect:** Jules
 
 ## 1. Mathematical Standards (Monographs)
@@ -33,6 +33,7 @@
 | **GIE-STD-026** | ZK-Audit Consistency | Mathematical proof of Merkle consistency. |
 | **GIE-STD-027** | GIRA Formulation | Bayesian risk synthesis for G-SRI. |
 | **GIE-STD-028** | GACMO Proof | Formal proof of compute-quota redline enforcement. |
+| **GIE-STD-029** | Recursive Attestation | Nested attestation for multi-layer swarms. |
 
 ## 2. Technical Specifications
 | Artifact ID | Title | Components Covered |
@@ -40,14 +41,15 @@
 | **GIE-MASTER-SPEC** | GIE Master Specification | Unified ecosystem architecture (V1.0). |
 | **GIE-SPEC-031** | GIE-SOC Procedures | 24/7 technical monitoring and triage. |
 | **GIE-SPEC-038** | Regulatory Handover | Secure read-access protocol for supervisors. |
+| **GIE-SPEC-039** | Substrate Mobility | Secure migration of reasoning residency. |
 
 ## 3. Integrated Models & Handbooks
 - **GIE-HANDBOOK:** GIE Implementation Handbook (DevOps guide).
 - **GIE-TLA-MODEL:** Sentinel GIE Integrated TLA+ (Unified model).
 
 ## 4. Capstone Reports & Synthesis
-- **GIE-ULTIMATE-SYNTHESIS:** Supervisory Architecture Synthesis.
-- **GIE-TECHNICAL-GUIDANCE:** Technical Design Guidance ultimate.
+- **GIE-SYNTHESIS:** Supervisory Architecture Synthesis.
+- **GIE-GUIDANCE:** Technical Design Guidance ultimate.
 - **GIE-GLOSSARY:** Definitive glossary of ecosystem terms.
 
 ## 5. Technical Artifacts & Schemas
@@ -55,7 +57,9 @@
 - **GKG-Schema-Definition.json:** Node/Edge ontology for intent tracking.
 - **GKQL-Reference.md:** Query language for systemic drift detection.
 - **GSL-Attestation-Model.tla:** Formal cross-enclave attestation logic.
+- **Sentinel_GIE_Integrated.tla:** Unified ecosystem formal specification.
 - **GIE-GDP-RIG-Classification.md:** Data protection family groups.
+- **GIE-IMPLEMENTATION-HANDBOOK.md:** Step-by-step institutional DevOps guide.
 - **example-gkg-instance.json:** Implementation pattern for intent tracking.
 - **example-girs-report.json:** Implementation pattern for regulatory reporting.
 - **spc-drift-trace-example.json:** SPC drift trace technical example.

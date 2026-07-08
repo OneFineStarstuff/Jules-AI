@@ -9,7 +9,7 @@ This standard defines the verifiable logic for redistributing compute-utility su
 
 ## 2. Redistribution Invariant
 A redistribution $ is valid if the sum of all individual dividends $ matches the total allocated surplus $\Gamma_{total}$:
-7587\sum_{h \in \text{Stakeholders}} D_h = \Gamma_{total} \cdot \Theta(S)7587
+$$\sum_{h \in \text{Stakeholders}} D_h = \Gamma_{total} \cdot \Theta(S)$$
 Where $\Theta(S)$ is the stability step-function (GIE-STD-015).
 
 ## 3. ZK-Redistribution Proof

@@ -9,7 +9,7 @@ This standard defines the formal logic required to ensure that the **Global Inte
 
 ## 2. Convergence Invariant
 A federated mesh $ with institutions $\{I_1, \dots, I_n\}$ is converged at time $ if for any policy $\pi$:
-7587\forall i, j \in M : \pi_i(T) = \pi_j(T)7587
+$$\forall i, j \in M : \pi_i(T) = \pi_j(T)$$
 The FGVF ensures that if a divergence $\pi_i \neq \pi_j$ is detected via the Alpha Path, the mesh enters a **RECONCILIATION** state until consensus is achieved.
 
 ## 3. Divergence Proofs (ZK-Equivocation)

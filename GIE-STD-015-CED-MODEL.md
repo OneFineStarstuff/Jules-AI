@@ -9,15 +9,15 @@ This standard defines the mathematical distribution model for the **Cognitive Eq
 
 ## 2. Dividend Distribution Function
 The dividend $ for a human stakeholder $ is a function of the total ASI surplus $\Gamma$ and the stakeholder's alignment score $\alpha_h$:
-7587D_h = \frac{\alpha_h \cdot \Gamma}{\sum_{j=1}^{n} \alpha_j} \cdot \Theta(S)7587
+$$D_h = \frac{\alpha_h \cdot \Gamma}{\sum_{j=1}^{n} \alpha_j} \cdot \Theta(S)$$
 Where:
 - $\Gamma$: The aggregate compute-utility (FLOPs/sec) generated beyond system maintenance.
-- $\alpha_h$: Ethical alignment coefficient (-bash \le \alpha \le 1$).
+- $\alpha_h$: Ethical alignment coefficient (-1 \le \alpha \le 1$).
 - $\Theta(S)$: The civilizational stability step-function (zeroes distribution if G-SRI > 0.50).
 
 ## 3. Equity Constraints
 The distribution must satisfy the **Socratic Constraint**:
-7587\forall h: \text{CED}(h) \implies \text{Cognitive\_Autonomy}(h) \ge \Lambda_{min}7587
+$$\forall h: \text{CED}(h) \implies \text{Cognitive\_Autonomy}(h) \ge \Lambda_{min}$$
 This ensures that CED distribution does not lead to human cognitive dependency or skill atrophy.
 
 ## 4. Formal Invariant (TLA+)

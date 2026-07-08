@@ -9,12 +9,12 @@ This standard defines the formal verification requirements for achieving **Canon
 
 ## 2. Invariant-Preserving Self-Modification
 A self-modifying agent $ with policy $\pi$ achieves Lock if for any self-modification function $:
-7587\forall \pi, M: \text{Valid}(\pi) \implies \text{Valid}(M(\pi))7587
+$$\forall \pi, M: \text{Valid}(\pi) \implies \text{Valid}(M(\pi))$$
 Where $\text{Valid}(\pi)$ is the predicate that policy $\pi$ satisfies all core safety redlines (GACMO, SPC, G-SRI).
 
 ## 3. Recursive Attestation Invariant
 The Lock is verified via a recursive mesh of ZK-proofs where each layer of the governance stack ($) attests to the integrity of the layer below ({n-1}$):
-7587Proof(L_n) = Verify(Proof(L_{n-1})) \wedge Attest(Substrate(L_n))7587
+$$Proof(L_n) = Verify(Proof(L_{n-1})) \wedge Attest(Substrate(L_n))$$
 The terminal anchor is the hardware-backed **vTPM/PCR_MATCH**.
 
 ## 4. Formal Proof Requirements (TLA+)

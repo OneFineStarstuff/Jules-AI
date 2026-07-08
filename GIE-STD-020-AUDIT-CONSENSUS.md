@@ -9,7 +9,7 @@ This standard defines the consensus logic for multi-institutional audits within 
 
 ## 2. Audit Consensus Protocol
 A planetary state root {global}$ is accepted if it is supported by a 3-of-5 quorum of G-SIFI institutional clusters:
-7587\text{Consensus}(R_{global}) \iff \sum_{i \in \text{Clusters}} \text{Verify}(ZK\_Proof_i, R_{global}) \ge 37587
+$$\text{Consensus}(R_{global}) \iff \sum_{i \in \text{Clusters}} \text{Verify}(ZK\_Proof_i, R_{global}) \ge 3$$
 
 ## 3. Quorum Dynamics
 The protocol utilizes **Weighted Consensus** based on each institution's **GIMM** maturity level. Level 5 (Optimized) institutions have a higher cognitive weight $\omega$ in the safety gossip mesh.

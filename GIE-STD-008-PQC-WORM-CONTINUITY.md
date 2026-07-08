@@ -14,12 +14,12 @@ To prevent second-preimage attacks, the PQC-WORM utilize RFC 6962-compliant doma
 
 ## 3. STH Issuance & ML-DSA-87 Sequencing
 A **Signed Tree Head (STH)** is issued every 60 seconds (max) to anchor the current tree root:
-7587STH_t = Sign_{ML-DSA-87}(Root_t || Timestamp_t || TreeSize_t)7587
+$$STH_t = Sign_{ML-DSA-87}(Root_t || Timestamp_t || TreeSize_t)$$
 The signature {STH_t}$ must incorporate the previous {t-1}$ hash to ensure sequence continuity ({chain}$).
 
 ## 4. Continuity Invariant
 The WORM verification kernel enforces the following invariant:
-7587\forall i: VerifyConsistency(Root_i, Root_{i-1}) = TRUE7587
+$$\forall i: VerifyConsistency(Root_i, Root_{i-1}) = TRUE$$
 If a consistency check fails, the **GIRI** triggers an immediate **T4_HARD_KILL** across all influenced enclaves to prevent non-repudiable state-forking.
 
 ---

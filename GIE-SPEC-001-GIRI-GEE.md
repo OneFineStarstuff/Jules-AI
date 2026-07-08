@@ -36,5 +36,5 @@ The GEE operates as a sidecar process within the confidential enclave, utilizing
 
 ### 2.3 Formal Invariant
 The GEE must maintain the following invariant at all times:
-7587\forall t: G(t) > 0.85 \implies State(t+1) = CONTAINED7587
+$$\forall t: G(t) > 0.85 \implies State(t+1) = CONTAINED$$
 Where (t)$ is the real-time G-SRI score.

@@ -9,7 +9,7 @@ This standard defines the mathematical framework for measuring and stabilizing M
 
 ## 2. MoE Stability Formulation (SAME Metric)
 The **Secure Autonomous Machine Entity (SAME)** stability metric ($) measures the entropy of expert selection compared to a safety-aligned prior:
-7587S = 1 - \frac{H(R_{actual} || R_{safety})}{H_{max}}7587
+$$S = 1 - \frac{H(R_{actual} || R_{safety})}{H_{max}}$$
 Where:
 - {actual}$: The actual routing distribution.
 - {safety}$: The SARA-aligned (Safety-Aware Routing Alignment) distribution.
@@ -20,7 +20,7 @@ The MoEStabilizer enforces stability by solving for a Nash equilibrium between c
 
 ## 3. Supervisory-Agent Drift Detection
 Drift in governor agents is detected via Bayesian updating of the **Cognitive Dissonance Index (CDI)**:
-7587CDI_{t+1} = \beta \cdot CDI_t + (1 - \beta) \cdot \delta_{res}7587
+$$CDI_{t+1} = \beta \cdot CDI_t + (1 - \beta) \cdot \delta_{res}$$
 Where:
 - $\delta_{res}$: Semantic resonance drift measured via GIE-STD-002.
 - $\beta$: Memory decay factor (standardized at 0.95).

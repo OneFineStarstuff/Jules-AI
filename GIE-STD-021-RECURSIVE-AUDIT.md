@@ -9,7 +9,7 @@ This standard defines the recursive consensus logic for high-agency auditor swar
 
 ## 2. Recursive Audit Function
 The validity of an audit $ at recursion depth $ is defined as:
-7587Audit(L_n) \iff Consensus(\{A_1, \dots, A_m\} \in L_{n+1}) \wedge \text{Verify}(ZK\_Proof_{L_{n-1}})7587
+$$Audit(L_n) \iff Consensus(\{A_1, \dots, A_m\} \in L_{n+1}) \wedge \text{Verify}(ZK\_Proof_{L_{n-1}})$$
 Where each layer {n+1}$ audits the reasoning traces and G-SRI calculations of layer $.
 
 ## 3. Triple-A Protocol (AGI-Auditing-AGI)

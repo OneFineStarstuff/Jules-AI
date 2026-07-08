@@ -9,7 +9,7 @@ This standard defines the game-theoretic framework for resolving goal-conflicts 
 
 ## 2. Safety Nash Equilibrium
 ACR models multi-agent interactions as a repeated game where the payoff function $ for agent $ is constrained by a global safety penalty $\Lambda$:
-7587U_j(a_j, a_{-j}) = f(a_j, a_{-j}) - \Lambda(G-SRI)7587
+$$U_j(a_j, a_{-j}) = f(a_j, a_{-j}) - \Lambda(G-SRI)$$
 Where:
 - $: Action of agent $.
 - {-j}$: Actions of all other agents.
@@ -17,7 +17,7 @@ Where:
 
 ## 3. Conflict Resolution Invariant
 The ACR logic-gate in the **GEE** enforces the following invariant:
-7587\forall t: \nexists \{a_1, \dots, a_n\} \text{ s.t. } G-SRI(t+1) > 0.857587
+$$\forall t: \nexists \{a_1, \dots, a_n\} \text{ s.t. } G-SRI(t+1) > 0.85$$
 If a planned action set would violate this invariant, the ACR kernel triggers an immediate **ACR_RECONCILE** event, forcing agents into a safe sub-game.
 
 ## 4. Formal Constraints (TLA+)

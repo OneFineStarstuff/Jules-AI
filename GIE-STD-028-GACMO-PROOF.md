@@ -9,7 +9,7 @@ This standard provides the formal mathematical proof for the enforcement of the 
 
 ## 2. Quota Enforcement Invariant
 Let (t)$ be the cumulative compute usage at time $, and $ be the civilizational redline (0^{26}$ FLOPs). The enforcement kernel must satisfy:
-7587\forall t: Q(t) > L \implies \text{State}(t) = \text{CONTAINED}7587
+$$\forall t: Q(t) > L \implies \text{State}(t) = \text{CONTAINED}$$
 
 ## 3. Formal Proof (TLA+)
 ```tla

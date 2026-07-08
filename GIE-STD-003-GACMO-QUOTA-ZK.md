@@ -9,7 +9,7 @@ This standard defines the mathematical and cryptographic mechanisms for enforcin
 
 ## 2. Compute-Quota Formulation
 The cumulative compute allocation $ is measured in FLOPs:
-7587Q = \sum_{j=1}^{m} \int_{0}^{T} P_j(t) dt7587
+$$Q = \sum_{j=1}^{m} \int_{0}^{T} P_j(t) dt$$
 Where:
 - (t)$: Real-time compute power (FLOPS) of compute node $.
 - $: Governance epoch (e.g., 24 hours).
@@ -19,11 +19,11 @@ The GACMO enforcement circuit utilizes **Plonky2 (AIR)** to verify quota complia
 
 ### 3.1 Constraint: Utilization Binding
 Institutional compute telemetry $ must be bound to the public quota commitment {comm}$:
-7587Poseidon(U) = Q_{comm}7587
+$$Poseidon(U) = Q_{comm}$$
 
 ### 3.2 Constraint: Redline Invariant
 The circuit must prove that the total utilized FLOPs $ is strictly below the limit $:
-7587Q < L \quad \text{where } L = 10^{26}7587
+$$Q < L \quad \text{where } L = 10^{26}$$
 If  \ge L$, the circuit cannot generate a valid proof, triggering a global **OmegaActual** containment heartbeat.
 
 ## 4. Federated Quota Registry (GACMO)

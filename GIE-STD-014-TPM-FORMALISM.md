@@ -9,13 +9,13 @@ This standard defines the mathematical formalisms for hardware-backed remote att
 
 ## 2. PCR Measurement Function
 The Platform Configuration Register (PCR) state $ is updated via a one-way extension function:
-7587P_{t+1} = Hash(P_t || Measurement_t)7587
+$$P_{t+1} = Hash(P_t || Measurement_t)$$
 A valid attestation requires that the aggregate hash matches the **Golden Hash** ({golden}$) registered in GACRA:
-7587P_{terminal} \equiv H_{golden} \pmod{PCR\_MATCH}7587
+$$P_{terminal} \equiv H_{golden} \pmod{PCR\_MATCH}$$
 
 ## 3. Remote Attestation Handshake
 The attestation quote $ is signed by the TPM's Attestation Key ($):
-7587Q = Sign_{AK}(P_{terminal} || Nonce || Timestamp)7587
+$$Q = Sign_{AK}(P_{terminal} || Nonce || Timestamp)$$
 The **GISM** (Security Management) kernel verifies $ using the institutional HSM public key before allowing any agentic state transition.
 
 ## 4. Formal Containment Logic (TLA+)

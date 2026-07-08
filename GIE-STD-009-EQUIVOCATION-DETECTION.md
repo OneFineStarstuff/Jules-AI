@@ -9,7 +9,7 @@ This standard defines the formal logic and cryptographic mechanisms for detectin
 
 ## 2. Equivocation Invariant
 An institutional node $ equivocates if it issues two distinct Signed Tree Heads (, STH_2$) for the same governance epoch $ that are not consistent with a single Merkle tree:
-7587\exists STH_1, STH_2 \in T : VerifyConsistency(Root_1, Root_2) = FALSE7587
+$$\exists STH_1, STH_2 \in T : VerifyConsistency(Root_1, Root_2) = FALSE$$
 
 ## 3. Detection & Containment
 The **FGVF** (Federated Governance Verification Framework) monitors the Alpha Path gossip for proof of equivocation. If a valid **Equivocation-Proof** (the two conflicting STHs) is circulated:

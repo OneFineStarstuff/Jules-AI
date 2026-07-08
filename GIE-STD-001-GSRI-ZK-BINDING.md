@@ -9,7 +9,7 @@ This standard defines the mathematical and cryptographic requirements for bindin
 
 ## 2. Bayesian G-SRI Formulation
 The G-SRI score ($) is computed using a real-time Bayesian risk synthesis model:
-7587G = \sum_{i=1}^{n} (w_i \cdot \mu_i) + \int_{0}^{T} \delta_{drift} dt7587
+$$G = \sum_{i=1}^{n} (w_i \cdot \mu_i) + \int_{0}^{T} \delta_{drift} dt$$
 Where:
 - $: Normalized weights for risk factors $\mu_i$ (e.g., agent_collusion_prob, cdi_delta).
 - $\delta_{drift}$: The time-integral of semantic drift detected via the **Semantic Preservation Calculus**.
@@ -20,17 +20,17 @@ The G-SRI binding circuit utilizes **Plonky2 (AIR)** constraints to enforce the 
 
 ### 3.1 Constraint: Input Binding
 The private telemetry vector {private}$ must hash to a public commitment $:
-7587Poseidon(V_{private}) = C7587
+$$Poseidon(V_{private}) = C$$
 This commitment $ is passed as a public input to the G-SRI proof.
 
 ### 3.2 Constraint: Computational Validity
 The reported score $ must be the result of the standardized scoring function $ applied to {private}$:
-7587f(V_{private}) = G7587
+$$f(V_{private}) = G$$
 This constraint ensures that the institution has not manipulated the risk score during reporting.
 
 ### 3.3 Constraint: PQC Anchor
 The proof must incorporate the previous PQC WORM signature {t-1}$ to ensure chronological continuity:
-7587Verify(S_{t-1}, Header_{t-1}) = TRUE7587
+$$Verify(S_{t-1}, Header_{t-1}) = TRUE$$
 
 ## 4. Formal Verification (TLA+)
 The state transition for the G-SRI reporter is defined as:

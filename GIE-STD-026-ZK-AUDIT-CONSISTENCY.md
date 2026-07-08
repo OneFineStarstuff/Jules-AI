@@ -9,11 +9,11 @@ This standard defines the mathematical proof of **Merkle Consistency** across fe
 
 ## 2. Consistency Proof Function
 A consistency proof {cons}$ proves that a tree {small}$ is a sub-tree of {large}$, anchored by their respective roots $ and {t+n}$:
-7587\text{VerifyConsistency}(R_t, R_{t+n}, P_{cons}) = TRUE7587
+$$\text{VerifyConsistency}(R_t, R_{t+n}, P_{cons}) = TRUE$$
 
 ## 3. ZK-Federation Invariant
 Institutions must provide a **ZK-Audit-Consistency-Proof** that binds their daily GIRS report to the mesh-wide state root:
-7587\text{Verify}(P_{girs}, R_{global}) \wedge \text{VerifyConsistency}(R_{local}, R_{global}) = TRUE7587
+$$\text{Verify}(P_{girs}, R_{global}) \wedge \text{VerifyConsistency}(R_{local}, R_{global}) = TRUE$$
 This prevents "Compliance Forking," where an institution reports a safe state to the regulator while maintaining an unsafe local state.
 
 ## 4. Formal Constraints (TLA+)

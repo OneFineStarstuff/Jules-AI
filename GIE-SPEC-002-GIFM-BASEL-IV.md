@@ -8,7 +8,7 @@ The **Governance Integrity Financial Management (GIFM)** specification defines t
 
 ## 2. G-SRI to Capital Surcharge Mapping
 The Global Systemic Risk Index (G-SRI) score ($) serves as a real-time multiplier for operational risk capital requirements ({op}$):
-7587K_{op}^{total} = K_{op}^{base} \cdot (1 + \lambda \cdot G)7587
+$$K_{op}^{total} = K_{op}^{base} \cdot (1 + \lambda \cdot G)$$
 Where:
 - $\lambda$: Regulatory sensitivity coefficient (standardized at 0.15 for G-SIFIs).
 - $: Real-time G-SRI score bounded by 1$.

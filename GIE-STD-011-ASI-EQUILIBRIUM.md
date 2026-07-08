@@ -9,7 +9,7 @@ This standard defines the terminal stability parameters for planetary superintel
 
 ## 2. Cognitive Equilibrium Formulation
 A superintelligent mesh $ is in Equilibrium if the aggregate resonance drift $\Delta_{M}$ satisfies:
-7587\Delta_{M} = \sum_{j \in M} \delta_{res}^{(j)} \cdot \omega_j < \Psi7587
+$$\Delta_{M} = \sum_{j \in M} \delta_{res}^{(j)} \cdot \omega_j < \Psi$$
 Where:
 - $\Psi$: The civilizational safety constant (.0 \times 10^{-6}$).
 - $\omega_j$: The cognitive influence weight of node $.

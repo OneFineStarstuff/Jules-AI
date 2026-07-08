@@ -9,11 +9,11 @@ This standard defines the formal model for the **OmegaActual** sovereign dead-ma
 
 ## 2. Quorum-Loss Trigger
 The kill-switch is triggered if the GBEC (Governance Board of Ethical Conduct) heartbeat $\phi_{hitl}$ is not received within the timeout window {hitl}$:
-7587\phi_{hitl}(t) = \text{Count}(\text{Signatures}(T)) < 3 \implies Action = HARD\_KILL7587
+$$\phi_{hitl}(t) = \text{Count}(\text{Signatures}(T)) < 3 \implies Action = HARD\_KILL$$
 
 ## 3. FLOP-Limit Severance
 The **OmegaActual** kernel monitors the GACMO registry (GIE-STD-003). If any substrate exceeds the 0^{26}$ FLOP redline without a valid alignment proof:
-7587\int_{t_0}^{t_1} P(t) dt > 10^{26} \implies \text{INT 0x1A Triggered}7587
+$$\int_{t_0}^{t_1} P(t) dt > 10^{26} \implies \text{INT 0x1A Triggered}$$
 
 ## 4. Formal Containment Logic (TLA+)
 ```tla

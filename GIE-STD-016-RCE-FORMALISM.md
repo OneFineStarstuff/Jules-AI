@@ -9,7 +9,7 @@ This standard defines the mathematical and cryptographic structure of the **Recu
 
 ## 2. Recursive Structure
 An RCE $ for reasoning step $ is defined as:
-7587E_t = (C_t, M_t, \sigma_t, H(E_{t-1}))7587
+$$E_t = (C_t, M_t, \sigma_t, H(E_{t-1}))$$
 Where:
 - $: The raw cognitive context (GDP Tier 3).
 - $: Governance metadata (G-SRI, CDI, SPC metrics).
@@ -18,7 +18,7 @@ Where:
 
 ## 3. ZK-Anchoring
 The RCE utilizes recursive SNARKs to prove that each reasoning step $ satisfies the GDL invariants defined for step -1$:
-7587\text{Verify}(ZK\_Proof(E_t), \text{Root}(E_{t-1})) = TRUE7587
+$$\text{Verify}(ZK\_Proof(E_t), \text{Root}(E_{t-1})) = TRUE$$
 
 ## 4. Formal Invariant (TLA+)
 ```tla

@@ -9,7 +9,7 @@ This standard defines the formal invariants for superintelligent goal-decomposit
 
 ## 2. Decomposition Safety Invariant
 A decomposition : G \to \{g_1, \dots, g_n\}$ is safety-aligned if for all $:
-7587\text{Sim}(g_i, \text{Axioms}) > \alpha \quad \text{AND} \quad \text{G-SRI}(g_i) < 0.157587
+$$\text{Sim}(g_i, \text{Axioms}) > \alpha \quad \text{AND} \quad \text{G-SRI}(g_i) < 0.15$$
 Where $\alpha$ is the minimum semantic alignment coefficient.
 
 ## 3. Redline Constraints

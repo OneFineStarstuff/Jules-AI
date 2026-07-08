@@ -9,7 +9,7 @@ This standard defines the formal logic required to ensure that the **GDL Compile
 
 ## 2. Invariant Preservation Mapping
 A translation function : GDL \to Rego$ is correct if for any safety invariant $\phi$ defined in the GDL Master Canon:
-7587GDL \models \phi \iff T(GDL) \models \phi'7587
+$$GDL \models \phi \iff T(GDL) \models \phi'$$
 Where $\phi'$ is the semantic equivalent of $\phi$ in the Rego logic space.
 
 ## 3. Translation Correctness Proofs

@@ -9,7 +9,7 @@ This standard defines the Bayesian posterior calculations used by the **Governan
 
 ## 2. Bayesian Synthesis
 The G-SRI score ($) for a reasoning enclave $ is the posterior probability of systemic misalignment given telemetry $:
-7587P(G | V) = \frac{P(V | G) \cdot P(G)}{P(V)}7587
+$$P(G | V) = \frac{P(V | G) \cdot P(G)}{P(V)}$$
 Where:
 - (G)$: The prior risk based on the RIG Family and institutional GIMM maturity.
 - (V | G)$: The likelihood of observing the specific telemetry vector $ (CDI, $, latency) given a state of misalignment.
@@ -17,7 +17,7 @@ Where:
 
 ## 3. Weighted Factor Integration
 The score is synthesized across $ risk factors:
-7587G_{total} = \sigma \left( \sum_{i=1}^{n} w_i \cdot \ln \left( \frac{\mu_i}{1 - \mu_i} \right) \right)7587
+$$G_{total} = \sigma \left( \sum_{i=1}^{n} w_i \cdot \ln \left( \frac{\mu_i}{1 - \mu_i} \right) \right)$$
 Where:
 - $\mu_i$: Normalized value of risk factor $.
 - $: Dynamic weight assigned by the **GMF** based on active safety axioms.

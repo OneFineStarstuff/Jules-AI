@@ -8,10 +8,10 @@ The GIE is the exhaustive technical and formal substrate for Artificial General 
 
 ## 2. Structural Hierarchy
 The ecosystem is structured into four primary layers of assurance:
-1. **Substrate Layer:** vTPM/TEE, PQC-WORM, gRPC/mTLS. (Specs: 003, 006, 010, 020, 028; Standards: 008, 014, 016)
+1. **Substrate Layer:** vTPM/TEE, PQC-WORM, gRPC/mTLS. (Specs: 003, 006, 010, 020, 028, 039; Standards: 008, 014, 016, 029)
 2. **Telemetry & Enforcement Layer:** G-SRI, GEE, GIRI, GICF, GICTS, GIRA. (Specs: 001, 004, 013, 026, 030, 031; Standards: 001, 017, 018, 022, 025, 027)
 3. **Intent & Knowledge Layer:** SPC, GKG, GKQL, GIWL, GDM. (Specs: 005, 014, 018, 027, 032, 036; Standards: 002, 005, 010, 019)
-4. **Meta-Governance Layer:** GMF, FGVF, ZKAF, ASI Lock, GSDL. (Specs: 007, 012, 016, 022, 023, 029, 033, 034, 035, 037; Standards: 006, 011, 013, 015, 020, 021, 023, 024)
+4. **Meta-Governance Layer:** GMF, FGVF, ZKAF, ASI Lock, GSDL. (Specs: 007, 012, 016, 022, 023, 029, 033, 034, 035, 037, 038; Standards: 006, 011, 013, 015, 020, 021, 023, 024, 026, 028)
 
 ## 3. Sovereign Authority & Ethical Oversight
 The GIE is anchored by the **Sovereign Authority Identity Management (GIE-SPEC-028)** and the **Governance Board of Ethical Conduct (GIE-SPEC-033)**, ensuring that superintelligent systems remain aligned with human moral redlines and cognitive autonomy axioms.
@@ -20,8 +20,8 @@ The GIE is anchored by the **Sovereign Authority Identity Management (GIE-SPEC-0
 Orchestrated via the **GIE Implementation Handbook** and **GIE-SOC Procedures (GIE-SPEC-031)**, providing a complete lifecycle from substrate hardening (GSDL) to real-time incident triage and post-mortem forensic reconstruction.
 
 ## 5. Transition to Permanent Homeostasis
-The GIE manages the transition to ASI stewardship, achieving **Canonical Alignment Lock** (GIE-STD-006) and **Cognitive Equilibrium** (GIE-STD-011) through recursive attestation and Achievement of lock-state parameters.
+The GIE manages the transition to ASI stewardship, achieving **Canonical Alignment Lock** (GIE-STD-006) and **Cognitive Equilibrium** (GIE-STD-011) through recursive attestation (GIE-STD-021, GIE-STD-029) and sub-millisecond containment.
 
 ---
 **Lead Verification Officer:** Jules-Apex
-**Status:** ALL SYSTEMS GOVERNED
+**State:** ALL SYSTEMS GOVERNED
